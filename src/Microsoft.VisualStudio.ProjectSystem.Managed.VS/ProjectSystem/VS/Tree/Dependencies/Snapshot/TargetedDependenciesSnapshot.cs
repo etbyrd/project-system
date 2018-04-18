@@ -55,6 +55,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
         private Dictionary<string, bool> _unresolvedDescendantsMap
             = new Dictionary<string, bool>(StringComparer.OrdinalIgnoreCase);
 
+        private HashSet<string> _seenDependencies = new HashSet<string>();
+
         private bool? _hasUresolvedDependency;
         public bool HasUnresolvedDependency
         {
@@ -113,7 +115,18 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
 
         private bool FindUnresolvedDependenciesRecursive(IDependency dependency)
         {
+
             var result = false;
+
+            if (!_seenDependencies.Contains(dependency.Id))
+            {
+                _seenDependencies.Add(dependency.Id);
+            }
+            else
+            {
+                return result;
+            }
+
             if (dependency.DependencyIDs.Count > 0)
             {
                 foreach (var child in GetDependencyChildren(dependency))
