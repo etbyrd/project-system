@@ -94,9 +94,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
                 return hasUnresolvedDescendants;
             }
 
-            var seenDependencies = new HashSet<string>();
-
-            return FindUnresolvedDependenciesRecursive(dependency, seenDependencies);
+            return FindUnresolvedDependenciesRecursive(dependency);
         }
 
         public bool CheckForUnresolvedDependencies(string providerType)
@@ -127,19 +125,10 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
             }
         }
 
-        private bool FindUnresolvedDependenciesRecursive(IDependency dependency, HashSet<string> seenDependencies)
+        private bool FindUnresolvedDependenciesRecursive(IDependency dependency)
         {
 
             var result = false;
-
-            //if (!seenDependencies.Contains(dependency.Id))
-            //{
-            //    seenDependencies.Add(dependency.Id);
-            //}
-            //else
-            //{
-            //    return result;
-            //}
 
             if (dependency.DependencyIDs.Count > 0)
             {
@@ -151,6 +140,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
                         break;
                     }
 
+                    //If the dependency is already in the child map, it is resolved
                     if (_dependenciesChildrenMap.ContainsKey(child.Id))
                     {
                         result = false;
@@ -159,7 +149,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
 
                     if (!_unresolvedDescendantsMap.TryGetValue(child.Id, out bool depthFirstResult))
                     {
-                        depthFirstResult = FindUnresolvedDependenciesRecursive(child, seenDependencies);
+                        depthFirstResult = FindUnresolvedDependenciesRecursive(child);
                     }
 
                     if (depthFirstResult)
