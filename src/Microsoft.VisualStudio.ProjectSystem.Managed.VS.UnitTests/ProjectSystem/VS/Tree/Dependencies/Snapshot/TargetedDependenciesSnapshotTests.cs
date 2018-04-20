@@ -574,7 +574,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         }
 
         [Fact]
-        public void TestCircularDependency()
+        public void TCheckForUnresolvedDependencies_CircularDependency_DoesNotRecurseInfinitely()
         {
             var dependencyModelTop1 = IDependencyFactory.FromJson(@"
             {
@@ -607,8 +607,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 topLevelDependencies: new List<IDependency>() { dependencyModelTop1 });
 
             // verify it doesn't stack overflow
-            previousSnapshot.CheckForUnresolvedDependencies(dependencyModelTop1);
-            
+            previousSnapshot.CheckForUnresolvedDependencies(dependencyModelTop1);   
         }
 
         private class TestableTargetedDependenciesSnapshot : TargetedDependenciesSnapshot
