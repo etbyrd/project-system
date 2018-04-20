@@ -32,6 +32,20 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
             }
         }
 
+        /// <summary>
+        /// Internal for testing.
+        /// </summary>
+        internal TargetedDependenciesSnapshot(IDictionary<string, IDependency> dependenciesWorld, IEnumerable<IDependency> topLevelDependencies)
+        {
+            DependenciesWorld = ImmutableStringDictionary<IDependency>.EmptyOrdinalIgnoreCase.AddRange(dependenciesWorld);
+            var dependencies = ImmutableHashSet<IDependency>.Empty;
+            foreach (var d in topLevelDependencies)
+            {
+                dependencies = dependencies.Add(d);
+            }
+            TopLevelDependencies = dependencies;
+        }
+
         public string ProjectPath { get; }
 
         public ITargetFramework TargetFramework { get; }

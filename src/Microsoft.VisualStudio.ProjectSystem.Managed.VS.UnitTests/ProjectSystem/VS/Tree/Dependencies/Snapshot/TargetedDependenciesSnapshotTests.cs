@@ -591,14 +591,14 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             {
                 ""ProviderType"": ""Xxx"",
                 ""Id"": ""tfm1\\xxx\\topdependency2"",
-                ""Name"":""TopDependency1"",
-                ""Caption"":""TopDependency1"",
+                ""Name"":""TopDependency2"",
+                ""Caption"":""TopDependency2"",
                 ""SchemaItemType"":""Xxx"",
                 ""Resolved"":""true"",
                 ""DependencyIDs"": [ ""tfm1\\xxx\\topdependency1"" ]
             }", icon: KnownMonikers.Uninstall, expandedIcon: KnownMonikers.Uninstall);
 
-            var previousSnapshot = ITargetedDependenciesSnapshotFactory.Implement(
+            var previousSnapshot = new TargetedDependenciesSnapshot(
                 dependenciesWorld: new Dictionary<string, IDependency>()
                 {
                     { dependencyModelTop1.Id, dependencyModelTop1 },
@@ -606,9 +606,9 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 },
                 topLevelDependencies: new List<IDependency>() { dependencyModelTop1 });
 
+            // verify it doesn't stack overflow
             previousSnapshot.CheckForUnresolvedDependencies(dependencyModelTop1);
-
-            Assert.True(true);
+            
         }
 
         private class TestableTargetedDependenciesSnapshot : TargetedDependenciesSnapshot
