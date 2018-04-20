@@ -573,6 +573,44 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.True(snapshot.DependenciesWorld.ContainsKey(@"tfm1\xxx\addeddependency3"));
         }
 
+        [Fact]
+        public void TestCircularDependency()
+        {
+            var dependencyModelTop1 = IDependencyFactory.FromJson(@"
+            {
+                ""ProviderType"": ""Xxx"",
+                ""Id"": ""tfm1\\xxx\\topdependency1"",
+                ""Name"":""TopDependency1"",
+                ""Caption"":""TopDependency1"",
+                ""SchemaItemType"":""Xxx"",
+                ""Resolved"":""true"",
+                ""DependencyIDs"": [ ""tfm1\\xxx\\topdependency2"" ]
+            }", icon: KnownMonikers.Uninstall, expandedIcon: KnownMonikers.Uninstall);
+
+            var dependencyModelTop2 = IDependencyFactory.FromJson(@"
+            {
+                ""ProviderType"": ""Xxx"",
+                ""Id"": ""tfm1\\xxx\\topdependency2"",
+                ""Name"":""TopDependency1"",
+                ""Caption"":""TopDependency1"",
+                ""SchemaItemType"":""Xxx"",
+                ""Resolved"":""true"",
+                ""DependencyIDs"": [ ""tfm1\\xxx\\topdependency1"" ]
+            }", icon: KnownMonikers.Uninstall, expandedIcon: KnownMonikers.Uninstall);
+
+            var previousSnapshot = ITargetedDependenciesSnapshotFactory.Implement(
+                dependenciesWorld: new Dictionary<string, IDependency>()
+                {
+                    { dependencyModelTop1.Id, dependencyModelTop1 },
+                    { dependencyModelTop2.Id, dependencyModelTop2 },
+                },
+                topLevelDependencies: new List<IDependency>() { dependencyModelTop1 });
+
+            previousSnapshot.CheckForUnresolvedDependencies(dependencyModelTop1);
+
+            Assert.True(true);
+        }
+
         private class TestableTargetedDependenciesSnapshot : TargetedDependenciesSnapshot
         {
             public TestableTargetedDependenciesSnapshot(
