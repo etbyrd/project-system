@@ -18,12 +18,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
             var model = new AnalyzerDependencyModel(
                 "myProvider",
                 "c:\\myPath",
                 "myOriginalItemSpec",
-                flags: flag,
+                flags: ProjectTreeFlagsEnum.Empty,
                 resolved: true,
                 isImplicit: false,
                 properties: properties);
@@ -42,7 +41,6 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(KnownMonikers.CodeInformation, model.ExpandedIcon);
             Assert.Equal(ManagedImageMonikers.CodeInformationWarning, model.UnresolvedIcon);
             Assert.Equal(ManagedImageMonikers.CodeInformationWarning, model.UnresolvedExpandedIcon);
-            Assert.True(model.Flags.Contains(flag));
         }
 
         [Fact]
@@ -50,7 +48,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.UnresolvedFlags;
             var model = new AnalyzerDependencyModel(
                 "myProvider",
                 "c:\\myPath",

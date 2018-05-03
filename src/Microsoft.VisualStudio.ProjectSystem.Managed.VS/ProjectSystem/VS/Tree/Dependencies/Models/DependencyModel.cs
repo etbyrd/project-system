@@ -13,7 +13,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
             string providerType,
             string path,
             string originalItemSpec,
-            ProjectTreeFlags flags,
+            ProjectTreeFlagsEnum flags,
             bool resolved,
             bool isImplicit,
             IImmutableDictionary<string, string> properties)
@@ -32,16 +32,16 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
 
             if (resolved)
             {
-                Flags = flags.Union(DependencyTreeFlags.GenericResolvedDependencyFlags);
+                Flags = flags.Union(ProjectTreeFlagsEnum.GenericResolvedDependencyFlags);
             }
             else
             {
-                Flags = flags.Union(DependencyTreeFlags.GenericUnresolvedDependencyFlags);
+                Flags = flags.Union(ProjectTreeFlagsEnum.GenericUnresolvedDependencyFlags);
             }
 
             if (isImplicit)
             {
-                Flags = Flags.Except(DependencyTreeFlags.SupportsRemove);
+                Flags = Flags.Except(ProjectTreeFlagsEnum.SupportsRemove);
             }
 
             if (Properties.TryGetValue("Visible", out string visibleMetadata)
@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
         public ImageMoniker UnresolvedExpandedIcon { get; protected set; }
         public IImmutableDictionary<string, string> Properties { get; protected set; }
         public IImmutableList<string> DependencyIDs { get; protected set; } = ImmutableList<string>.Empty;
-        public ProjectTreeFlags Flags { get; protected set; } = ProjectTreeFlags.Empty;
+        public ProjectTreeFlagsEnum Flags { get; protected set; } = ProjectTreeFlagsEnum.Empty;
 
         private string _id;
         public virtual string Id

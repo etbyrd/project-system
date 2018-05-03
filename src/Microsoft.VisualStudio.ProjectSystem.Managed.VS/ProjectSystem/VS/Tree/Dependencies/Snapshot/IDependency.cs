@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
         IDependency SetProperties(
             string caption = null,
             bool? resolved = null,
-            ProjectTreeFlags? flags = null,
+            ProjectTreeFlagsEnum? flags = null,
             string schemaName = null,
             IImmutableList<string> dependencyIDs = null,
             ImageMoniker icon = default(ImageMoniker),

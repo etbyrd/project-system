@@ -162,7 +162,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.GraphNodes.V
         {
             topLevelDependencyMatches = new HashSet<IDependency>();
 
-            if (!topLevelDependency.Flags.Contains(DependencyTreeFlags.ProjectNodeFlags))
+            if (!topLevelDependency.Flags.Contains(ProjectTreeFlagsEnum.ProjectNodeFlags))
             {
                 return false;
             }

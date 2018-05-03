@@ -33,13 +33,13 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                     id: "mydependency3",
                     topLevel: true,
                     resolved: true,
-                    flags: ProjectTreeFlags.Empty);
+                    flags: ProjectTreeFlagsEnum.Empty);
 
             var topLevelResolvedSharedProjectDependency = IDependencyFactory.Implement(
                     id: "mydependency4",
                     topLevel: true,
                     resolved: true,
-                    flags: DependencyTreeFlags.ProjectNodeFlags.Union(DependencyTreeFlags.SharedProjectFlags));
+                    flags: ProjectTreeFlagsEnum.ProjectNodeFlags.Union(ProjectTreeFlagsEnum.SharedProjectFlags));
 
             var worldBuilder = new Dictionary<string, IDependency>()
             {
@@ -115,11 +115,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                     targetFramework: targetFramework,
                     topLevel: true,
                     resolved: true,
-                    flags: DependencyTreeFlags.ProjectNodeFlags.Union(DependencyTreeFlags.ResolvedFlags),
+                    flags: ProjectTreeFlagsEnum.ProjectNodeFlags.Union(ProjectTreeFlagsEnum.ResolvedFlags),
                     fullPath: @"c:\myproject1\project.csproj",
                     setPropertiesResolved: false,
                     setPropertiesSchemaName: ProjectReference.SchemaName,
-                    setPropertiesFlags: DependencyTreeFlags.ProjectNodeFlags.Union(DependencyTreeFlags.UnresolvedFlags));
+                    setPropertiesFlags: ProjectTreeFlagsEnum.ProjectNodeFlags.Union(ProjectTreeFlagsEnum.UnresolvedFlags));
 
             var filter = new UnsupportedProjectsSnapshotFilter(aggregateSnapshotProvider, targetFrameworkProvider);
 
@@ -146,7 +146,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             var dependency = IDependencyFactory.Implement(
                     topLevel: true,
                     resolved: true,
-                    flags: DependencyTreeFlags.ProjectNodeFlags.Union(DependencyTreeFlags.ResolvedFlags),
+                    flags: ProjectTreeFlagsEnum.ProjectNodeFlags.Union(ProjectTreeFlagsEnum.ResolvedFlags),
                     fullPath: @"c:\myproject1\project.csproj");
 
             var filter = new UnsupportedProjectsSnapshotFilter(aggregateSnapshotProvider, null);
@@ -182,7 +182,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             var dependency = IDependencyFactory.Implement(
                     topLevel: true,
                     resolved: true,
-                    flags: DependencyTreeFlags.ProjectNodeFlags.Union(DependencyTreeFlags.ResolvedFlags),
+                    flags: ProjectTreeFlagsEnum.ProjectNodeFlags.Union(ProjectTreeFlagsEnum.ResolvedFlags),
                     fullPath: @"c:\myproject1\project.csproj",
                     targetFramework: targetFramework);
 
@@ -219,7 +219,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             var dependency = IDependencyFactory.Implement(
                     topLevel: true,
                     resolved: true,
-                    flags: DependencyTreeFlags.ProjectNodeFlags.Union(DependencyTreeFlags.ResolvedFlags),
+                    flags: ProjectTreeFlagsEnum.ProjectNodeFlags.Union(ProjectTreeFlagsEnum.ResolvedFlags),
                     fullPath: @"c:\myproject1\project.csproj",
                     targetFramework: targetFramework
                  );

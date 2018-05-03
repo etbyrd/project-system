@@ -68,11 +68,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
             // in the tree to avoid flicks).
             if (Resolved)
             {
-                Flags = Flags.Union(DependencyTreeFlags.ResolvedFlags);
+                Flags = Flags.Union(ProjectTreeFlagsEnum.ResolvedFlags);
             }
             else
             {
-                Flags = Flags.Union(DependencyTreeFlags.UnresolvedFlags);
+                Flags = Flags.Union(ProjectTreeFlagsEnum.UnresolvedFlags);
             }
 
             Icon = dependencyModel.Icon;
@@ -168,7 +168,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
                 // Thus always set predefined itemType for all custom nodes.
                 // TODO: generate specific xaml rule for generic Dependency nodes
                 // tracking issue: https://github.com/dotnet/roslyn-project-system/issues/1102
-                bool isGenericNodeType = Flags.Contains(DependencyTreeFlags.GenericDependencyFlags);
+                bool isGenericNodeType = Flags.Contains(ProjectTreeFlagsEnum.GenericDependencyFlags);
                 return isGenericNodeType ? _schemaItemType : Folder.PrimaryDataSourceItemType;
             }
             protected set
@@ -188,7 +188,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
         public ImageMoniker UnresolvedIcon { get; }
         public ImageMoniker UnresolvedExpandedIcon { get; }
         public int Priority { get; }
-        public ProjectTreeFlags Flags { get; set; }
+        public ProjectTreeFlagsEnum Flags { get; set; }
 
         public IImmutableDictionary<string, string> Properties { get; }
 
@@ -203,7 +203,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
         public IDependency SetProperties(
             string caption = null,
             bool? resolved = null,
-            ProjectTreeFlags? flags = null,
+            ProjectTreeFlagsEnum? flags = null,
             string schemaName = null,
             IImmutableList<string> dependencyIDs = null,
             ImageMoniker icon = default(ImageMoniker),

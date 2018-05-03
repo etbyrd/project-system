@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
             string path,
             string originalItemSpec,
             string name,
-            ProjectTreeFlags flags,
+            ProjectTreeFlagsEnum flags,
             string version,
             bool resolved,
             bool isImplicit,
@@ -43,8 +43,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
                 DependencyIDs = ImmutableList.CreateRange(dependenciesIDs);
             }
 
-            Flags = Flags.Union(DependencyTreeFlags.PackageNodeFlags)
-                         .Union(DependencyTreeFlags.SupportsHierarchy);
+            Flags = Flags.Union(ProjectTreeFlagsEnum.PackageNodeFlags)
+                         .Union(ProjectTreeFlagsEnum.SupportsHierarchy);
 
             if (resolved)
             {

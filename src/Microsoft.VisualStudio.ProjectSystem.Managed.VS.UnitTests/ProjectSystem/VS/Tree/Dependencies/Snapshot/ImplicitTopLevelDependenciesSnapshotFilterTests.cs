@@ -115,7 +115,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 topLevel: true,
                 isImplicit: false,
                 resolved: true,
-                flags: DependencyTreeFlags.SubTreeRootNodeFlags);
+                flags: ProjectTreeFlagsEnum.SubTreeRootNodeFlags);
 
             var worldBuilder = new Dictionary<string, IDependency>()
             {
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 topLevel: true,
                 isImplicit: false,
                 resolved: true,
-                flags: DependencyTreeFlags.GenericDependencyFlags,
+                flags: ProjectTreeFlagsEnum.GenericDependencyFlags,
                 originalItemSpec: "myprojectitem");
 
             var worldBuilder = new Dictionary<string, IDependency>()
@@ -183,7 +183,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 topLevel: true,
                 isImplicit: false,
                 resolved: true,
-                flags: DependencyTreeFlags.GenericDependencyFlags,
+                flags: ProjectTreeFlagsEnum.GenericDependencyFlags,
                 originalItemSpec: "myprojectitem",
                 setPropertiesImplicit: true);
 

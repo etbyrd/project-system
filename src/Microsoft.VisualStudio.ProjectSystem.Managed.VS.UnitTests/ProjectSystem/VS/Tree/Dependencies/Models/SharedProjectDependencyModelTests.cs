@@ -42,8 +42,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(KnownMonikers.SharedProject, model.ExpandedIcon);
             Assert.Equal(ManagedImageMonikers.SharedProjectWarning, model.UnresolvedIcon);
             Assert.Equal(ManagedImageMonikers.SharedProjectWarning, model.UnresolvedExpandedIcon);
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.SharedProjectFlags));
-            Assert.False(model.Flags.Contains(DependencyTreeFlags.SupportsRuleProperties));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SharedProjectFlags));
+            Assert.False(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsRuleProperties));
             Assert.True(model.Flags.Contains(flag));
         }
 
@@ -76,8 +76,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(KnownMonikers.SharedProject, model.ExpandedIcon);
             Assert.Equal(ManagedImageMonikers.SharedProjectWarning, model.UnresolvedIcon);
             Assert.Equal(ManagedImageMonikers.SharedProjectWarning, model.UnresolvedExpandedIcon);
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.SharedProjectFlags));
-            Assert.False(model.Flags.Contains(DependencyTreeFlags.SupportsRuleProperties));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SharedProjectFlags));
+            Assert.False(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsRuleProperties));
             Assert.True(model.Flags.Contains(flag));
         }
 
@@ -110,8 +110,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(ManagedImageMonikers.SharedProjectPrivate, model.ExpandedIcon);
             Assert.Equal(ManagedImageMonikers.SharedProjectWarning, model.UnresolvedIcon);
             Assert.Equal(ManagedImageMonikers.SharedProjectWarning, model.UnresolvedExpandedIcon);
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.SharedProjectFlags));
-            Assert.False(model.Flags.Contains(DependencyTreeFlags.SupportsRuleProperties));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SharedProjectFlags));
+            Assert.False(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsRuleProperties));
             Assert.True(model.Flags.Contains(flag));
         }
     }

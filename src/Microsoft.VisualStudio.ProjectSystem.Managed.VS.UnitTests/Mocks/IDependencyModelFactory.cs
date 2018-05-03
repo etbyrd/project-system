@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS
 
         public static IDependencyModel FromJson(
             string jsonString,
-            ProjectTreeFlags? flags = null,
+            ProjectTreeFlagsEnum? flags = null,
             ImageMoniker? icon = null,
             ImageMoniker? expandedIcon = null,
             ImageMoniker? unresolvedIcon = null,
@@ -150,7 +150,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS
             public ImageMoniker UnresolvedExpandedIcon { get; set; }
             public IImmutableDictionary<string, string> Properties { get; set; }
             public IImmutableList<string> DependencyIDs { get; set; } = ImmutableList<string>.Empty;
-            public ProjectTreeFlags Flags { get; set; } = ProjectTreeFlags.Empty;
+            public ProjectTreeFlagsEnum Flags { get; set; } = ProjectTreeFlagsEnum.Empty;
             public string Id { get; set; }
         }
     }

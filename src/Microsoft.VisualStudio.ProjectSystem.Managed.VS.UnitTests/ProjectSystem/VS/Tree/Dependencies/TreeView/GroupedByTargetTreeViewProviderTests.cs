@@ -190,7 +190,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyXxxpath, IconHash=325249260, Ex
     ""Resolved"":""true""
 }", icon: KnownMonikers.Uninstall,
     expandedIcon: KnownMonikers.Uninstall,
-    flags: DependencyTreeFlags.SupportsHierarchy,
+    flags: ProjectTreeFlagsEnum.SupportsHierarchy,
     targetFramework: tfm1);
 
             var dependencies = new List<IDependency>
@@ -273,7 +273,7 @@ Caption=DependencyExisting, FilePath=tfm1\Yyy\dependencyExistingpath, IconHash=3
     expandedIcon: KnownMonikers.Uninstall,
     unresolvedIcon: KnownMonikers.Uninstall,
     unresolvedExpandedIcon: KnownMonikers.Uninstall,
-    flags: DependencyTreeFlags.SupportsHierarchy);
+    flags: ProjectTreeFlagsEnum.SupportsHierarchy);
 
             var dependencies = new List<IDependency>
             {
@@ -353,7 +353,7 @@ Caption=DependencyExisting, FilePath=tfm1\yyy\dependencyExisting, IconHash=32524
     ""Resolved"":""true""
 }", icon: KnownMonikers.Uninstall,
     expandedIcon: KnownMonikers.Uninstall,
-    flags: DependencyTreeFlags.SupportsRuleProperties);
+    flags: ProjectTreeFlagsEnum.SupportsRuleProperties);
 
             var dependencies = new List<IDependency>
             {
@@ -430,7 +430,7 @@ Caption=DependencyExisting, FilePath=tfm1\yyy\dependencyExisting, IconHash=32524
     ""Caption"":""someid"",
     ""Resolved"":""false"",
     ""Visible"":""false""
-}", flags: DependencyTreeFlags.ShowEmptyProviderRootNode);
+}", flags: ProjectTreeFlagsEnum.ShowEmptyProviderRootNode);
 
             var dependencies = new List<IDependency>
             {
@@ -610,7 +610,7 @@ Caption=YyyDependencyRoot, FilePath=YyyDependencyRoot, IconHash=0, ExpandedIconH
     ""Name"":""ZzzDependencyRoot"",
     ""Caption"":""ZzzDependencyRoot"",
     ""Resolved"":""true""
-}", flags: ProjectTreeFlags.Create(ProjectTreeFlags.Common.BubbleUp));
+}", flags: ProjectTreeFlagsEnum.BubbleUp);
             var dependencyAny1 = IDependencyFactory.FromJson(@"
 {
     ""ProviderType"": ""Zzz"",
@@ -793,7 +793,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
+                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree
@@ -872,7 +872,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
+                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree
@@ -957,7 +957,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
+                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree

@@ -90,7 +90,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
 
             var mockModel = IDependencyModelFactory.FromJson(
                 jsonModel,
-                flags: DependencyTreeFlags.DependencyFlags.Union(DependencyTreeFlags.GenericDependencyFlags),
+                flags: ProjectTreeFlagsEnum.DependencyFlags.Union(ProjectTreeFlagsEnum.GenericDependencyFlags),
                 icon: KnownMonikers.Path,
                 expandedIcon: KnownMonikers.PathIcon,
                 unresolvedIcon: KnownMonikers.PathListBox,
@@ -119,8 +119,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.True(dependency.Properties.ContainsKey("prop1"));
             Assert.True(dependency.DependencyIDs.Count == 1);
             Assert.Equal("Tfm1\\xxx\\otherid", dependency.DependencyIDs[0]);
-            Assert.True(dependency.Flags.Contains(DependencyTreeFlags.ResolvedFlags));
-            Assert.True(dependency.Flags.Contains(DependencyTreeFlags.DependencyFlags));
+            Assert.True(dependency.Flags.Contains(ProjectTreeFlagsEnum.ResolvedFlags));
+            Assert.True(dependency.Flags.Contains(ProjectTreeFlagsEnum.DependencyFlags));
         }
 
         [Theory]
@@ -209,12 +209,12 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             var newDependency = dependency.SetProperties(
                 caption: "newcaption",
                 resolved: true,
-                flags: DependencyTreeFlags.BaseReferenceFlags,
+                flags: ProjectTreeFlagsEnum.BaseReferenceFlags,
                 dependencyIDs: ImmutableList<string>.Empty.Add("aaa"));
 
             Assert.Equal("newcaption", newDependency.Caption);
             Assert.True(newDependency.Resolved);
-            Assert.True(newDependency.Flags.Equals(DependencyTreeFlags.BaseReferenceFlags));
+            Assert.True(newDependency.Flags.Equals(ProjectTreeFlagsEnum.BaseReferenceFlags));
             Assert.True(newDependency.DependencyIDs.Count == 1);
             Assert.Equal("aaa", newDependency.DependencyIDs[0]);
         }

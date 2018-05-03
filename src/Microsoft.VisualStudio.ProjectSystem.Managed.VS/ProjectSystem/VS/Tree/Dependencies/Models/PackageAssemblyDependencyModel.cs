@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
             string path,
             string originalItemSpec,
             string name,
-            ProjectTreeFlags flags,
+            ProjectTreeFlagsEnum flags,
             bool resolved,
             IImmutableDictionary<string, string> properties,
             IEnumerable<string> dependenciesIDs)

@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                 VSResources.AssembliesNodeName,
                 KnownMonikers.Reference,
                 KnownMonikers.ReferenceWarning,
-                DependencyTreeFlags.AssemblySubTreeRootNodeFlags);
+                ProjectTreeFlagsEnum.AssemblySubTreeRootNodeFlags);
         }
 
         protected override IDependencyModel CreateDependencyModel(
@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                 providerType,
                 path,
                 originalItemSpec,
-                DependencyTreeFlags.AssemblySubTreeNodeFlags,
+                ProjectTreeFlagsEnum.AssemblySubTreeNodeFlags,
                 resolved,
                 isImplicit,
                 properties);

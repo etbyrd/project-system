@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                 VSResources.SdkNodeName,
                 ManagedImageMonikers.Sdk,
                 ManagedImageMonikers.SdkWarning,
-                DependencyTreeFlags.SdkSubTreeRootNodeFlags);
+                ProjectTreeFlagsEnum.SdkSubTreeRootNodeFlags);
         }
 
         protected override IDependencyModel CreateDependencyModel(
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                 providerType,
                 path,
                 originalItemSpec,
-                DependencyTreeFlags.SdkSubTreeNodeFlags,
+                ProjectTreeFlagsEnum.SdkSubTreeNodeFlags,
                 resolved && !isImplicit,
                 isImplicit,
                 properties);

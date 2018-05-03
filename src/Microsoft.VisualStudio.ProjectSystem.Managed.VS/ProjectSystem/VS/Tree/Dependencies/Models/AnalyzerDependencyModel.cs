@@ -13,7 +13,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
             string providerType,
             string path,
             string originalItemSpec,
-            ProjectTreeFlags flags,
+            ProjectTreeFlagsEnum flags,
             bool resolved,
             bool isImplicit,
             IImmutableDictionary<string, string> properties)

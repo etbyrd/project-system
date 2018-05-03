@@ -118,16 +118,16 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot
                 dependencyIDs: dependencyIDs);
         }
 
-        public static ProjectTreeFlags GetResolvedFlags(this IDependency dependency)
+        public static ProjectTreeFlagsEnum GetResolvedFlags(this IDependency dependency)
         {
-            return dependency.Flags.Union(DependencyTreeFlags.ResolvedFlags)
-                                   .Except(DependencyTreeFlags.UnresolvedFlags);
+            return dependency.Flags.Union(ProjectTreeFlagsEnum.ResolvedFlags)
+                                   .Except(ProjectTreeFlagsEnum.UnresolvedFlags);
         }
 
-        public static ProjectTreeFlags GetUnresolvedFlags(this IDependency dependency)
+        public static ProjectTreeFlagsEnum GetUnresolvedFlags(this IDependency dependency)
         {
-            return dependency.Flags.Union(DependencyTreeFlags.UnresolvedFlags)
-                                   .Except(DependencyTreeFlags.ResolvedFlags);
+            return dependency.Flags.Union(ProjectTreeFlagsEnum.UnresolvedFlags)
+                                   .Except(ProjectTreeFlagsEnum.ResolvedFlags);
         }
     }
 }

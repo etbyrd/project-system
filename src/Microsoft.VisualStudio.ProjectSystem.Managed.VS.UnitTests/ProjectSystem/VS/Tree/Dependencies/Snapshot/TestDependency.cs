@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         public ImageMoniker UnresolvedExpandedIcon { get; set; }
         public IImmutableDictionary<string, string> Properties { get; set; }
         public IImmutableList<string> DependencyIDs { get; set; } = ImmutableList<string>.Empty;
-        public ProjectTreeFlags Flags { get; set; } = ProjectTreeFlags.Empty;
+        public ProjectTreeFlagsEnum Flags { get; set; } = ProjectTreeFlagsEnum.Empty;
         public string Id { get; set; }
         public string Alias { get; set; }
         public ITargetFramework TargetFramework { get; set; }
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         public IDependency SetProperties(
             string caption = null,
             bool? resolved = null,
-            ProjectTreeFlags? flags = null,
+            ProjectTreeFlagsEnum? flags = null,
             string schemaName = null,
             IImmutableList<string> dependencyIDs = null,
             ImageMoniker icon = default(ImageMoniker),

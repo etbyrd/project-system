@@ -41,7 +41,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot.Fil
                 return resultDependency;
             }
 
-            if (dependency.Flags.Contains(DependencyTreeFlags.SdkSubTreeNodeFlags))
+            if (dependency.Flags.Contains(ProjectTreeFlagsEnum.SdkSubTreeNodeFlags))
             {
                 // find package with the same name
                 string packageModelId = dependency.Name;
@@ -55,7 +55,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot.Fil
                         dependencyIDs: package.DependencyIDs);
                 }
             }
-            else if (dependency.Flags.Contains(DependencyTreeFlags.PackageNodeFlags) && dependency.Resolved)
+            else if (dependency.Flags.Contains(ProjectTreeFlagsEnum.PackageNodeFlags) && dependency.Resolved)
             {
                 // find sdk with the same name
                 string sdkModelId = dependency.Name;
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot.Fil
                 return dependency;
             }
 
-            if (dependency.Flags.Contains(DependencyTreeFlags.PackageNodeFlags))
+            if (dependency.Flags.Contains(ProjectTreeFlagsEnum.PackageNodeFlags))
             {
                 // find sdk with the same name and clean dependencyIDs
                 string sdkModelId = dependency.Name;

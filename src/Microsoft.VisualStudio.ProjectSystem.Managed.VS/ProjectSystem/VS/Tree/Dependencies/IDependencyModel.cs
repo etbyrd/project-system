@@ -105,7 +105,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         /// </summary>
         int Priority { get; }
 
-        ProjectTreeFlags Flags { get; }
+        ProjectTreeFlagsEnum Flags { get; }
 
         /// <summary>
         /// A list of properties that might be displayed in property pages

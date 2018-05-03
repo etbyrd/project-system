@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
             DiagnosticMessageSeverity severity,
             string code,
             string message,
-            ProjectTreeFlags flags,
+            ProjectTreeFlagsEnum flags,
             bool isVisible,
             IImmutableDictionary<string, string> properties)
             : base(providerType, originalItemSpec, originalItemSpec, flags, resolved: false, isImplicit: false, properties: properties)
@@ -34,18 +34,18 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
             Caption = $"{code.ToUpperInvariant()} {message}".TrimStart();
             TopLevel = false;
             Visible = isVisible;
-            Flags = Flags.Union(DependencyTreeFlags.DiagnosticNodeFlags);
+            Flags = Flags.Union(ProjectTreeFlagsEnum.DiagnosticNodeFlags);
 
             if (severity == DiagnosticMessageSeverity.Error)
             {
                 Icon = ManagedImageMonikers.ErrorSmall;
-                Flags = Flags.Union(DependencyTreeFlags.DiagnosticErrorNodeFlags);
+                Flags = Flags.Union(ProjectTreeFlagsEnum.DiagnosticErrorNodeFlags);
                 Priority = Dependency.DiagnosticsErrorNodePriority;
             }
             else
             {
                 Icon = ManagedImageMonikers.WarningSmall;
-                Flags = Flags.Union(DependencyTreeFlags.DiagnosticWarningNodeFlags);
+                Flags = Flags.Union(ProjectTreeFlagsEnum.DiagnosticWarningNodeFlags);
                 Priority = Dependency.DiagnosticsWarningNodePriority;
             }
 

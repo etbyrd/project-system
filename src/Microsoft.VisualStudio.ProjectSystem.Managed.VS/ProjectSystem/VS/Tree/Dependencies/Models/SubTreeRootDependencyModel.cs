@@ -11,17 +11,17 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
             string name,
             ImageMoniker icon,
             ImageMoniker unresolvedIcon,
-            ProjectTreeFlags flags)
+            ProjectTreeFlagsEnum flags)
             : base(providerType, name, name, flags, true, false, null)
         {
             Icon = icon;
             ExpandedIcon = Icon;
             UnresolvedIcon = unresolvedIcon;
             UnresolvedExpandedIcon = UnresolvedIcon;
-            Flags = flags.Union(DependencyTreeFlags.DependencyFlags)
-                         .Union(DependencyTreeFlags.SubTreeRootNodeFlags)
-                         .Except(DependencyTreeFlags.SupportsRuleProperties)
-                         .Except(DependencyTreeFlags.SupportsRemove);
+            Flags = flags.Union(ProjectTreeFlagsEnum.DependencyFlags)
+                         .Union(ProjectTreeFlagsEnum.SubTreeRootNodeFlags)
+                         .Except(ProjectTreeFlagsEnum.SupportsRuleProperties)
+                         .Except(ProjectTreeFlagsEnum.SupportsRemove);
         }
     }
 }

@@ -53,8 +53,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(ManagedImageMonikers.NuGetGreyWarning, model.UnresolvedIcon);
             Assert.Equal(ManagedImageMonikers.NuGetGreyWarning, model.UnresolvedExpandedIcon);
             AssertEx.CollectionLength(model.DependencyIDs, 2);
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.PackageNodeFlags));
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.SupportsHierarchy));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.PackageNodeFlags));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsHierarchy));
             Assert.True(model.Flags.Contains(flag));
         }
 
@@ -99,8 +99,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(ManagedImageMonikers.NuGetGreyWarning, model.UnresolvedIcon);
             Assert.Equal(ManagedImageMonikers.NuGetGreyWarning, model.UnresolvedExpandedIcon);
             AssertEx.CollectionLength(model.DependencyIDs, 2);
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.PackageNodeFlags));
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.SupportsHierarchy));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.PackageNodeFlags));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsHierarchy));
             Assert.True(model.Flags.Contains(flag));
         }
 
@@ -145,8 +145,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(ManagedImageMonikers.NuGetGreyWarning, model.UnresolvedIcon);
             Assert.Equal(ManagedImageMonikers.NuGetGreyWarning, model.UnresolvedExpandedIcon);
             AssertEx.CollectionLength(model.DependencyIDs, 2);
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.PackageNodeFlags));
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.SupportsHierarchy));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.PackageNodeFlags));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsHierarchy));
             Assert.True(model.Flags.Contains(flag));
         }
     }

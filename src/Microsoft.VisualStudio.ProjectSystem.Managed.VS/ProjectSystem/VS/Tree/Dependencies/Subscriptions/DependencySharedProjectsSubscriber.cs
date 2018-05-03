@@ -188,7 +188,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.CrossTarget
 
             IEnumerable<string> sharedFolderProjectPaths = sharedFolders.Value.Select(sf => sf.ProjectPath);
             var currentSharedImportNodes = targetedSnapshot.TopLevelDependencies
-                .Where(x => x.Flags.Contains(DependencyTreeFlags.SharedProjectFlags))
+                .Where(x => x.Flags.Contains(ProjectTreeFlagsEnum.SharedProjectFlags))
                 .ToList();
             IEnumerable<string> currentSharedImportNodePaths = currentSharedImportNodes.Select(x => x.Path);
 
@@ -227,7 +227,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.CrossTarget
                 ProjectRuleHandler.ProviderTypeString,
                 itemSpec,
                 itemSpec,
-                DependencyTreeFlags.ProjectNodeFlags,
+                ProjectTreeFlagsEnum.ProjectNodeFlags,
                 resolved,
                 false,
                 properties);

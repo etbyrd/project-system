@@ -102,7 +102,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                                                   targetViewModel,
                                                   rule: null,
                                                   isProjectItem: false,
-                                                  additionalFlags: ProjectTreeFlags.Create(ProjectTreeFlags.Common.BubbleUp));
+                                                  additionalFlags: ProjectTreeFlagsEnum.BubbleUp);
                         node = await BuildSubTreesAsync(node, snapshot.ActiveTarget, target.Value, target.Value.Catalogs, CleanupOldNodes).ConfigureAwait(false);
 
                         if (shouldAddTargetNode)
@@ -179,7 +179,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             {
                 if (!dependency.Visible)
                 {
-                    if (dependency.Flags.Contains(DependencyTreeFlags.ShowEmptyProviderRootNode))
+                    if (dependency.Flags.Contains(ProjectTreeFlagsEnum.ShowEmptyProviderRootNode))
                     {
                         // if provider sends special invisible node with flag ShowEmptyProviderRootNode, we 
                         // need to show provider node even if it does not have any dependencies.
@@ -206,10 +206,10 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 IProjectTree subTreeNode = rootNode.FindNodeByCaption(subTreeViewModel.Caption);
                 bool isNewSubTreeNode = subTreeNode == null;
 
-                ProjectTreeFlags excludedFlags = ProjectTreeFlags.Empty;
+                ProjectTreeFlagsEnum excludedFlags = ProjectTreeFlagsEnum.Empty;
                 if (targetedSnapshot.TargetFramework.Equals(TargetFramework.Any))
                 {
-                    excludedFlags = ProjectTreeFlags.Create(ProjectTreeFlags.Common.BubbleUp);
+                    excludedFlags = ProjectTreeFlagsEnum.BubbleUp;
                 }
 
                 subTreeNode = CreateOrUpdateNode(
@@ -260,7 +260,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 bool isNewDependencyNode = dependencyNode == null;
 
                 if (!isNewDependencyNode
-                    && dependency.Flags.Contains(DependencyTreeFlags.SupportsHierarchy))
+                    && dependency.Flags.Contains(ProjectTreeFlagsEnum.SupportsHierarchy))
                 {
                     if ((dependency.Resolved && dependencyNode.Flags.Contains(DependencyTreeFlags.UnresolvedFlags))
                         || (!dependency.Resolved && dependencyNode.Flags.Contains(DependencyTreeFlags.ResolvedFlags)))
@@ -316,11 +316,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ITargetedDependenciesSnapshot targetedSnapshot,
             IProjectCatalogSnapshot catalogs,
             bool isProjectItem,
-            ProjectTreeFlags? additionalFlags = null,
-            ProjectTreeFlags? excludedFlags = null)
+            ProjectTreeFlagsEnum? additionalFlags = null,
+            ProjectTreeFlagsEnum? excludedFlags = null)
         {
             IRule rule = null;
-            if (dependency.Flags.Contains(DependencyTreeFlags.SupportsRuleProperties))
+            if (dependency.Flags.Contains(ProjectTreeFlagsEnum.SupportsRuleProperties))
             {
                 rule = await TreeServices.GetRuleAsync(dependency, catalogs)
                                          .ConfigureAwait(false);
@@ -343,8 +343,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             IDependencyViewModel viewModel,
             IRule rule,
             bool isProjectItem,
-            ProjectTreeFlags? additionalFlags = null,
-            ProjectTreeFlags? excludedFlags = null)
+            ProjectTreeFlagsEnum? additionalFlags = null,
+            ProjectTreeFlagsEnum? excludedFlags = null)
         {
             return isProjectItem
                 ? CreateOrUpdateProjectItemTreeNode(node, viewModel, rule, additionalFlags, excludedFlags)
@@ -358,15 +358,15 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             IProjectTree node,
             IDependencyViewModel viewModel,
             IRule rule,
-            ProjectTreeFlags? additionalFlags = null,
-            ProjectTreeFlags? excludedFlags = null)
+            ProjectTreeFlagsEnum? additionalFlags = null,
+            ProjectTreeFlagsEnum? excludedFlags = null)
         {
             if (node == null)
             {
                 // For IProjectTree remove ProjectTreeFlags.Common.Reference flag, otherwise CPS would fail to 
                 // map this node to graph node and GraphProvider would be never called. 
                 // Only IProjectItemTree can have this flag
-                ProjectTreeFlags flags = FilterFlags(viewModel.Flags.Except(DependencyTreeFlags.BaseReferenceFlags),
+                ProjectTreeFlagsEnum flags = FilterFlags(viewModel.Flags.Except(ProjectTreeFlagsEnum.BaseReferenceFlags),
                                         additionalFlags,
                                         excludedFlags);
                 string filePath = (viewModel.OriginalModel != null && viewModel.OriginalModel.TopLevel && viewModel.OriginalModel.Resolved)
@@ -397,12 +397,12 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             IProjectTree node,
             IDependencyViewModel viewModel,
             IRule rule,
-            ProjectTreeFlags? additionalFlags = null,
-            ProjectTreeFlags? excludedFlags = null)
+            ProjectTreeFlagsEnum? additionalFlags = null,
+            ProjectTreeFlagsEnum? excludedFlags = null)
         {
             if (node == null)
             {
-                ProjectTreeFlags flags = FilterFlags(viewModel.Flags, additionalFlags, excludedFlags);
+                ProjectTreeFlagsEnum flags = FilterFlags(viewModel.Flags, additionalFlags, excludedFlags);
                 string filePath = (viewModel.OriginalModel != null && viewModel.OriginalModel.TopLevel && viewModel.OriginalModel.Resolved)
                                     ? viewModel.OriginalModel.GetTopLevelId()
                                     : viewModel.FilePath;
@@ -419,7 +419,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                     propertySheet: null,
                     visible: true,
                     browseObjectProperties: rule,
-                    flags: viewModel.Flags,
+                    flags: flags,
                     icon: viewModel.Icon.ToProjectSystemType(),
                     expandedIcon: viewModel.ExpandedIcon.ToProjectSystemType());
             }
@@ -440,7 +440,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             var updatedValues = new ReferencesProjectTreeCustomizablePropertyValues
             {
                 Caption = viewModel.Caption,
-                Flags = viewModel.Flags,
+                Flags = viewModel.Flags.ToProjectTreeFlags(),
                 Icon = viewModel.Icon.ToProjectSystemType(),
                 ExpandedIcon = viewModel.ExpandedIcon.ToProjectSystemType()
             };
@@ -454,19 +454,19 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                     expandedIcon: viewModel.ExpandedIcon.ToProjectSystemType());
         }
 
-        private static ProjectTreeFlags FilterFlags(
-            ProjectTreeFlags flags,
-            ProjectTreeFlags? additionalFlags,
-            ProjectTreeFlags? excludedFlags)
+        private static ProjectTreeFlagsEnum FilterFlags(
+            ProjectTreeFlagsEnum flags,
+            ProjectTreeFlagsEnum? additionalFlags,
+            ProjectTreeFlagsEnum? excludedFlags)
         {
             if (additionalFlags != null && additionalFlags.HasValue)
             {
-                flags = flags.Union(additionalFlags.Value);
+                flags = flags | additionalFlags.Value;
             }
 
             if (excludedFlags != null && excludedFlags.HasValue)
             {
-                flags = flags.Except(excludedFlags.Value);
+                flags = flags & ~excludedFlags.Value;
             }
 
             return flags;

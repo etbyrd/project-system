@@ -29,11 +29,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(KnownMonikers.AboutBox, model.ExpandedIcon);
             Assert.Equal(KnownMonikers.AbsolutePosition, model.UnresolvedIcon);
             Assert.Equal(KnownMonikers.AbsolutePosition, model.UnresolvedExpandedIcon);
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.DependencyFlags
-                                                .Except(DependencyTreeFlags.SupportsRuleProperties)
-                                                .Except(DependencyTreeFlags.SupportsRemove)));
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.SubTreeRootNodeFlags));
-            Assert.False(model.Flags.Contains(DependencyTreeFlags.SupportsRuleProperties));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.DependencyFlags
+                                                .Except(ProjectTreeFlagsEnum.SupportsRuleProperties)
+                                                .Except(ProjectTreeFlagsEnum.SupportsRemove)));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SubTreeRootNodeFlags));
+            Assert.False(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsRuleProperties));
             Assert.True(model.Flags.Contains(flag));
         }
     }

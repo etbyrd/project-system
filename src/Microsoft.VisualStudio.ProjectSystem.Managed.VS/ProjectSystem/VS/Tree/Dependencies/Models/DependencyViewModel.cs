@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Models
         public ImageMoniker Icon { get; set; }
         public ImageMoniker ExpandedIcon { get; set; }
         public IImmutableDictionary<string, string> Properties { get; set; }
-        public ProjectTreeFlags Flags { get; set; }
+        public ProjectTreeFlagsEnum Flags { get; set; }
         public IDependency OriginalModel { get; set; }
     }
 }

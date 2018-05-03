@@ -17,12 +17,12 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             Assert.Throws<ArgumentNullException>("providerType", () =>
             {
-                new DependencyModel(null, null, "", ProjectTreeFlags.Empty, false, false, null);
+                new DependencyModel(null, null, "", ProjectTreeFlagsEnum.Empty, false, false, null);
             });
 
             Assert.Throws<ArgumentNullException>("path", () =>
             {
-                new DependencyModel("sometype", null, "", ProjectTreeFlags.Empty, false, false, null);
+                new DependencyModel("sometype", null, "", ProjectTreeFlagsEnum.Empty, false, false, null);
             });
         }
 
@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "somProvider",
                 path: "somePath",
                 originalItemSpec: "SomeItemSpec",
-                flags: ProjectTreeFlags.HiddenProjectItem,
+                flags: ProjectTreeFlagsEnum.HiddenProjectItem,
                 resolved: false,
                 isImplicit: false,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("someProp1", "someVal1"),
@@ -59,8 +59,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal("somProvider", model.ProviderType);
             Assert.Equal("somePath", model.Path);
             Assert.Equal("SomeItemSpec", model.OriginalItemSpec);
-            Assert.True(model.Flags.Contains(ProjectTreeFlags.HiddenProjectItem));
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.GenericUnresolvedDependencyFlags));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.HiddenProjectItem));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.GenericUnresolvedDependencyFlags));
             Assert.False(model.Resolved);
             Assert.False(model.Implicit);
             Assert.Single(model.Properties);
@@ -73,7 +73,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "somProvider",
                 path: "somePath",
                 originalItemSpec: "SomeItemSpec",
-                flags: ProjectTreeFlags.HiddenProjectItem,
+                flags: ProjectTreeFlagsEnum.HiddenProjectItem,
                 resolved: true,
                 isImplicit: false,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("someProp1", "someVal1"),
@@ -83,8 +83,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal("somProvider", model.ProviderType);
             Assert.Equal("somePath", model.Path);
             Assert.Equal("SomeItemSpec", model.OriginalItemSpec);
-            Assert.True(model.Flags.Contains(ProjectTreeFlags.HiddenProjectItem));
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.GenericResolvedDependencyFlags));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.HiddenProjectItem));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.GenericResolvedDependencyFlags));
             Assert.True(model.Resolved);
             Assert.False(model.Implicit);
             Assert.Single(model.Properties);
@@ -107,9 +107,9 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal("somProvider", model.ProviderType);
             Assert.Equal("somePath", model.Path);
             Assert.Equal("SomeItemSpec", model.OriginalItemSpec);
-            Assert.True(model.Flags.Contains(ProjectTreeFlags.HiddenProjectItem));
-            Assert.True(model.Flags.Contains(DependencyTreeFlags.GenericResolvedDependencyFlags.Except(DependencyTreeFlags.SupportsRemove)));
-            Assert.False(model.Flags.Contains(DependencyTreeFlags.SupportsRemove));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.HiddenProjectItem));
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.GenericResolvedDependencyFlags.Except(ProjectTreeFlagsEnum.SupportsRemove)));
+            Assert.False(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsRemove));
             Assert.True(model.Resolved);
             Assert.True(model.Implicit);
             Assert.Single(model.Properties);
@@ -162,7 +162,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "someProvider",
                 path: "somePath",
                 originalItemSpec: "someItemSpec",
-                flags: ProjectTreeFlags.Empty,
+                flags: ProjectTreeFlagsEnum.Empty,
                 resolved: true,
                 isImplicit: false,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("Visible", "true"));
@@ -206,7 +206,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 string providerType,
                 string path,
                 string originalItemSpec,
-                ProjectTreeFlags flags,
+                ProjectTreeFlagsEnum flags,
                 bool resolved,
                 bool isImplicit,
                 IImmutableDictionary<string, string> properties,

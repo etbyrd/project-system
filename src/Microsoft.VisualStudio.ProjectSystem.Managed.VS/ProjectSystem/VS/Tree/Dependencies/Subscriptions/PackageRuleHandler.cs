@@ -178,7 +178,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                         itemSpec,
                         originalItemSpec,
                         metadata.Name,
-                        DependencyTreeFlags.NuGetSubTreeNodeFlags,
+                        ProjectTreeFlagsEnum.NuGetSubTreeNodeFlags,
                         metadata.Version,
                         resolved,
                         metadata.IsImplicitlyDefined,
@@ -194,7 +194,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                         itemSpec,
                         originalItemSpec,
                         metadata.Name,
-                        DependencyTreeFlags.NuGetSubTreeNodeFlags,
+                        ProjectTreeFlagsEnum.NuGetSubTreeNodeFlags,
                         resolved,
                         properties,
                         metadata.DependenciesItemSpecs);
@@ -205,7 +205,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                         itemSpec,
                         originalItemSpec,
                         metadata.Name,
-                        DependencyTreeFlags.NuGetSubTreeNodeFlags,
+                        ProjectTreeFlagsEnum.NuGetSubTreeNodeFlags,
                         resolved,
                         properties,
                         metadata.DependenciesItemSpecs);
@@ -217,7 +217,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                         metadata.Severity,
                         metadata.DiagnosticCode,
                         metadata.Name,
-                        DependencyTreeFlags.NuGetSubTreeNodeFlags,
+                        ProjectTreeFlagsEnum.NuGetSubTreeNodeFlags,
                         isVisible: true,
                         properties: properties);
                     break;
@@ -227,7 +227,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                         itemSpec,
                         originalItemSpec,
                         metadata.Name,
-                        DependencyTreeFlags.NuGetSubTreeNodeFlags,
+                        ProjectTreeFlagsEnum.NuGetSubTreeNodeFlags,
                         resolved,
                         properties,
                         metadata.DependenciesItemSpecs);
@@ -244,7 +244,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                 VSResources.NuGetPackagesNodeName,
                 ManagedImageMonikers.NuGetGrey,
                 ManagedImageMonikers.NuGetGreyWarning,
-                DependencyTreeFlags.NuGetSubTreeRootNodeFlags);
+                ProjectTreeFlagsEnum.NuGetSubTreeRootNodeFlags);
         }
 
         private static PackageDependencyMetadata CreateUnresolvedMetadata(string itemSpec,

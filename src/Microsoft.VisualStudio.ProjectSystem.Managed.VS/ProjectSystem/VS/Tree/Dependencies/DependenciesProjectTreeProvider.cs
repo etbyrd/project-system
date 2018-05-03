@@ -545,7 +545,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ProjectImageMoniker icon = null,
             ProjectImageMoniker expandedIcon = null,
             bool visible = true,
-            ProjectTreeFlags? flags = default(ProjectTreeFlags?))
+            ProjectTreeFlagsEnum? flags = null)
         {
             // Note that all the parameters are specified so we can force this call to an
             // overload of NewTree available prior to 15.5 versions of CPS. Once a 15.5 build
@@ -559,7 +559,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 icon: icon,
                 expandedIcon: expandedIcon,
                 visible: visible,
-                flags: flags,
+                flags: flags.ToProjectTreeFlags(),
                 isLinked: false);
         }
 
@@ -570,7 +570,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ProjectImageMoniker icon = null,
             ProjectImageMoniker expandedIcon = null,
             bool visible = true,
-            ProjectTreeFlags? flags = default(ProjectTreeFlags?))
+            ProjectTreeFlagsEnum? flags = null)
         {
             return NewTree(
                 caption: caption,
@@ -579,7 +579,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 icon: icon,
                 expandedIcon: expandedIcon,
                 visible: visible,
-                flags: flags);
+                flags: flags.ToProjectTreeFlags());
         }
 
         public async Task<IRule> GetRuleAsync(IDependency dependency, IProjectCatalogSnapshot catalogs)

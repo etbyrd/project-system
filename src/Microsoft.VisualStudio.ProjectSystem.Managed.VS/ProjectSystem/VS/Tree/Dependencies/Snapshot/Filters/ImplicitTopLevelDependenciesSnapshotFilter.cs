@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot.Fil
             if (!resultDependency.TopLevel
                 || resultDependency.Implicit
                 || !resultDependency.Resolved
-                || !resultDependency.Flags.Contains(DependencyTreeFlags.GenericDependencyFlags))
+                || !resultDependency.Flags.Contains(ProjectTreeFlagsEnum.GenericDependencyFlags))
             {
                 return resultDependency;
             }

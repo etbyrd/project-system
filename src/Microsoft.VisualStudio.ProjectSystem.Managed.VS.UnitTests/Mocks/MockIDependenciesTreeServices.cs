@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS
             ProjectImageMoniker icon = null,
             ProjectImageMoniker expandedIcon = null,
             bool visible = true,
-            ProjectTreeFlags? flags = default(ProjectTreeFlags?))
+            ProjectTreeFlagsEnum? flags = null)
         {
             return new TestProjectTree()
             {
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS
                 Icon = icon,
                 ExpandedIcon = expandedIcon,
                 Visible = visible,
-                Flags = flags.Value,
+                Flags = flags.Value.ToProjectTreeFlags(),
                 IsProjectItem = true
             };
         }
@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS
             ProjectImageMoniker icon = null,
             ProjectImageMoniker expandedIcon = null,
             bool visible = true,
-            ProjectTreeFlags? flags = default(ProjectTreeFlags?))
+            ProjectTreeFlagsEnum? flags = null)
         {
             return new TestProjectTree()
             {
@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS
                 Icon = icon,
                 ExpandedIcon = expandedIcon,
                 Visible = visible,
-                Flags = flags.Value,
+                Flags = flags.Value.ToProjectTreeFlags(),
                 IsProjectItem = false
             };
         }

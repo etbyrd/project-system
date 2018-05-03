@@ -49,11 +49,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
 
             var mockTargetFramework = ITargetFrameworkFactory.Implement(moniker: "tfm");
 
-            var flags = DependencyTreeFlags.SdkSubTreeNodeFlags
-                               .Union(DependencyTreeFlags.ResolvedFlags)
-                                .Except(DependencyTreeFlags.UnresolvedFlags);
+            var flags = ProjectTreeFlagsEnum.SdkSubTreeNodeFlags
+                               .Union(ProjectTreeFlagsEnum.ResolvedFlags)
+                                .Except(ProjectTreeFlagsEnum.UnresolvedFlags);
             var sdkDependency = IDependencyFactory.Implement(
-                flags: DependencyTreeFlags.SdkSubTreeNodeFlags,
+                flags: ProjectTreeFlagsEnum.SdkSubTreeNodeFlags,
                 id: "mydependency1id",
                 name: "mydependency1",
                 topLevel: true,
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             var mockTargetFramework = ITargetFrameworkFactory.Implement(moniker: "tfm");
 
             var dependency = IDependencyFactory.Implement(
-                flags: DependencyTreeFlags.SdkSubTreeNodeFlags,
+                flags: ProjectTreeFlagsEnum.SdkSubTreeNodeFlags,
                 id: "mydependency1id",
                 name: "mydependency1",
                 topLevel: true);
@@ -138,18 +138,18 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
 
             var dependency = IDependencyFactory.Implement(
                 id: "mydependency1id",
-                flags: DependencyTreeFlags.PackageNodeFlags,
+                flags: ProjectTreeFlagsEnum.PackageNodeFlags,
                 name: "mydependency1",
                 topLevel: true,
                 resolved: true,
                 dependencyIDs: dependencyIDs);
 
-            var flags = DependencyTreeFlags.PackageNodeFlags
-                                           .Union(DependencyTreeFlags.ResolvedFlags)
-                                           .Except(DependencyTreeFlags.UnresolvedFlags);
+            var flags = ProjectTreeFlagsEnum.PackageNodeFlags
+                                           .Union(ProjectTreeFlagsEnum.ResolvedFlags)
+                                           .Except(ProjectTreeFlagsEnum.UnresolvedFlags);
             var sdkDependency = IDependencyFactory.Implement(
                     id: $"tfm\\{SdkRuleHandler.ProviderTypeString}\\mydependency1",
-                    flags: DependencyTreeFlags.PackageNodeFlags.Union(DependencyTreeFlags.UnresolvedFlags), // to see if unresolved is fixed
+                    flags: ProjectTreeFlagsEnum.PackageNodeFlags.Union(ProjectTreeFlagsEnum.UnresolvedFlags), // to see if unresolved is fixed
                     setPropertiesResolved: true,
                     setPropertiesDependencyIDs: dependencyIDs,
                     setPropertiesFlags: flags,
@@ -190,17 +190,17 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
 
             var dependency = IDependencyFactory.Implement(
                 id: "mydependency1id",
-                flags: DependencyTreeFlags.PackageNodeFlags,
+                flags: ProjectTreeFlagsEnum.PackageNodeFlags,
                 name: "mydependency1",
                 topLevel: true,
                 resolved: true);
 
-            var flags = DependencyTreeFlags.SdkSubTreeNodeFlags
-                                           .Union(DependencyTreeFlags.UnresolvedFlags)
-                                           .Except(DependencyTreeFlags.ResolvedFlags);
+            var flags = ProjectTreeFlagsEnum.SdkSubTreeNodeFlags
+                                           .Union(ProjectTreeFlagsEnum.UnresolvedFlags)
+                                           .Except(ProjectTreeFlagsEnum.ResolvedFlags);
             var sdkDependency = IDependencyFactory.Implement(
                     id: $"tfm\\{SdkRuleHandler.ProviderTypeString}\\mydependency1",
-                    flags: DependencyTreeFlags.SdkSubTreeNodeFlags.Union(DependencyTreeFlags.ResolvedFlags), // to see if resolved is fixed
+                    flags: ProjectTreeFlagsEnum.SdkSubTreeNodeFlags.Union(ProjectTreeFlagsEnum.ResolvedFlags), // to see if resolved is fixed
                     setPropertiesDependencyIDs: dependencyIDs,
                     setPropertiesResolved: false,
                     setPropertiesSchemaName: SdkReference.SchemaName,

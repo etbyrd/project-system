@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                 VSResources.AnalyzersNodeName,
                 KnownMonikers.CodeInformation,
                 ManagedImageMonikers.CodeInformationWarning,
-                DependencyTreeFlags.AnalyzerSubTreeRootNodeFlags);
+                ProjectTreeFlagsEnum.AnalyzerSubTreeRootNodeFlags);
         }
 
         protected override IDependencyModel CreateDependencyModel(
@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Subscription
                 providerType,
                 path,
                 originalItemSpec,
-                DependencyTreeFlags.AnalyzerSubTreeNodeFlags,
+                ProjectTreeFlagsEnum.AnalyzerSubTreeNodeFlags,
                 resolved,
                 isImplicit,
                 properties);

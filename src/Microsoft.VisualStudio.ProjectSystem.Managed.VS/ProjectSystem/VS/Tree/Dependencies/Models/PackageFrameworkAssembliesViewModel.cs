@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Icon = RegularIcon;
             ExpandedIcon = Icon;
             Priority = Dependency.FrameworkAssemblyNodePriority;
-            Flags = DependencyTreeFlags.FrameworkAssembliesNodeFlags;
+            Flags = ProjectTreeFlagsEnum.FrameworkAssembliesNodeFlags;
         }
     }
 }

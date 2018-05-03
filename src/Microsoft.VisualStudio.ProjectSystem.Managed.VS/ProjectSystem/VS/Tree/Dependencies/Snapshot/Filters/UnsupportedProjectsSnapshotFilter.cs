@@ -47,8 +47,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies.Snapshot.Fil
 
             if (resultDependency.TopLevel
                 && resultDependency.Resolved
-                && resultDependency.Flags.Contains(DependencyTreeFlags.ProjectNodeFlags)
-                && !resultDependency.Flags.Contains(DependencyTreeFlags.SharedProjectFlags))
+                && resultDependency.Flags.Contains(ProjectTreeFlagsEnum.ProjectNodeFlags)
+                && !resultDependency.Flags.Contains(ProjectTreeFlagsEnum.SharedProjectFlags))
             {
                 ITargetedDependenciesSnapshot snapshot = GetSnapshot(projectPath, resultDependency);
                 if (snapshot != null && snapshot.HasUnresolvedDependency)
