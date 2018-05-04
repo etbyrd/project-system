@@ -13,7 +13,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         [Fact]
         public void SubTreeRootDependencyModelTest()
         {
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.Empty;
             var model = new SubTreeRootDependencyModel(
                 "myProvider",
                 "myRoot",

@@ -793,7 +793,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
+                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree
@@ -872,7 +872,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
+                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree
@@ -957,7 +957,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
+                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree

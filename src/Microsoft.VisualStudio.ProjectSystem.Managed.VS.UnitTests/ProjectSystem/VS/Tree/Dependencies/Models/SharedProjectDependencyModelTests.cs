@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.Empty;
             var model = new SharedProjectDependencyModel(
                 "myProvider",
                 "c:\\myPath.dll",
@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.Empty;
             var model = new SharedProjectDependencyModel(
                 "myProvider",
                 "c:\\myPath.dll",
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.Empty;
             var model = new SharedProjectDependencyModel(
                 "myProvider",
                 "c:\\myPath.dll",

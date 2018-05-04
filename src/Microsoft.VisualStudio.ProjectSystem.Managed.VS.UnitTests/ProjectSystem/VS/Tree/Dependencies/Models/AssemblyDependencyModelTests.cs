@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.UnresolvedFlags;
             var model = new AssemblyDependencyModel(
                 "myProvider",
                 "c:\\myPath",
@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add(ResolvedAssemblyReference.FusionNameProperty, "myAssembly.dll");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.UnresolvedFlags;
             var model = new AssemblyDependencyModel(
                 "myProvider",
                 "c:\\myPath",
@@ -82,7 +82,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.UnresolvedFlags;
             var model = new AssemblyDependencyModel(
                 "myProvider",
                 "c:\\myPath",
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.UnresolvedFlags;
             var model = new AssemblyDependencyModel(
                 "myProvider",
                 "c:\\myPath",
