@@ -45,7 +45,10 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         ProjectSubTreeRootNodeFlags = 2147483648,
         SdkSubTreeRootNodeFlags = 4294967296,
         HiddenProjectItem = 8589934592,
-        DependenciesRootNodeFlags = 17179869184,
+        DependenciesRootNode = 17179869184,
+        ReferencesFolder = ProjectTreeFlags.Common.ReferencesFolder,
+        VirtualFolder = ProjectTreeFlags.Common.VirtualFolder,
+        DependenciesRootNodeFlags = BubbleUp | ReferencesFolder | VirtualFolder | DependenciesRootNode,
     }
 
     internal static class ProjectTreeFlagsEnumExtension
@@ -75,7 +78,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         public static ProjectTreeFlags ToProjectTreeFlags(this ProjectTreeFlagsEnum source)
         {
             // TODO: Implement this
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            if (source.Contains(ProjectTreeFlagsEnum.BubbleUp)) {
+                return ProjectTreeFlags.BubbleUp;
+            } 
+            return ProjectTreeFlags.Empty;
         }
     }
 }
