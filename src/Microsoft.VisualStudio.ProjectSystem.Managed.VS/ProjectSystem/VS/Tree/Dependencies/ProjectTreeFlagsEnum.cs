@@ -8,7 +8,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
     {
         Empty = 0,
         // These values come from ProjectTreeFlags.Common, make sure the values match
-        FxAssemblyProjectFlags = 1,
+        //these should be hex values 
+        FxAssemblyProjectFlags = 0x0001,
         ProjectNodeFlags = 2,
         ShowEmptyProviderRootNode = 4,
         SupportsHierarchy = 8,
