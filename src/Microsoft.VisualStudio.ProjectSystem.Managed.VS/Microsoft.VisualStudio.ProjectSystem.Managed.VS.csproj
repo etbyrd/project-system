@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PropertyPageResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="ProjectSystem\VS\PropertyPages\StatusCallout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProjectSystem\VS\PropertyPages\StatusCalloutDecorator.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ProjectSystem\VS\PropertyPages\WpfBasedPropertyPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     <Page Include="ProjectSystem\VS\PropertyPages\GetProfileNameDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProjectSystem\VS\PropertyPages\StatusCallout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProjectSystem\VS\PropertyPages\StatusCalloutDecorator.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProjectSystem\VS\PropertyPages\WatermarkStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -221,6 +233,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="**\*.xlf" />
+    <None Remove="ProjectSystem\VS\PropertyPages\StatusCallout.xaml" />
+    <None Remove="ProjectSystem\VS\PropertyPages\StatusCalloutDecorator.xaml" />
     <EmbeddedResource Update="ProjectSystem\VS\PropertyPages\PropertyPageResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PropertyPageResources.Designer.cs</LastGenOutput>

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Microsoft.VisualStudio.ProjectSystem.Managed.VS": {
+      "commandName": "Project"
+    }
+  }
+}
