@@ -14,7 +14,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
         private Color _highlightedTextColor;
 
         //SystemColorHighlightColor Selected Text(background)  Highlight	#FF3399FF
-        private Brush _highlightedColor;
+        private SolidColorBrush _highlightedColor;
 
         internal PropPageSettings()
         {
@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
             }
         }
 
-        public Brush HighlightedColor
+        public SolidColorBrush HighlightedColor
         {
             get
             {
@@ -84,19 +84,18 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
                 //This will work, so we know the bindining is working correctly
                 //HighlightedColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("ff1aeb"));
 
-                HighlightedColor = Application.Current.Resources[EnvironmentColors.SystemHighlightBrushKey] as Brush;
-
-                //NO, this needs to be a brush
-                //HighlightedColor = (SolidColorBrush)(new BrushConverter().ConvertFrom(SystemColors.HighlightColor));
-
-
-
+                //Works, with the correct color, but WPF sets the opacity to .4 and changing that reveals that WPF
+                //Draws the brush over the text, meaning it will just be a solid block
+                var correctBrush = Application.Current.Resources[EnvironmentColors.SystemHighlightBrushKey] as SolidColorBrush;
+                Color colorOfBrush = correctBrush.Color;
+                HighlightedColor = new SolidColorBrush(colorOfBrush);
+               
                 HighlightedTextColor = VsColors.GetThemedWPFColor(vsShell, EnvironmentColors.SystemHighlightTextColorKey);
     
             }
             else // Fall back to some reasonable defaults (these are the current colors for the Light theme)
             {
-                //TODO THE COLORS FOR THE LIGHT THEME
+                //TODO 
             }
         }
     }
