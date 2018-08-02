@@ -1,12 +1,26 @@
 ﻿// Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
 {
     internal class PropertyPageControl : UserControl
     {
+        public static readonly DependencyProperty SettingsProperty = DependencyProperty.Register(
+           name: nameof(Settings),
+           propertyType: typeof(PropPageSettings),
+           ownerType: typeof(PropertyPageControl),
+           typeMetadata: new FrameworkPropertyMetadata(
+               defaultValue: new PropPageSettings(),
+               flags: FrameworkPropertyMetadataOptions.Inherits,
+               propertyChangedCallback: null,
+               coerceValueCallback: null
+           ),
+           validateValueCallback: null
+        );
+
         private bool _isDirty;
         private bool _ignoreEvents;
 
@@ -15,6 +29,18 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
         }
 
         public event EventHandler StatusChanged;
+
+        public PropPageSettings Settings
+        {
+            get
+            {
+                return (PropPageSettings)GetValue(SettingsProperty);
+            }
+            set
+            {
+                SetValue(SettingsProperty, value);
+            }
+        }
 
         public PropertyPageViewModel ViewModel
         {

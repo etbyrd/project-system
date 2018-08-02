@@ -18,6 +18,19 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
 
         public string ProfileName { get; set; }
 
+        public static readonly DependencyProperty SettingsProperty = DependencyProperty.Register(
+            name: nameof(Settings),
+            propertyType: typeof(PropPageSettings),
+            ownerType: typeof(GetProfileNameDialog),
+            typeMetadata: new FrameworkPropertyMetadata(
+                defaultValue: new PropPageSettings(),
+                flags: FrameworkPropertyMetadataOptions.Inherits,
+                propertyChangedCallback: null,
+                coerceValueCallback: null
+            ),
+            validateValueCallback: null
+        );
+
         public GetProfileNameDialog(SVsServiceProvider sp, IProjectThreadingService threadingService, string suggestedName, Predicate<string> validator)
             : base()// Pass help topic to base if there is one
         {
@@ -27,6 +40,17 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
             _validator = validator;
             _serviceProvider = sp;
             _threadingService = threadingService;
+        }
+        public PropPageSettings Settings
+        {
+            get
+            {
+                return (PropPageSettings)GetValue(SettingsProperty);
+            }
+            set
+            {
+                SetValue(SettingsProperty, value);
+            }
         }
 
         //------------------------------------------------------------------------------
