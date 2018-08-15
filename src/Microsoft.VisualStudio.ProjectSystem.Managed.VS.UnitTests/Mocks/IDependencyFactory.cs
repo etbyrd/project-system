@@ -145,7 +145,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS
 
         public static IDependency FromJson(
             string jsonString,
-            ProjectTreeFlags? flags = null,
+            ProjectTreeFlagsEnum? flags = null,
             ImageMoniker? icon = null,
             ImageMoniker? expandedIcon = null,
             ImageMoniker? unresolvedIcon = null,

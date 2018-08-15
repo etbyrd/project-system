@@ -412,7 +412,7 @@ Caption=DependencyExisting, FilePath=tfm1\yyy\dependencyExisting, IconHash=32524
         }
 
         [Fact]
-        public async Task WheEmptySnapshotAndVisibilityMarkerProvided_ShouldDisplaySubTreeRoot()
+        public async Task WhenEmptySnapshotAndVisibilityMarkerProvided_ShouldDisplaySubTreeRoot()
         {
             var dependencyRootYyy = IDependencyFactory.FromJson(@"
 {
@@ -480,7 +480,7 @@ Caption=YyyDependencyRoot, FilePath=YyyDependencyRoot, IconHash=0, ExpandedIconH
         }
 
         [Fact]
-        public async Task WheEmptySnapshotAndVisibilityMarkerNotProvided_ShouldHideSubTreeRoot()
+        public async Task WhenEmptySnapshotAndVisibilityMarkerNotProvided_ShouldHideSubTreeRoot()
         {
             var dependencyRootYyy = IDependencyFactory.FromJson(@"
 {
@@ -691,7 +691,7 @@ Caption=YyyDependencyRoot, FilePath=YyyDependencyRoot, IconHash=0, ExpandedIconH
                 { tfmAny, dependenciesAny }
             };
 
-            var project = UnconfiguredProjectFactory.Create(filePath: @"c:\somefodler\someproject.csproj");
+            var project = UnconfiguredProjectFactory.Create(filePath: @"c:\somefolder\someproject.csproj");
             var commonServices = IUnconfiguredProjectCommonServicesFactory.Create(project: project);
 
             var provider = new GroupedByTargetTreeViewProvider(
@@ -793,7 +793,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
+                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree
@@ -872,7 +872,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
+                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree
@@ -957,7 +957,7 @@ Caption=Dependency1, FilePath=tfm1\Xxx\dependencyxxxpath, IconHash=325249260, Ex
             {
                 Caption = "MyDependencies",
                 FilePath = "",
-                Flags = ProjectTreeFlagsEnum.DependenciesRootNodeFlags
+                Flags = DependencyTreeFlags.DependenciesRootNodeFlags
             };
 
             var level1Child1 = new TestProjectTree

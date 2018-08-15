@@ -47,6 +47,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         /// nodes and all custom nodes provided by third party IProjectDependenciesSubTreeProvider
         /// implementations. This is to have a way to distinguish dependency nodes in general.
         /// </summary>
+        /// 
+        
         public static readonly ProjectTreeFlags DependencyFlags
                 = ProjectTreeFlags.Create("Dependency")
                                   .Add(ProjectTreeFlags.Common.VirtualFolder.ToString())

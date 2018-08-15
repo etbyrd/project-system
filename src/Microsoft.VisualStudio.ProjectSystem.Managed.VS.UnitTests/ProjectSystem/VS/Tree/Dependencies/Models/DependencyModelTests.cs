@@ -33,7 +33,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "somProvider",
                 path: "somePath",
                 originalItemSpec: null,
-                flags: ProjectTreeFlags.Empty,
+                flags: ProjectTreeFlagsEnum.Empty,
                 resolved: false,
                 isImplicit: false,
                 properties: null);
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "somProvider",
                 path: "somePath",
                 originalItemSpec: "SomeItemSpec",
-                flags: ProjectTreeFlags.HiddenProjectItem,
+                flags: ProjectTreeFlagsEnum.HiddenProjectItem,
                 resolved: true,
                 isImplicit: true,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("someProp1", "someVal1"),
@@ -122,7 +122,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "somProvider",
                 path: "somePath",
                 originalItemSpec: "SomeItemSpec1",
-                flags: ProjectTreeFlags.HiddenProjectItem,
+                flags: ProjectTreeFlagsEnum.HiddenProjectItem,
                 resolved: true,
                 isImplicit: true,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("someProp1", "someVal1"),
@@ -132,17 +132,18 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "somProvider",
                 path: "somePath",
                 originalItemSpec: "SomeItemSpec1",
-                flags: ProjectTreeFlags.HiddenProjectItem,
+                flags: ProjectTreeFlagsEnum.HiddenProjectItem,
                 resolved: true,
                 isImplicit: true,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("someProp1", "someVal1"),
                 version: "versio1\\");
 
+
             var model3 = new TestableDependencyModel(
                 providerType: "somProvider",
                 path: "somePath",
                 originalItemSpec: "SomeItemSpec2",
-                flags: ProjectTreeFlags.HiddenProjectItem,
+                flags: ProjectTreeFlagsEnum.HiddenProjectItem,
                 resolved: true,
                 isImplicit: true,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("someProp1", "someVal1"),
@@ -177,7 +178,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "someProvider",
                 path: "somePath",
                 originalItemSpec: "someItemSpec",
-                flags: ProjectTreeFlags.Empty,
+                flags: ProjectTreeFlagsEnum.Empty,
                 resolved: true,
                 isImplicit: false,
                 properties: ImmutableStringDictionary<string>.EmptyOrdinal.Add("Visible", "false"));
@@ -192,7 +193,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
                 providerType: "someProvider",
                 path: "somePath",
                 originalItemSpec: "someItemSpec",
-                flags: ProjectTreeFlags.Empty,
+                flags: ProjectTreeFlagsEnum.Empty,
                 resolved: true,
                 isImplicit: false,
                 properties: null);

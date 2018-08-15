@@ -11,14 +11,14 @@ using Xunit;
 namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
 {
     [Trait("UnitTest", "ProjectSystem")]
-    public class SharedSharedProjectDependencyModelTests
+    public class SharedProjectDependencyModelTests
     {
         [Fact]
         public void SharedResolved()
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.Empty;
             var model = new SharedProjectDependencyModel(
                 "myProvider",
                 "c:\\myPath.dll",
@@ -52,16 +52,24 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            //This was previously ProjectTreeFlags.Create("MyCustomFlag")
+            // Question: Do we need to support custom flags? 
+
+            //var flag = ProjectTreeFlagsEnum.Empty;
             var model = new SharedProjectDependencyModel(
                 "myProvider",
                 "c:\\myPath.dll",
                 "myOriginalItemSpec",
-                flags: flag,
+                flags: ProjectTreeFlagsEnum.Empty,
                 resolved: false,
                 isImplicit: false,
                 properties: properties);
 
+            // the last tests were:
+            // "VirtualFolder BubbleUp Unresolved MyCustomFlag GenericDependency BrokenReference 
+            // Dependency SharedProjectDependency SupportsRemove SharedProjectImportReference Reference"
+            // but we only have GenericUnresolvedDependencyFlags and SharedProjectFlags
+            // that can't be right...
             Assert.Equal("myProvider", model.ProviderType);
             Assert.Equal("c:\\myPath.dll", model.Path);
             Assert.Equal("myOriginalItemSpec", model.OriginalItemSpec);
@@ -78,7 +86,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             Assert.Equal(ManagedImageMonikers.SharedProjectWarning, model.UnresolvedExpandedIcon);
             Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.SharedProjectFlags));
             Assert.False(model.Flags.Contains(ProjectTreeFlagsEnum.SupportsRuleProperties));
-            Assert.True(model.Flags.Contains(flag));
+            //is this really neccesary if we are starting from empty? x & 0 will always be 0
+            Assert.True(model.Flags.Contains(ProjectTreeFlagsEnum.Empty));
         }
 
         [Fact]
@@ -86,7 +95,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         {
             var properties = ImmutableStringDictionary<string>.EmptyOrdinal.Add("myProp", "myVal");
 
-            var flag = ProjectTreeFlags.Create("MyCustomFlag");
+            var flag = ProjectTreeFlagsEnum.Empty;
             var model = new SharedProjectDependencyModel(
                 "myProvider",
                 "c:\\myPath.dll",
