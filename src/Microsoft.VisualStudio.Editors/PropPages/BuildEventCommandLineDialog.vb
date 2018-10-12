@@ -180,6 +180,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             overarchingTableLayoutPanel.RowStyles.Item(1).SizeType = SizeType.Percent
             Height = Height + MacrosPanel.Height
 
+            HideMacrosButton.Focus()
+
             '// Show the Insert button
             SetInsertButtonState(True)
             Return True
