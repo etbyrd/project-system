@@ -167,11 +167,6 @@
         <target state="translated">Il pacchetto richiede l'accettazione della licenza</target>
         <note />
       </trans-unit>
-      <trans-unit id="StringProperty|PackageLicenseUrl|DisplayName">
-        <source>Package License Url</source>
-        <target state="translated">URL della licenza del pacchetto</target>
-        <note />
-      </trans-unit>
       <trans-unit id="StringProperty|PackageProjectUrl|DisplayName">
         <source>Package Project Url</source>
         <target state="translated">URL del progetto del pacchetto</target>
@@ -265,6 +260,11 @@
       <trans-unit id="BoolProperty|AutoGenerateBindingRedirects|DisplayName">
         <source>Auto-Generate Binding Redirects</source>
         <target state="translated">Genera automaticamente reindirizzamenti di binding</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="StringProperty|PackageLicenseExpression|DisplayName">
+        <source>Package License Url</source>
+        <target state="new">Package License Url</target>
         <note />
       </trans-unit>
     </body>

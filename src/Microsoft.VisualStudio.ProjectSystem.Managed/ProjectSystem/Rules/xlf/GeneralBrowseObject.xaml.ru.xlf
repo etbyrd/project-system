@@ -167,11 +167,6 @@
         <target state="translated">Для пакета требуется прием условий лицензионного соглашения.</target>
         <note />
       </trans-unit>
-      <trans-unit id="StringProperty|PackageLicenseUrl|DisplayName">
-        <source>Package License Url</source>
-        <target state="translated">URL-адрес лицензии пакета</target>
-        <note />
-      </trans-unit>
       <trans-unit id="StringProperty|PackageProjectUrl|DisplayName">
         <source>Package Project Url</source>
         <target state="translated">URL-адрес проекта пакета</target>
@@ -265,6 +260,11 @@
       <trans-unit id="BoolProperty|AutoGenerateBindingRedirects|DisplayName">
         <source>Auto-Generate Binding Redirects</source>
         <target state="translated">Автоматически создавать перенаправления привязок</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="StringProperty|PackageLicenseExpression|DisplayName">
+        <source>Package License Url</source>
+        <target state="new">Package License Url</target>
         <note />
       </trans-unit>
     </body>

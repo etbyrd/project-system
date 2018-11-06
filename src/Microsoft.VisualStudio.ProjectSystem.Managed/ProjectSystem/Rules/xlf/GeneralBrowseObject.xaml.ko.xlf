@@ -167,11 +167,6 @@
         <target state="translated">패키지에 라이선스 승인 필요</target>
         <note />
       </trans-unit>
-      <trans-unit id="StringProperty|PackageLicenseUrl|DisplayName">
-        <source>Package License Url</source>
-        <target state="translated">패키지 라이선스 URL</target>
-        <note />
-      </trans-unit>
       <trans-unit id="StringProperty|PackageProjectUrl|DisplayName">
         <source>Package Project Url</source>
         <target state="translated">패키지 프로젝트 URL</target>
@@ -265,6 +260,11 @@
       <trans-unit id="BoolProperty|AutoGenerateBindingRedirects|DisplayName">
         <source>Auto-Generate Binding Redirects</source>
         <target state="translated">바인딩 리디렉션 자동 생성</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="StringProperty|PackageLicenseExpression|DisplayName">
+        <source>Package License Url</source>
+        <target state="new">Package License Url</target>
         <note />
       </trans-unit>
     </body>
