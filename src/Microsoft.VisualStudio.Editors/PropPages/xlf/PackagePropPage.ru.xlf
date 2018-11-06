@@ -28,8 +28,8 @@
         <note />
       </trans-unit>
       <trans-unit id="PackageLicenseUrlLabel.Text">
-        <source>&amp;License URL:</source>
-        <target state="translated">URL-адрес &amp;лицензии:</target>
+        <source>&amp;License:</source>
+        <target state="needs-review-translation">URL-адрес &amp;лицензии:</target>
         <note />
       </trans-unit>
       <trans-unit id="PackageTagsLabel.Text">

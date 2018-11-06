@@ -167,11 +167,6 @@
         <target state="translated">包需要许可证接受</target>
         <note />
       </trans-unit>
-      <trans-unit id="StringProperty|PackageLicenseUrl|DisplayName">
-        <source>Package License Url</source>
-        <target state="translated">包许可证 URL</target>
-        <note />
-      </trans-unit>
       <trans-unit id="StringProperty|PackageProjectUrl|DisplayName">
         <source>Package Project Url</source>
         <target state="translated">包项目 URL</target>
@@ -265,6 +260,11 @@
       <trans-unit id="BoolProperty|AutoGenerateBindingRedirects|DisplayName">
         <source>Auto-Generate Binding Redirects</source>
         <target state="translated">自动生成绑定重定向</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="StringProperty|PackageLicenseExpression|DisplayName">
+        <source>Package License Expression</source>
+        <target state="new">Package License Expression</target>
         <note />
       </trans-unit>
     </body>
