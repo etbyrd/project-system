@@ -50,7 +50,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.FileVersionBuildTextBox = New System.Windows.Forms.TextBox()
             Me.FileVersionMinorTextBox = New System.Windows.Forms.TextBox()
             Me.FileVersionMajorTextBox = New System.Windows.Forms.TextBox()
-            Me.PackageLicenseExpression = New System.Windows.Forms.TextBox()
+
             Me.NeutralLanguageComboBox = New System.Windows.Forms.ComboBox()
             Me.PackageRequireLicenseAcceptance = New System.Windows.Forms.CheckBox()
             Me.PackageIdLabel = New System.Windows.Forms.Label()
@@ -62,8 +62,15 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.AssemblyCompany = New System.Windows.Forms.TextBox()
             Me.Product = New System.Windows.Forms.TextBox()
             Me.AssemblyFileVersionLabel = New System.Windows.Forms.Label()
-            Me.Win32ResourceFileBrowse = New System.Windows.Forms.Button()
+
             Me.LicenseLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+            Me.ExpressionLabel = New System.Windows.Forms.Label()
+            Me.PackageLicenseExpression = New System.Windows.Forms.TextBox()
+            Me.OrLabel = New System.Windows.Forms.Label()
+            Me.FileLabel = New System.Windows.Forms.Label()
+            Me.LicenseFileNameTextBox = New System.Windows.Forms.TextBox()
+            Me.Win32ResourceFileBrowse = New System.Windows.Forms.Button()
+
             Me.TableLayoutPanel.SuspendLayout()
             Me.AssemblyVersionLayoutPanel.SuspendLayout()
             Me.FileVersionLayoutPanel.SuspendLayout()
@@ -238,9 +245,44 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             'LicenseLayoutPanel
             '
             resources.ApplyResources(Me.LicenseLayoutPanel, "LicenseLayoutPanel")
-            Me.LicenseLayoutPanel.Controls.Add(Me.Win32ResourceFileBrowse, 1, 0)
-            Me.LicenseLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 0, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.Win32ResourceFileBrowse, 5, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.LicenseFileNameTextBox, 4, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.FileLabel, 3, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.OrLabel, 2, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 1, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.ExpressionLabel, 0, 0)
             Me.LicenseLayoutPanel.Name = "LicenseLayoutPanel"
+            '
+            'ExpressionLabel
+            '
+            resources.ApplyResources(Me.ExpressionLabel, "ExpressionLabel")
+            Me.ExpressionLabel.Name = "ExpressionLabel"
+            '
+            'PackageLicenseExpression
+            '
+            resources.ApplyResources(Me.PackageLicenseExpression, "PackageLicenseExpression")
+            Me.PackageLicenseExpression.Name = "PackageLicenseExpression"
+            '
+            'OrLabel
+            '
+            resources.ApplyResources(Me.OrLabel, "OrLabel")
+            Me.OrLabel.Name = "OrLabel"
+            '
+            'FileLabel
+            '
+            resources.ApplyResources(Me.FileLabel, "FileLabel")
+            Me.FileLabel.Name = "FileLabel"
+            '
+            'LicenseFileNameTextBox
+            '
+            resources.ApplyResources(Me.LicenseFileNameTextBox, "LicenseFileNameTextBox")
+            Me.LicenseFileNameTextBox.Name = "LicenseFileNameTextBox"
+            '
+            'Win32ResourceFileBrowse
+            '
+            resources.ApplyResources(Me.Win32ResourceFileBrowse, "Win32ResourceFileBrowse")
+            Me.Win32ResourceFileBrowse.Name = "Win32ResourceFileBrowse"
+
             '
             'AssemblyVersionRevisionTextBox
             '
@@ -290,11 +332,6 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             '
             resources.ApplyResources(Me.FileVersionMajorTextBox, "FileVersionMajorTextBox")
             Me.FileVersionMajorTextBox.Name = "FileVersionMajorTextBox"
-            '
-            'PackageLicenseExpression
-            '
-            resources.ApplyResources(Me.PackageLicenseExpression, "PackageLicenseExpression")
-            Me.PackageLicenseExpression.Name = "PackageLicenseExpression"
             '
             'NeutralLanguageComboBox
             '
@@ -353,11 +390,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             '
             resources.ApplyResources(Me.AssemblyFileVersionLabel, "AssemblyFileVersionLabel")
             Me.AssemblyFileVersionLabel.Name = "AssemblyFileVersionLabel"
-            '
-            'Win32ResourceFileBrowse
-            '
-            resources.ApplyResources(Me.Win32ResourceFileBrowse, "Win32ResourceFileBrowse")
-            Me.Win32ResourceFileBrowse.Name = "Win32ResourceFileBrowse"
+
             '
             'PackagePropPage
             '
@@ -392,7 +425,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents PackageIdLabel As Windows.Forms.Label
         Friend WithEvents PackageVersion As Windows.Forms.TextBox
         Friend WithEvents PackageVersionLabel As Windows.Forms.Label
-        Friend WithEvents PackageLicenseExpression As Windows.Forms.TextBox
+
         Friend WithEvents AuthorsLabel As Windows.Forms.Label
         Friend WithEvents PackageLicenseLabel As Windows.Forms.Label
         Friend WithEvents RepositoryUrl As Windows.Forms.TextBox
@@ -423,8 +456,15 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents FileVersionMinorTextBox As Windows.Forms.TextBox
         Friend WithEvents FileVersionMajorTextBox As Windows.Forms.TextBox
         Friend WithEvents AssemblyFileVersionLabel As Windows.Forms.Label
-        Friend WithEvents Win32ResourceFileBrowse As System.Windows.Forms.Button
+
         Friend WithEvents LicenseLayoutPanel As Windows.Forms.TableLayoutPanel
+        Friend WithEvents ExpressionLabel As Windows.Forms.Label
+        Friend WithEvents PackageLicenseExpression As Windows.Forms.TextBox
+        Friend WithEvents OrLabel As Windows.Forms.Label
+        Friend WithEvents FileLabel As Windows.Forms.Label
+        Friend WithEvents LicenseFileNameTextBox As Windows.Forms.TextBox
+        Friend WithEvents Win32ResourceFileBrowse As System.Windows.Forms.Button
+
     End Class
 
 End Namespace
