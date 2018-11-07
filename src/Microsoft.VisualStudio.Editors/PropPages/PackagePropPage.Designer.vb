@@ -63,10 +63,12 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.Product = New System.Windows.Forms.TextBox()
             Me.AssemblyFileVersionLabel = New System.Windows.Forms.Label()
             Me.Win32ResourceFileBrowse = New System.Windows.Forms.Button()
+            Me.LicenseLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
             Me.TableLayoutPanel.SuspendLayout()
             Me.AssemblyVersionLayoutPanel.SuspendLayout()
             Me.FileVersionLayoutPanel.SuspendLayout()
             Me.SuspendLayout()
+            Me.LicenseLayoutPanel.SuspendLayout()
             '
             'TableLayoutPanel
             '
@@ -81,7 +83,6 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.PackageProjectUrl, 1, 14)
             Me.TableLayoutPanel.Controls.Add(Me.PackageVersion, 1, 4)
             Me.TableLayoutPanel.Controls.Add(Me.PackageVersionLabel, 0, 4)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageLicenseLabel, 0, 13)
             Me.TableLayoutPanel.Controls.Add(Me.RepositoryUrl, 1, 16)
             Me.TableLayoutPanel.Controls.Add(Me.RepositoryType, 1, 17)
             Me.TableLayoutPanel.Controls.Add(Me.PackageTagsLabel, 0, 18)
@@ -95,8 +96,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.NeutralLanguageLabel, 0, 24)
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyVersionLayoutPanel, 1, 25)
             Me.TableLayoutPanel.Controls.Add(Me.FileVersionLayoutPanel, 1, 26)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 1, 13)
-            Me.TableLayoutPanel.Controls.Add(Me.Win32ResourceFileBrowse, 2, 13)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageLicenseLabel, 0, 13)
             Me.TableLayoutPanel.Controls.Add(Me.NeutralLanguageComboBox, 1, 24)
             Me.TableLayoutPanel.Controls.Add(Me.PackageRequireLicenseAcceptance, 0, 1)
             Me.TableLayoutPanel.Controls.Add(Me.PackageIdLabel, 0, 2)
@@ -108,8 +108,11 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyCompany, 1, 6)
             Me.TableLayoutPanel.Controls.Add(Me.Product, 1, 7)
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyFileVersionLabel, 0, 26)
+            Me.TableLayoutPanel.Controls.Add(Me.LicenseLayoutPanel, 1, 13)
             Me.TableLayoutPanel.ColumnCount = 3
             Me.TableLayoutPanel.Name = "TableLayoutPanel"
+
+
             '
             'AssemblyVersionLabel
             '
@@ -231,6 +234,13 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.AssemblyVersionLayoutPanel.Controls.Add(Me.AssemblyVersionMinorTextBox, 1, 0)
             Me.AssemblyVersionLayoutPanel.Controls.Add(Me.AssemblyVersionMajorTextBox, 0, 0)
             Me.AssemblyVersionLayoutPanel.Name = "AssemblyVersionLayoutPanel"
+            '
+            'LicenseLayoutPanel
+            '
+            resources.ApplyResources(Me.LicenseLayoutPanel, "LicenseLayoutPanel")
+            Me.LicenseLayoutPanel.Controls.Add(Me.Win32ResourceFileBrowse, 1, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 0, 0)
+            Me.LicenseLayoutPanel.Name = "LicenseLayoutPanel"
             '
             'AssemblyVersionRevisionTextBox
             '
@@ -359,6 +369,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.PerformLayout()
             Me.AssemblyVersionLayoutPanel.ResumeLayout(False)
             Me.AssemblyVersionLayoutPanel.PerformLayout()
+            Me.LicenseLayoutPanel.ResumeLayout(False)
+            Me.LicenseLayoutPanel.PerformLayout()
             Me.FileVersionLayoutPanel.ResumeLayout(False)
             Me.FileVersionLayoutPanel.PerformLayout()
             Me.ResumeLayout(False)
@@ -412,6 +424,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents FileVersionMajorTextBox As Windows.Forms.TextBox
         Friend WithEvents AssemblyFileVersionLabel As Windows.Forms.Label
         Friend WithEvents Win32ResourceFileBrowse As System.Windows.Forms.Button
+        Friend WithEvents LicenseLayoutPanel As Windows.Forms.TableLayoutPanel
     End Class
 
 End Namespace
