@@ -137,6 +137,11 @@
         <target state="new">&amp;License:</target>
         <note />
       </trans-unit>
+      <trans-unit id="Win32ResourceFileBrowse.Text">
+        <source>Browse...</source>
+        <target state="new">Browse...</target>
+        <note />
+      </trans-unit>
     </body>
   </file>
 </xliff>

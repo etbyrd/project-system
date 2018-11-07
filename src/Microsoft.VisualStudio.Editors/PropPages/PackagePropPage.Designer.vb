@@ -62,6 +62,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.AssemblyCompany = New System.Windows.Forms.TextBox()
             Me.Product = New System.Windows.Forms.TextBox()
             Me.AssemblyFileVersionLabel = New System.Windows.Forms.Label()
+            Me.Win32ResourceFileBrowse = New System.Windows.Forms.Button()
             Me.TableLayoutPanel.SuspendLayout()
             Me.AssemblyVersionLayoutPanel.SuspendLayout()
             Me.FileVersionLayoutPanel.SuspendLayout()
@@ -95,6 +96,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyVersionLayoutPanel, 1, 25)
             Me.TableLayoutPanel.Controls.Add(Me.FileVersionLayoutPanel, 1, 26)
             Me.TableLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 1, 13)
+            Me.TableLayoutPanel.Controls.Add(Me.Win32ResourceFileBrowse, 2, 13)
             Me.TableLayoutPanel.Controls.Add(Me.NeutralLanguageComboBox, 1, 24)
             Me.TableLayoutPanel.Controls.Add(Me.PackageRequireLicenseAcceptance, 0, 1)
             Me.TableLayoutPanel.Controls.Add(Me.PackageIdLabel, 0, 2)
@@ -106,6 +108,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyCompany, 1, 6)
             Me.TableLayoutPanel.Controls.Add(Me.Product, 1, 7)
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyFileVersionLabel, 0, 26)
+            Me.TableLayoutPanel.ColumnCount = 3
             Me.TableLayoutPanel.Name = "TableLayoutPanel"
             '
             'AssemblyVersionLabel
@@ -341,6 +344,11 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             resources.ApplyResources(Me.AssemblyFileVersionLabel, "AssemblyFileVersionLabel")
             Me.AssemblyFileVersionLabel.Name = "AssemblyFileVersionLabel"
             '
+            'Win32ResourceFileBrowse
+            '
+            resources.ApplyResources(Me.Win32ResourceFileBrowse, "Win32ResourceFileBrowse")
+            Me.Win32ResourceFileBrowse.Name = "Win32ResourceFileBrowse"
+            '
             'PackagePropPage
             '
             resources.ApplyResources(Me, "$this")
@@ -403,6 +411,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents FileVersionMinorTextBox As Windows.Forms.TextBox
         Friend WithEvents FileVersionMajorTextBox As Windows.Forms.TextBox
         Friend WithEvents AssemblyFileVersionLabel As Windows.Forms.Label
+        Friend WithEvents Win32ResourceFileBrowse As System.Windows.Forms.Button
     End Class
 
 End Namespace
