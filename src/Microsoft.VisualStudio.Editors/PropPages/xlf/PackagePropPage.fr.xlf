@@ -27,11 +27,6 @@
         <target state="translated">Version du pac&amp;kage :</target>
         <note />
       </trans-unit>
-      <trans-unit id="PackageLicenseUrlLabel.Text">
-        <source>&amp;License URL:</source>
-        <target state="translated">URL de &amp;licence :</target>
-        <note />
-      </trans-unit>
       <trans-unit id="PackageTagsLabel.Text">
         <source>&amp;Tags:</source>
         <target state="translated">Éti&amp;quettes :</target>
@@ -135,6 +130,11 @@
       <trans-unit id="AssemblyFileVersionLabel.Text">
         <source>Assembly &amp;file version:</source>
         <target state="translated">Version du &amp;fichier d'assembly :</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="PackageLicenseLabel.Text">
+        <source>&amp;License:</source>
+        <target state="new">&amp;License:</target>
         <note />
       </trans-unit>
     </body>

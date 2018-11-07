@@ -27,11 +27,6 @@
         <target state="translated">В&amp;ерсия пакета:</target>
         <note />
       </trans-unit>
-      <trans-unit id="PackageLicenseUrlLabel.Text">
-        <source>&amp;License URL:</source>
-        <target state="translated">URL-адрес &amp;лицензии:</target>
-        <note />
-      </trans-unit>
       <trans-unit id="PackageTagsLabel.Text">
         <source>&amp;Tags:</source>
         <target state="translated">&amp;Теги:</target>
@@ -135,6 +130,11 @@
       <trans-unit id="AssemblyFileVersionLabel.Text">
         <source>Assembly &amp;file version:</source>
         <target state="translated">Верс&amp;ия файла сборки:</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="PackageLicenseLabel.Text">
+        <source>&amp;License:</source>
+        <target state="new">&amp;License:</target>
         <note />
       </trans-unit>
     </body>

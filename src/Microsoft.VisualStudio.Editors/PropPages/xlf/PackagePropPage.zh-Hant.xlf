@@ -27,11 +27,6 @@
         <target state="translated">套件版本(&amp;V):</target>
         <note />
       </trans-unit>
-      <trans-unit id="PackageLicenseUrlLabel.Text">
-        <source>&amp;License URL:</source>
-        <target state="translated">授權 URL(&amp;L):</target>
-        <note />
-      </trans-unit>
       <trans-unit id="PackageTagsLabel.Text">
         <source>&amp;Tags:</source>
         <target state="translated">標記(&amp;T):</target>
@@ -135,6 +130,11 @@
       <trans-unit id="AssemblyFileVersionLabel.Text">
         <source>Assembly &amp;file version:</source>
         <target state="translated">組件檔版本(&amp;F):</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="PackageLicenseLabel.Text">
+        <source>&amp;License:</source>
+        <target state="new">&amp;License:</target>
         <note />
       </trans-unit>
     </body>

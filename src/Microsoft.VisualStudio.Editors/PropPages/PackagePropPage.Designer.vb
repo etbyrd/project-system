@@ -28,7 +28,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.PackageProjectUrl = New System.Windows.Forms.TextBox()
             Me.PackageVersion = New System.Windows.Forms.TextBox()
             Me.PackageVersionLabel = New System.Windows.Forms.Label()
-            Me.PackageLicenseUrlLabel = New System.Windows.Forms.Label()
+            Me.PackageLicenseLabel = New System.Windows.Forms.Label()
             Me.RepositoryUrl = New System.Windows.Forms.TextBox()
             Me.RepositoryType = New System.Windows.Forms.TextBox()
             Me.PackageTagsLabel = New System.Windows.Forms.Label()
@@ -80,7 +80,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.PackageProjectUrl, 1, 14)
             Me.TableLayoutPanel.Controls.Add(Me.PackageVersion, 1, 4)
             Me.TableLayoutPanel.Controls.Add(Me.PackageVersionLabel, 0, 4)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageLicenseUrlLabel, 0, 13)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageLicenseLabel, 0, 13)
             Me.TableLayoutPanel.Controls.Add(Me.RepositoryUrl, 1, 16)
             Me.TableLayoutPanel.Controls.Add(Me.RepositoryType, 1, 17)
             Me.TableLayoutPanel.Controls.Add(Me.PackageTagsLabel, 0, 18)
@@ -158,10 +158,10 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             resources.ApplyResources(Me.PackageVersionLabel, "PackageVersionLabel")
             Me.PackageVersionLabel.Name = "PackageVersionLabel"
             '
-            'PackageLicenseUrlLabel
+            'PackageLicenseLabel
             '
-            resources.ApplyResources(Me.PackageLicenseUrlLabel, "PackageLicenseUrlLabel")
-            Me.PackageLicenseUrlLabel.Name = "PackageLicenseUrlLabel"
+            resources.ApplyResources(Me.PackageLicenseLabel, "PackageLicenseLabel")
+            Me.PackageLicenseLabel.Name = "PackageLicenseLabel"
             '
             'RepositoryUrl
             '
@@ -374,7 +374,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents PackageVersionLabel As Windows.Forms.Label
         Friend WithEvents PackageLicenseExpression As Windows.Forms.TextBox
         Friend WithEvents AuthorsLabel As Windows.Forms.Label
-        Friend WithEvents PackageLicenseUrlLabel As Windows.Forms.Label
+        Friend WithEvents PackageLicenseLabel As Windows.Forms.Label
         Friend WithEvents RepositoryUrl As Windows.Forms.TextBox
         Friend WithEvents RepositoryType As Windows.Forms.TextBox
         Friend WithEvents PackageTagsLabel As Windows.Forms.Label

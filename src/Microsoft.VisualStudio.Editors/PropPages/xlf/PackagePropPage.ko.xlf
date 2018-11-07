@@ -27,11 +27,6 @@
         <target state="translated">패키지 버전(&amp;V):</target>
         <note />
       </trans-unit>
-      <trans-unit id="PackageLicenseUrlLabel.Text">
-        <source>&amp;License URL:</source>
-        <target state="translated">라이선스 URL(&amp;L):</target>
-        <note />
-      </trans-unit>
       <trans-unit id="PackageTagsLabel.Text">
         <source>&amp;Tags:</source>
         <target state="translated">태그(&amp;T):</target>
@@ -135,6 +130,11 @@
       <trans-unit id="AssemblyFileVersionLabel.Text">
         <source>Assembly &amp;file version:</source>
         <target state="translated">어셈블리 파일 버전(&amp;F):</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="PackageLicenseLabel.Text">
+        <source>&amp;License:</source>
+        <target state="new">&amp;License:</target>
         <note />
       </trans-unit>
     </body>

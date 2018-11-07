@@ -187,7 +187,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                     datalist.Add(data)
                     data = New PropertyControlData(105, "Copyright", Copyright, ControlDataFlags.None, New Control() {CopyrightLabel})
                     datalist.Add(data)
-                    data = New PropertyControlData(107, "PackageLicenseExpression", PackageLicenseExpression, ControlDataFlags.None, New Control() {PackageLicenseUrlLabel})
+                    data = New PropertyControlData(107, "PackageLicenseExpression", PackageLicenseExpression, ControlDataFlags.None, New Control() {PackageLicenseLabel})
                     datalist.Add(data)
                     data = New PropertyControlData(108, "PackageProjectUrl", PackageProjectUrl, ControlDataFlags.None, New Control() {PackageProjectUrlLabel})
                     datalist.Add(data)
