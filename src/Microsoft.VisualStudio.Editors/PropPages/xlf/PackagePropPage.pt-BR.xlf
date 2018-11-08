@@ -137,11 +137,6 @@
         <target state="new">&amp;License:</target>
         <note />
       </trans-unit>
-      <trans-unit id="Win32ResourceFileBrowse.Text">
-        <source>Browse...</source>
-        <target state="new">Browse...</target>
-        <note />
-      </trans-unit>
       <trans-unit id="ExpressionLabel.Text">
         <source>&amp;Expression:</source>
         <target state="new">&amp;Expression:</target>
@@ -155,6 +150,11 @@
       <trans-unit id="FileLabel.Text">
         <source>&amp;File:</source>
         <target state="new">&amp;File:</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="LicenseBrowseButton.Text">
+        <source>Browse...</source>
+        <target state="new">Browse...</target>
         <note />
       </trans-unit>
     </body>

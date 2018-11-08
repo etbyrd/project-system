@@ -69,7 +69,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.OrLabel = New System.Windows.Forms.Label()
             Me.FileLabel = New System.Windows.Forms.Label()
             Me.LicenseFileNameTextBox = New System.Windows.Forms.TextBox()
-            Me.Win32ResourceFileBrowse = New System.Windows.Forms.Button()
+            Me.LicenseBrowseButton = New System.Windows.Forms.Button()
 
             Me.TableLayoutPanel.SuspendLayout()
             Me.AssemblyVersionLayoutPanel.SuspendLayout()
@@ -245,7 +245,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             'LicenseLayoutPanel
             '
             resources.ApplyResources(Me.LicenseLayoutPanel, "LicenseLayoutPanel")
-            Me.LicenseLayoutPanel.Controls.Add(Me.Win32ResourceFileBrowse, 5, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.LicenseBrowseButton, 5, 0)
             Me.LicenseLayoutPanel.Controls.Add(Me.LicenseFileNameTextBox, 4, 0)
             Me.LicenseLayoutPanel.Controls.Add(Me.FileLabel, 3, 0)
             Me.LicenseLayoutPanel.Controls.Add(Me.OrLabel, 2, 0)
@@ -278,10 +278,10 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             resources.ApplyResources(Me.LicenseFileNameTextBox, "LicenseFileNameTextBox")
             Me.LicenseFileNameTextBox.Name = "LicenseFileNameTextBox"
             '
-            'Win32ResourceFileBrowse
+            'LicenseBrowseButton
             '
-            resources.ApplyResources(Me.Win32ResourceFileBrowse, "Win32ResourceFileBrowse")
-            Me.Win32ResourceFileBrowse.Name = "Win32ResourceFileBrowse"
+            resources.ApplyResources(Me.LicenseBrowseButton, "LicenseBrowseButton")
+            Me.LicenseBrowseButton.Name = "LicenseBrowseButton"
 
             '
             'AssemblyVersionRevisionTextBox
@@ -463,7 +463,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents OrLabel As Windows.Forms.Label
         Friend WithEvents FileLabel As Windows.Forms.Label
         Friend WithEvents LicenseFileNameTextBox As Windows.Forms.TextBox
-        Friend WithEvents Win32ResourceFileBrowse As System.Windows.Forms.Button
+        Friend WithEvents LicenseBrowseButton As System.Windows.Forms.Button
 
     End Class
 
