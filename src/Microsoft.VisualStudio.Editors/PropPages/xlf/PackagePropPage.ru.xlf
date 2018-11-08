@@ -143,8 +143,8 @@
         <note />
       </trans-unit>
       <trans-unit id="OrLabel.Text">
-        <source>&amp;Or:</source>
-        <target state="new">&amp;Or:</target>
+        <source>&amp;Or</source>
+        <target state="new">&amp;Or</target>
         <note />
       </trans-unit>
       <trans-unit id="FileLabel.Text">
