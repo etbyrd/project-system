@@ -348,10 +348,10 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             resources.ApplyResources(Me.LicenseLayoutPanel, "LicenseLayoutPanel")
             Me.LicenseLayoutPanel.Controls.Add(Me.LicenseBrowseButton, 5, 0)
             Me.LicenseLayoutPanel.Controls.Add(Me.LicenseFileNameTextBox, 4, 0)
+            Me.LicenseLayoutPanel.Controls.Add(Me.ExpressionLabel, 0, 0)
             Me.LicenseLayoutPanel.Controls.Add(Me.FileLabel, 3, 0)
             Me.LicenseLayoutPanel.Controls.Add(Me.OrLabel, 2, 0)
             Me.LicenseLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 1, 0)
-            Me.LicenseLayoutPanel.Controls.Add(Me.ExpressionLabel, 0, 0)
             Me.LicenseLayoutPanel.Name = "LicenseLayoutPanel"
             '
             'LicenseBrowseButton

@@ -1456,7 +1456,7 @@
     <value>NoControl</value>
   </data>
   <data name="LicenseBrowseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>772, 5</value>
+    <value>769, 5</value>
   </data>
   <data name="LicenseBrowseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1482,14 +1482,17 @@
   <data name="&gt;&gt;LicenseBrowseButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="LicenseFileNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="LicenseFileNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>502, 5</value>
+    <value>498, 7</value>
   </data>
   <data name="LicenseFileNameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
   <data name="LicenseFileNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 26</value>
+    <value>243, 26</value>
   </data>
   <data name="LicenseFileNameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -1505,102 +1508,6 @@
   </data>
   <data name="&gt;&gt;LicenseFileNameTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="FileLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="FileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="FileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 10</value>
-  </data>
-  <data name="FileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 5, 0, 5</value>
-  </data>
-  <data name="FileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
-  </data>
-  <data name="FileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="FileLabel.Text" xml:space="preserve">
-    <value>&amp;File:</value>
-  </data>
-  <data name="&gt;&gt;FileLabel.Name" xml:space="preserve">
-    <value>FileLabel</value>
-  </data>
-  <data name="&gt;&gt;FileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileLabel.Parent" xml:space="preserve">
-    <value>LicenseLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;FileLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="OrLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="OrLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="OrLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="OrLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>421, 10</value>
-  </data>
-  <data name="OrLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 5, 0, 5</value>
-  </data>
-  <data name="OrLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 20</value>
-  </data>
-  <data name="OrLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="OrLabel.Text" xml:space="preserve">
-    <value>&amp;Or</value>
-  </data>
-  <data name="&gt;&gt;OrLabel.Name" xml:space="preserve">
-    <value>OrLabel</value>
-  </data>
-  <data name="&gt;&gt;OrLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OrLabel.Parent" xml:space="preserve">
-    <value>LicenseLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;OrLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="PackageLicenseExpression.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 5</value>
-  </data>
-  <data name="PackageLicenseExpression.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="PackageLicenseExpression.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 26</value>
-  </data>
-  <data name="PackageLicenseExpression.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;PackageLicenseExpression.Name" xml:space="preserve">
-    <value>PackageLicenseExpression</value>
-  </data>
-  <data name="&gt;&gt;PackageLicenseExpression.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PackageLicenseExpression.Parent" xml:space="preserve">
-    <value>LicenseLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;PackageLicenseExpression.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="ExpressionLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1636,6 +1543,108 @@
     <value>LicenseLayoutPanel</value>
   </data>
   <data name="&gt;&gt;ExpressionLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FileLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="FileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="FileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 10</value>
+  </data>
+  <data name="FileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 5, 0, 5</value>
+  </data>
+  <data name="FileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
+  </data>
+  <data name="FileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="FileLabel.Text" xml:space="preserve">
+    <value>&amp;File:</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.Name" xml:space="preserve">
+    <value>FileLabel</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.Parent" xml:space="preserve">
+    <value>LicenseLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="OrLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="OrLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OrLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8pt, style=Bold</value>
+  </data>
+  <data name="OrLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OrLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 10</value>
+  </data>
+  <data name="OrLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 5, 0, 5</value>
+  </data>
+  <data name="OrLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="OrLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="OrLabel.Text" xml:space="preserve">
+    <value>&amp;OR</value>
+  </data>
+  <data name="&gt;&gt;OrLabel.Name" xml:space="preserve">
+    <value>OrLabel</value>
+  </data>
+  <data name="&gt;&gt;OrLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OrLabel.Parent" xml:space="preserve">
+    <value>LicenseLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;OrLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PackageLicenseExpression.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="PackageLicenseExpression.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 7</value>
+  </data>
+  <data name="PackageLicenseExpression.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="PackageLicenseExpression.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 26</value>
+  </data>
+  <data name="PackageLicenseExpression.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;PackageLicenseExpression.Name" xml:space="preserve">
+    <value>PackageLicenseExpression</value>
+  </data>
+  <data name="&gt;&gt;PackageLicenseExpression.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PackageLicenseExpression.Parent" xml:space="preserve">
+    <value>LicenseLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;PackageLicenseExpression.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="LicenseLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
@@ -1648,7 +1657,7 @@
     <value>1</value>
   </data>
   <data name="LicenseLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>856, 40</value>
+    <value>853, 40</value>
   </data>
   <data name="LicenseLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1666,7 +1675,7 @@
     <value>35</value>
   </data>
   <data name="LicenseLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LicenseBrowseButton" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="LicenseFileNameTextBox" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="FileLabel" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="OrLabel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="PackageLicenseExpression" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ExpressionLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,34.22897,Percent,4.439252,Percent,4.556075,Percent,29.43925,Percent,12.26636" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LicenseBrowseButton" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="LicenseFileNameTextBox" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="ExpressionLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FileLabel" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="OrLabel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="PackageLicenseExpression" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,10.86449,Percent,38.31776,Percent,4.439252,Percent,4.556075,Percent,29.43925,Percent,12.26636" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="TableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 5</value>
