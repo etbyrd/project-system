@@ -46,6 +46,9 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             IDependenciesSnapshot snapshot,
             CancellationToken cancellationToken = default)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "BuildTreeAsync" });
+            
+
             IProjectTree originalTree = dependenciesTree;
 
             var currentTopLevelNodes = new List<IProjectTree>();
@@ -130,6 +133,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
 
         public override IProjectTree FindByPath(IProjectTree root, string path)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "FindByPath" });
             if (root == null)
             {
                 return null;
@@ -153,6 +157,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ITargetedDependenciesSnapshot targetedSnapshot,
             Func<IProjectTree, IEnumerable<IProjectTree>, IProjectTree> syncFunc)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "BuildSubTreesAsync" });
             var groupedByProviderType = new Dictionary<string, List<IDependency>>(StringComparers.DependencyProviderTypes);
 
             foreach (IDependency dependency in targetedSnapshot.TopLevelDependencies)
@@ -226,6 +231,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             bool isActiveTarget,
             bool shouldCleanup)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "BuildSubTreeAsync" });
             List<IProjectTree> currentNodes = shouldCleanup 
                 ? new List<IProjectTree>(capacity: dependencies.Count) 
                 : null;
@@ -268,6 +274,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
         /// </summary>
         private static IProjectTree CleanupOldNodes(IProjectTree rootNode, IEnumerable<IProjectTree> currentNodes)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "CleanupOldNodes" });
             foreach (IProjectTree nodeToRemove in rootNode.Children.Except(currentNodes))
             {
                 rootNode = rootNode.Remove(nodeToRemove);
@@ -284,6 +291,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ProjectTreeFlags? additionalFlags = null,
             ProjectTreeFlags? excludedFlags = null)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "CreateOrUpdateNodeAsync" });
             IRule rule = null;
             if (dependency.Flags.Contains(DependencyTreeFlags.SupportsRuleProperties))
             {
@@ -307,6 +315,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ProjectTreeFlags? additionalFlags = null,
             ProjectTreeFlags? excludedFlags = null)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "CreateOrUpdateNode" });
             if (node != null)
             {
                 return UpdateTreeNode(node, viewModel, rule);
@@ -323,6 +332,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ProjectTreeFlags? additionalFlags = null,
             ProjectTreeFlags? excludedFlags = null)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "CreateProjectTreeNode" });
             // For IProjectTree remove ProjectTreeFlags.Common.Reference flag, otherwise CPS would fail to 
             // map this node to graph node and GraphProvider would be never called. 
             // Only IProjectItemTree can have this flag
@@ -350,6 +360,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ProjectTreeFlags? additionalFlags = null,
             ProjectTreeFlags? excludedFlags = null)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "CreateProjectItemTreeNode" });
             ProjectTreeFlags flags = FilterFlags(viewModel.Flags, additionalFlags, excludedFlags);
             string filePath = (viewModel.OriginalModel != null && viewModel.OriginalModel.TopLevel &&
                                viewModel.OriginalModel.Resolved)
@@ -378,6 +389,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             IDependencyViewModel viewModel,
             IRule rule)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "UpdateTreeNode" });
             ProjectTreeCustomizablePropertyContext updatedNodeParentContext = GetCustomPropertyContext(node.Parent);
 
             var updatedValues = new ReferencesProjectTreeCustomizablePropertyValues
@@ -403,6 +415,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.Tree.Dependencies
             ProjectTreeFlags? additionalFlags,
             ProjectTreeFlags? excludedFlags)
         {
+            System.IO.File.AppendAllLines("C:\\Users\\etbyrd\\desktop\\log.txt", new[] { "FilterFlags" });
             if (additionalFlags.HasValue)
             {
                 flags = flags.Union(additionalFlags.Value);
