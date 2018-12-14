@@ -99,7 +99,6 @@ Namespace Microsoft.VisualStudio.Editors.ApplicationDesigner
             End Get
         End Property
 
-
 #Region " IPropertyPageSite"
         Public Const PROPPAGESTATUS_DIRTY As Integer = 1
         Public Const PROPPAGESTATUS_VALIDATE As Integer = 2

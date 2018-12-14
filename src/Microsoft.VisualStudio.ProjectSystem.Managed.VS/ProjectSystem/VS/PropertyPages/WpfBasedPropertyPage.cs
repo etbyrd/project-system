@@ -3,6 +3,8 @@ using System;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Windows.Input;
+using Microsoft.VisualStudio.Editors.ApplicationDesigner;
 
 namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
 {
@@ -90,6 +92,28 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
 
             ResumeLayout(true);
             _control.StatusChanged += OnControlStatusChanged;
+        }
+
+        private void _control_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            // Okay so this works, we can see the tab returning
+            // Step two is to get the active control
+            if (e.Key == Key.Tab)
+            {
+                //If(SelectNextControl(ActiveControl, forward, tabStopOnly:= True, nested:= True, wrap:= False)) Then
+                //      Return True
+                //  Else
+                //    Dim appDesView As ApplicationDesignerView = CType(_loadedPageSite.Owner, ApplicationDesignerView)
+                //    appDesView.SelectedItem.Focus()
+                //    appDesView.SelectedItem.FocusedFromKeyboardNav = True
+                //End If
+
+                var propPageSite = (PropertyPageSite)(_site);
+                //var propPageDesigner = (PropPageDesignerView)propPageSite.BackingServiceProvider;
+                //var appDesView = (ApplicationDesignerView)propPageSite.Owner;
+                //var appDesView = (ApplicationDesignerView)(((PropertyPageSite)(_site)).Owner);
+                //appDesView.SelectedItem.Focus();
+            }
         }
 
         private void OnControlStatusChanged(object sender, EventArgs e)
