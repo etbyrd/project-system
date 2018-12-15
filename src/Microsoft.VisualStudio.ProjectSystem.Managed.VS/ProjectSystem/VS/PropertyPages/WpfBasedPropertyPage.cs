@@ -85,6 +85,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
                 Focusable = false,
             };
 
+            _control.KeyDown += _control_KeyDown;
             viewer.Content = _control;
             _host.Child = viewer;
 
@@ -113,7 +114,8 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
                 var propPageDesigner = (PropPageDesignerView)propPageSite.BackingServiceProvider;
                 var appDesView = (ApplicationDesignerView)propPageSite._appDesView;
                 //var appDesView = (ApplicationDesignerView)(((PropertyPageSite)(_site)).Owner);
-                appDesView.SelectedItem.Focus();
+                //appDesView.SelectedItem.Focus();
+                appDesView.SwitchTab(true);
                 //appDesView.SelectedItem.FocusedFromKeyboardNav = true;
             }
         }
