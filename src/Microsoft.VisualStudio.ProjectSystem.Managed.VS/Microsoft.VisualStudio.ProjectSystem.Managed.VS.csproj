@@ -16,6 +16,7 @@
     <NoWarn>$(NoWarn);NU5125</NoWarn>    
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Microsoft.VisualStudio.AppDesigner\Microsoft.VisualStudio.AppDesigner.vbproj" />
     <ProjectReference Include="..\Microsoft.VisualStudio.ProjectSystem.Managed\Microsoft.VisualStudio.ProjectSystem.Managed.csproj" />
   </ItemGroup>
   <ItemGroup>

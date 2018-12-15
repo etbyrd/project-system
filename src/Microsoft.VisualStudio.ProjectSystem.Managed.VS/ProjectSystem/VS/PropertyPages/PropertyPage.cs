@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
        IPropertyPage,
        IVsDebuggerEvents
     {
-        private IPropertyPageSite _site = null;
+        public IPropertyPageSite _site = null;
         private bool _isDirty = false;
         private readonly bool _ignoreEvents = false;
         private IVsDebugger _debugger;

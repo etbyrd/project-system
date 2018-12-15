@@ -32,7 +32,9 @@ Namespace Microsoft.VisualStudio.Editors.ApplicationDesigner
         Implements OleInterop.IServiceProvider
 
         Private _propPage As OleInterop.IPropertyPage
-        Private _appDesView As IPropertyPageSiteOwner
+#Disable Warning RS0016 ' Add public types and members to the declared API
+        Public _appDesView As IPropertyPageSiteOwner
+#Enable Warning RS0016 ' Add public types and members to the declared API
         Private ReadOnly _isImmediateApply As Boolean = True
 
         'The service provider to delegate IServiceProvider calls through

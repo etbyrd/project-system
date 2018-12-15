@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Microsoft.VisualStudio.Editors.ApplicationDesigner;
+using Microsoft.VisualStudio.Editors.PropPageDesigner;
 
 namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
 {
@@ -109,10 +110,11 @@ namespace Microsoft.VisualStudio.ProjectSystem.VS.PropertyPages
                 //End If
 
                 var propPageSite = (PropertyPageSite)(_site);
-                //var propPageDesigner = (PropPageDesignerView)propPageSite.BackingServiceProvider;
-                //var appDesView = (ApplicationDesignerView)propPageSite.Owner;
+                var propPageDesigner = (PropPageDesignerView)propPageSite.BackingServiceProvider;
+                var appDesView = (ApplicationDesignerView)propPageSite._appDesView;
                 //var appDesView = (ApplicationDesignerView)(((PropertyPageSite)(_site)).Owner);
-                //appDesView.SelectedItem.Focus();
+                appDesView.SelectedItem.Focus();
+                //appDesView.SelectedItem.FocusedFromKeyboardNav = true;
             }
         }
 

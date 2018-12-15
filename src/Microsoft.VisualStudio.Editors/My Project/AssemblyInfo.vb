@@ -75,7 +75,9 @@ Imports System.Runtime.InteropServices
 <Assembly: TypeForwardedTo(GetType(Microsoft.VisualStudio.Editors.ApplicationDesigner.ProjectDesignerTabControl))>
 <Assembly: TypeForwardedTo(GetType(Microsoft.VisualStudio.Editors.ApplicationDesigner.ProjectDesignerTabRenderer))>
 <Assembly: TypeForwardedTo(GetType(Microsoft.VisualStudio.Editors.ApplicationDesigner.PropertyPageInfo))>
+#Disable Warning RS0016 ' Add public types and members to the declared API
 <Assembly: TypeForwardedTo(GetType(Microsoft.VisualStudio.Editors.ApplicationDesigner.PropertyPageSite))>
+#Enable Warning RS0016 ' Add public types and members to the declared API
 <Assembly: TypeForwardedTo(GetType(Microsoft.VisualStudio.Editors.ApplicationDesigner.SpecialFileCustomDocumentMonikerProvider))>
 <Assembly: TypeForwardedTo(GetType(Microsoft.VisualStudio.Editors.ApplicationDesigner.SpecialFileCustomView))>
 <Assembly: TypeForwardedTo(GetType(Microsoft.VisualStudio.Editors.ApplicationDesigner.SpecialFileCustomViewProvider))>

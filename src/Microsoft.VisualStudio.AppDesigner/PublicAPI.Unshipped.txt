@@ -1,0 +1,1 @@
+Microsoft.VisualStudio.Editors.ApplicationDesigner.PropertyPageSite._appDesView -> Microsoft.VisualStudio.Editors.ApplicationDesigner.IPropertyPageSiteOwner
