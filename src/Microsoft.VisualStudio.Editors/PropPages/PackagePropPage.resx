@@ -136,7 +136,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="AssemblyVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 834</value>
+    <value>0, 814</value>
   </data>
   <data name="AssemblyVersionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -298,7 +298,7 @@
     <value>Package Icon URL</value>
   </data>
   <data name="PackageIconUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 553</value>
+    <value>208, 533</value>
   </data>
   <data name="PackageIconUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -331,7 +331,7 @@
     <value>NoControl</value>
   </data>
   <data name="PackageIconUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 556</value>
+    <value>0, 536</value>
   </data>
   <data name="PackageIconUrlLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -361,7 +361,7 @@
     <value>Package Project URL</value>
   </data>
   <data name="PackageProjectUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 517</value>
+    <value>208, 497</value>
   </data>
   <data name="PackageProjectUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -451,7 +451,7 @@
     <value>Package Repository URL</value>
   </data>
   <data name="RepositoryUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 589</value>
+    <value>208, 569</value>
   </data>
   <data name="RepositoryUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -478,7 +478,7 @@
     <value>Package Repository Type</value>
   </data>
   <data name="RepositoryType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 625</value>
+    <value>208, 605</value>
   </data>
   <data name="RepositoryType.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -511,7 +511,7 @@
     <value>NoControl</value>
   </data>
   <data name="PackageTagsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 664</value>
+    <value>0, 644</value>
   </data>
   <data name="PackageTagsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -547,7 +547,7 @@
     <value>NoControl</value>
   </data>
   <data name="RepositoryUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 592</value>
+    <value>0, 572</value>
   </data>
   <data name="RepositoryUrlLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -583,7 +583,7 @@
     <value>NoControl</value>
   </data>
   <data name="PackageReleaseNotesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 726</value>
+    <value>0, 706</value>
   </data>
   <data name="PackageReleaseNotesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -619,7 +619,7 @@
     <value>NoControl</value>
   </data>
   <data name="RepositoryTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 628</value>
+    <value>0, 608</value>
   </data>
   <data name="RepositoryTypeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -649,7 +649,7 @@
     <value>Package Tags</value>
   </data>
   <data name="PackageTags.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 661</value>
+    <value>208, 641</value>
   </data>
   <data name="PackageTags.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -676,7 +676,7 @@
     <value>Package Release Notes</value>
   </data>
   <data name="PackageReleaseNotes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 697</value>
+    <value>208, 677</value>
   </data>
   <data name="PackageReleaseNotes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -715,7 +715,7 @@
     <value>NoControl</value>
   </data>
   <data name="PackageProjectUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 520</value>
+    <value>0, 500</value>
   </data>
   <data name="PackageProjectUrlLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -787,7 +787,7 @@
     <value>NoControl</value>
   </data>
   <data name="NeutralLanguageLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 790</value>
+    <value>0, 770</value>
   </data>
   <data name="NeutralLanguageLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -925,7 +925,7 @@
     <value>3</value>
   </data>
   <data name="AssemblyVersionLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 824</value>
+    <value>208, 804</value>
   </data>
   <data name="AssemblyVersionLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -953,6 +953,9 @@
   </data>
   <data name="AssemblyVersionLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AssemblyVersionRevisionTextBox" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyVersionBuildTextBox" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyVersionMinorTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyVersionMajorTextBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="FileVersionLayoutPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="FileVersionLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1066,7 +1069,7 @@
     <value>3</value>
   </data>
   <data name="FileVersionLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 874</value>
+    <value>208, 864</value>
   </data>
   <data name="FileVersionLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -1105,7 +1108,7 @@
     <value>NoControl</value>
   </data>
   <data name="PackageLicenseLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 385</value>
+    <value>0, 375</value>
   </data>
   <data name="PackageLicenseLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -1135,7 +1138,7 @@
     <value>Package Assembly Neutral Language</value>
   </data>
   <data name="NeutralLanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 786</value>
+    <value>208, 766</value>
   </data>
   <data name="NeutralLanguageComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -1456,7 +1459,7 @@
     <value>NoControl</value>
   </data>
   <data name="AssemblyFileVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 883</value>
+    <value>0, 873</value>
   </data>
   <data name="AssemblyFileVersionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -1482,47 +1485,62 @@
   <data name="&gt;&gt;AssemblyFileVersionLabel.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
-  <data name="LicenseLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="LicenseLineLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="LicenseLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 375</value>
+  <data name="LicenseLineLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 384</value>
   </data>
-  <data name="LicenseLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+  <data name="LicenseLineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>854, 1</value>
   </data>
-  <data name="LicenseLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="LicenseLineLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="LicenseLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>853, 40</value>
+  <data name="&gt;&gt;LicenseLineLabel.Name" xml:space="preserve">
+    <value>LicenseLineLabel</value>
   </data>
-  <data name="LicenseLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;LicenseLineLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LicenseLayoutPanel.Name" xml:space="preserve">
-    <value>LicenseLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;LicenseLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LicenseLayoutPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LicenseLineLabel.Parent" xml:space="preserve">
     <value>TableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;LicenseLayoutPanel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LicenseLineLabel.ZOrder" xml:space="preserve">
     <value>35</value>
-  </data>
-  <data name="LicenseLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Percent,10.86449,Percent,16.93926,Percent,4.439252,Percent,4.556075,Percent,50.81775,Percent,12.26636" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="ExpressionLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="LicenseExpressionRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="LicenseExpressionRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="LicenseExpressionRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 24</value>
+  </data>
+  <data name="LicenseExpressionRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LicenseExpressionRadioButton.Name" xml:space="preserve">
+    <value>LicenseExpressionRadioButton</value>
+  </data>
+  <data name="&gt;&gt;LicenseExpressionRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicenseExpressionRadioButton.Parent" xml:space="preserve">
+    <value>ExpressionLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;LicenseExpressionRadioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="PackageLicenseExpression.AccessibleName" xml:space="preserve">
     <value>Package License Expression</value>
   </data>
   <data name="PackageLicenseExpression.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Right</value>
   </data>
   <data name="PackageLicenseExpression.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 7</value>
@@ -1531,7 +1549,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="PackageLicenseExpression.Size" type="System.Drawing.Size, System.Drawing">
-    <value>804, 26</value>
+    <value>808, 26</value>
   </data>
   <data name="PackageLicenseExpression.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1546,13 +1564,13 @@
     <value>ExpressionLayoutPanel</value>
   </data>
   <data name="&gt;&gt;PackageLicenseExpression.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="ExpressionLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 423</value>
+    <value>207, 403</value>
   </data>
   <data name="ExpressionLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>855, 40</value>
+    <value>859, 40</value>
   </data>
   <data name="ExpressionLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1570,10 +1588,34 @@
     <value>36</value>
   </data>
   <data name="ExpressionLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="PackageLicenseExpression" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,5,Percent,95,Percent,0" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LicenseExpressionRadioButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageLicenseExpression" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,5,Percent,95,Percent,0" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="LicenseFileLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="LicenseFileRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="LicenseFileRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="LicenseFileRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 24</value>
+  </data>
+  <data name="LicenseFileRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LicenseFileRadioButton.Name" xml:space="preserve">
+    <value>LicenseFileRadioButton</value>
+  </data>
+  <data name="&gt;&gt;LicenseFileRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicenseFileRadioButton.Parent" xml:space="preserve">
+    <value>LicenseFileLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;LicenseFileRadioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="LicenseFileNameTextBox.AccessibleName" xml:space="preserve">
     <value>Package License File Path</value>
@@ -1603,7 +1645,7 @@
     <value>LicenseFileLayoutPanel</value>
   </data>
   <data name="&gt;&gt;LicenseFileNameTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="LicenseBrowseButton.AccessibleName" xml:space="preserve">
     <value>Package License File Browse</value>
@@ -1645,10 +1687,10 @@
     <value>LicenseFileLayoutPanel</value>
   </data>
   <data name="&gt;&gt;LicenseBrowseButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="LicenseFileLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 469</value>
+    <value>207, 449</value>
   </data>
   <data name="LicenseFileLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>854, 40</value>
@@ -1669,7 +1711,7 @@
     <value>37</value>
   </data>
   <data name="LicenseFileLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LicenseFileNameTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="LicenseBrowseButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,5,Percent,80,Percent,15" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="LicenseFileRadioButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LicenseFileNameTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="LicenseBrowseButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,5,Percent,80,Percent,15" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="ExpressionLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1678,7 +1720,7 @@
     <value>NoControl</value>
   </data>
   <data name="ExpressionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 433</value>
+    <value>0, 413</value>
   </data>
   <data name="ExpressionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -1714,7 +1756,7 @@
     <value>NoControl</value>
   </data>
   <data name="FileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 479</value>
+    <value>0, 459</value>
   </data>
   <data name="FileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 0, 5</value>
@@ -1768,7 +1810,34 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AssemblyVersionLabel" Row="27" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CopyrightLabel" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Copyright" Row="10" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="DescriptionLabel" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Description" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageIconUrl" Row="17" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageIconUrlLabel" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageProjectUrl" Row="16" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageVersion" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageVersionLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryUrl" Row="18" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryType" Row="19" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageTagsLabel" Row="20" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryUrlLabel" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageReleaseNotesLabel" Row="21" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryTypeLabel" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageTags" Row="20" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageReleaseNotes" Row="21" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageProjectUrlLabel" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GeneratePackageOnBuild" Row="0" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="NeutralLanguageLabel" Row="26" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyVersionLayoutPanel" Row="27" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FileVersionLayoutPanel" Row="28" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageLicenseLabel" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="NeutralLanguageComboBox" Row="26" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageRequireLicenseAcceptance" Row="1" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="PackageIdLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageId" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AuthorsLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Authors" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyCompanyLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ProductLabel" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyCompany" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Product" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyFileVersionLabel" Row="28" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LicenseLayoutPanel" Row="13" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ExpressionLayoutPanel" Row="14" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="LicenseFileLayoutPanel" Row="15" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ExpressionLabel" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FileLabel" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AssemblyVersionLabel" Row="27" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CopyrightLabel" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Copyright" Row="10" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="DescriptionLabel" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Description" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageIconUrl" Row="17" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageIconUrlLabel" Row="17" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageProjectUrl" Row="16" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageVersion" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageVersionLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryUrl" Row="18" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryType" Row="19" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageTagsLabel" Row="20" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryUrlLabel" Row="18" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageReleaseNotesLabel" Row="21" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RepositoryTypeLabel" Row="19" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageTags" Row="20" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageReleaseNotes" Row="21" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageProjectUrlLabel" Row="16" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GeneratePackageOnBuild" Row="0" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="NeutralLanguageLabel" Row="26" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyVersionLayoutPanel" Row="27" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FileVersionLayoutPanel" Row="28" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageLicenseLabel" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="NeutralLanguageComboBox" Row="26" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PackageRequireLicenseAcceptance" Row="1" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="PackageIdLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PackageId" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AuthorsLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Authors" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyCompanyLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ProductLabel" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyCompany" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Product" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyFileVersionLabel" Row="28" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="LicenseLineLabel" Row="13" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ExpressionLayoutPanel" Row="14" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="LicenseFileLayoutPanel" Row="15" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ExpressionLabel" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FileLabel" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="LicenseLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LicenseLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 375</value>
+  </data>
+  <data name="LicenseLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="LicenseLayoutPanel.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LicenseLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>853, 40</value>
+  </data>
+  <data name="LicenseLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;LicenseLayoutPanel.Name" xml:space="preserve">
+    <value>LicenseLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;LicenseLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LicenseLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Percent,10.86449,Percent,16.93926,Percent,4.439252,Percent,4.556075,Percent,50.81775,Percent,12.26636" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="OrLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>

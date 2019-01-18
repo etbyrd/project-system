@@ -61,14 +61,17 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.AssemblyCompany = New System.Windows.Forms.TextBox()
             Me.Product = New System.Windows.Forms.TextBox()
             Me.AssemblyFileVersionLabel = New System.Windows.Forms.Label()
-            Me.LicenseLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+            Me.LicenseLineLabel = New System.Windows.Forms.Label()
             Me.ExpressionLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+            Me.LicenseExpressionRadioButton = New System.Windows.Forms.RadioButton()
             Me.PackageLicenseExpression = New System.Windows.Forms.TextBox()
             Me.LicenseFileLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+            Me.LicenseFileRadioButton = New System.Windows.Forms.RadioButton()
             Me.LicenseFileNameTextBox = New System.Windows.Forms.TextBox()
             Me.LicenseBrowseButton = New System.Windows.Forms.Button()
             Me.ExpressionLabel = New System.Windows.Forms.Label()
             Me.FileLabel = New System.Windows.Forms.Label()
+            Me.LicenseLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
             Me.OrLabel = New System.Windows.Forms.Label()
             Me.TableLayoutPanel.SuspendLayout()
             Me.AssemblyVersionLayoutPanel.SuspendLayout()
@@ -115,7 +118,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyCompany, 1, 6)
             Me.TableLayoutPanel.Controls.Add(Me.Product, 1, 7)
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyFileVersionLabel, 0, 28)
-            Me.TableLayoutPanel.Controls.Add(Me.LicenseLayoutPanel, 1, 13)
+            Me.TableLayoutPanel.Controls.Add(Me.LicenseLineLabel, 1, 13)
             Me.TableLayoutPanel.Controls.Add(Me.ExpressionLayoutPanel, 1, 14)
             Me.TableLayoutPanel.Controls.Add(Me.LicenseFileLayoutPanel, 1, 15)
             Me.TableLayoutPanel.Controls.Add(Me.ExpressionLabel, 0, 14)
@@ -350,17 +353,25 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             resources.ApplyResources(Me.AssemblyFileVersionLabel, "AssemblyFileVersionLabel")
             Me.AssemblyFileVersionLabel.Name = "AssemblyFileVersionLabel"
             '
-            'LicenseLayoutPanel
+            'LicenseLineLabel
             '
-            resources.ApplyResources(Me.LicenseLayoutPanel, "LicenseLayoutPanel")
-            Me.LicenseLayoutPanel.Name = "LicenseLayoutPanel"
+            Me.LicenseLineLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.Separator
+            resources.ApplyResources(Me.LicenseLineLabel, "LicenseLineLabel")
+            Me.LicenseLineLabel.BackColor = System.Drawing.SystemColors.ControlDark
+            Me.LicenseLineLabel.Name = "LicenseLineLabel"
             '
             'ExpressionLayoutPanel
             '
             Me.ExpressionLayoutPanel.CausesValidation = False
             resources.ApplyResources(Me.ExpressionLayoutPanel, "ExpressionLayoutPanel")
+            Me.ExpressionLayoutPanel.Controls.Add(Me.LicenseExpressionRadioButton, 0, 0)
             Me.ExpressionLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 1, 0)
             Me.ExpressionLayoutPanel.Name = "ExpressionLayoutPanel"
+            '
+            'LicenseExpressionRadioButton
+            '
+            resources.ApplyResources(Me.LicenseExpressionRadioButton, "LicenseExpressionRadioButton")
+            Me.LicenseExpressionRadioButton.Name = "LicenseExpressionRadioButton"
             '
             'PackageLicenseExpression
             '
@@ -370,9 +381,15 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             'LicenseFileLayoutPanel
             '
             resources.ApplyResources(Me.LicenseFileLayoutPanel, "LicenseFileLayoutPanel")
+            Me.LicenseFileLayoutPanel.Controls.Add(Me.LicenseFileRadioButton, 0, 0)
             Me.LicenseFileLayoutPanel.Controls.Add(Me.LicenseFileNameTextBox, 1, 0)
             Me.LicenseFileLayoutPanel.Controls.Add(Me.LicenseBrowseButton, 2, 0)
             Me.LicenseFileLayoutPanel.Name = "LicenseFileLayoutPanel"
+            '
+            'LicenseFileRadioButton
+            '
+            resources.ApplyResources(Me.LicenseFileRadioButton, "LicenseFileRadioButton")
+            Me.LicenseFileRadioButton.Name = "LicenseFileRadioButton"
             '
             'LicenseFileNameTextBox
             '
@@ -393,6 +410,11 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             '
             resources.ApplyResources(Me.FileLabel, "FileLabel")
             Me.FileLabel.Name = "FileLabel"
+            '
+            'LicenseLayoutPanel
+            '
+            resources.ApplyResources(Me.LicenseLayoutPanel, "LicenseLayoutPanel")
+            Me.LicenseLayoutPanel.Name = "LicenseLayoutPanel"
             '
             'OrLabel
             '
@@ -465,11 +487,14 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents FileVersionMinorTextBox As Windows.Forms.TextBox
         Friend WithEvents FileVersionMajorTextBox As Windows.Forms.TextBox
         Friend WithEvents AssemblyFileVersionLabel As Windows.Forms.Label
+        Friend WithEvents LicenseLineLabel As System.Windows.Forms.Label
 
         Friend WithEvents LicenseLayoutPanel As Windows.Forms.TableLayoutPanel
         Friend WithEvents ExpressionLayoutPanel As Windows.Forms.TableLayoutPanel
         Friend WithEvents LicenseFileLayoutPanel As Windows.Forms.TableLayoutPanel
 
+        Friend WithEvents LicenseFileRadioButton As Windows.Forms.RadioButton
+        Friend WithEvents LicenseExpressionRadioButton As Windows.Forms.RadioButton
 
         Friend WithEvents ExpressionLabel As Windows.Forms.Label
         Friend WithEvents PackageLicenseExpression As Windows.Forms.TextBox

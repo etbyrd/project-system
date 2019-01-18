@@ -15,6 +15,9 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         Private ReadOnly _fileVersionTextBoxes As TextBox()
         Private ReadOnly _assemblyVersionTextBoxes As TextBox()
+        Private _licenseFileSelected As Boolean = False
+        Private _licenseExpressionSelected As Boolean = False
+
 
         'After 65535, the project system doesn't complain, and in theory any value is allowed as
         '  the string version of this, but after this value the numeric version of the file version
@@ -100,6 +103,30 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                 FileVersionMajorTextBox, FileVersionMinorTextBox, FileVersionBuildTextBox, FileVersionRevisionTextBox}
             _assemblyVersionTextBoxes = New TextBox(3) {
                 AssemblyVersionMajorTextBox, AssemblyVersionMinorTextBox, AssemblyVersionBuildTextBox, AssemblyVersionRevisionTextBox}
+        End Sub
+
+        ''' <summary>
+        ''' This checks the properties for licenses to determine the initial state of the licensing section.
+        ''' Currently, If both are set or neither are set, it will default to just enabling the PackageLicenseExpression.
+        ''' In the future, it might be a good idea to have a warning and only output one value, but this might be bad design.
+        ''' TryGetNonCommonPropertyValue will get the property if it is set, but because the empty properties are ignored elsewhere
+        ''' we need to check and make sure they are ignored here
+        ''' </summary>
+        Private Sub InitLicensing()
+            Dim PackageLicenseFileSet = TryCast(TryGetNonCommonPropertyValue(GetPropertyDescriptor("PackageLicenseFile")), String)
+            If (PackageLicenseFileSet IsNot Nothing And PackageLicenseFileSet IsNot "") Then
+                LicenseFileRadioButton.Checked = True
+                SetLicenseFileRadioButton()
+            End If
+            Dim PackageLicenseExpressionSet = TryCast(TryGetNonCommonPropertyValue(GetPropertyDescriptor("PackageLicenseExpression")), String)
+            If (PackageLicenseExpressionSet IsNot Nothing And PackageLicenseExpressionSet IsNot "") Then
+                LicenseExpressionRadioButton.Checked = True
+                SetLicenseExpressionRadioButton()
+            End If
+        End Sub
+
+        Protected Overrides Sub PostInitPage()
+            InitLicensing()
         End Sub
 
         ''' <summary>
@@ -238,7 +265,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                     datalist.Add(data)
                     data = New PropertyControlData(105, "Copyright", Copyright, ControlDataFlags.None, New Control() {CopyrightLabel})
                     datalist.Add(data)
-                    data = New PropertyControlData(106, "PackageLicenseExpression", PackageLicenseExpression, ControlDataFlags.None, New Control() {PackageLicenseLabel})
+                    data = New PropertyControlData(106, "PackageLicenseExpression", PackageLicenseExpression, ControlDataFlags.UserHandledEvents, New Control() {PackageLicenseLabel})
                     datalist.Add(data)
                     data = New PropertyControlData(107, "PackageLicenseFile", LicenseFileNameTextBox, ControlDataFlags.None, New Control() {PackageLicenseLabel})
                     datalist.Add(data)
@@ -301,6 +328,50 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
             Return relativeUri.ToString().Replace("/", "\")
         End Function
+
+        Private Sub SetLicenseExpressionRadioButton()
+            LicenseFileRadioButton.Checked = False
+            PackageLicenseExpression.Enabled = True
+            LicenseFileNameTextBox.Enabled = False
+            _licenseFileSelected = False
+            _licenseExpressionSelected = True
+        End Sub
+
+        Private Sub SetLicenseFileRadioButton()
+            LicenseExpressionRadioButton.Checked = False
+            PackageLicenseExpression.Enabled = False
+            LicenseFileNameTextBox.Enabled = True
+            _licenseFileSelected = True
+            _licenseExpressionSelected = False
+        End Sub
+
+        Private Sub LicenseExpressionRadioButton_Selected(sender As Object, e As EventArgs) Handles LicenseExpressionRadioButton.CheckedChanged
+            If (LicenseExpressionRadioButton.Checked) Then
+                SetLicenseExpressionRadioButton()
+            End If
+        End Sub
+
+        Private Sub LicenseFileRadioButton_Selected(sender As Object, e As EventArgs) Handles LicenseFileRadioButton.CheckedChanged
+            If (LicenseFileRadioButton.Checked) Then
+                SetLicenseFileRadioButton()
+            End If
+        End Sub
+
+        Private Sub PackageLicenseExpression_Changed(sender As Object, e As EventArgs) Handles PackageLicenseExpression.TextChanged
+            If (_licenseExpressionSelected) Then
+                'LicenseFileNameTextBox.Text = ""
+                SetDirty(PackageLicenseExpression)
+                'SetDirty(LicenseFileNameTextBox)
+            End If
+        End Sub
+
+        Private Sub LicenseFileNameTextBox_Changed(sender As Object, e As EventArgs) Handles LicenseFileNameTextBox.TextChanged
+            If (_licenseFileSelected) Then
+                'PackageLicenseExpression.Text = ""
+                'SetDirty(PackageLicenseExpression)
+                SetDirty(LicenseFileNameTextBox)
+            End If
+        End Sub
 
         Private Sub LicenseBrowseButton_Click(sender As Object, e As EventArgs) Handles LicenseBrowseButton.Click
             Dim sInitialDirectory = ""
