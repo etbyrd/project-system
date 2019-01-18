@@ -331,18 +331,30 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         Private Sub SetLicenseExpressionRadioButton()
             LicenseFileRadioButton.Checked = False
+            LicenseExpressionRadioButton.Checked = True
             PackageLicenseExpression.Enabled = True
             LicenseFileNameTextBox.Enabled = False
+            LicenseBrowseButton.Enabled = False
             _licenseFileSelected = False
             _licenseExpressionSelected = True
+
+            'Set it to empty, but not dirty so that the property is not set yet
+            LicenseFileNameTextBox.Text = ""
+            SetDirty(LicenseFileNameTextBox)
         End Sub
 
         Private Sub SetLicenseFileRadioButton()
             LicenseExpressionRadioButton.Checked = False
+            LicenseFileRadioButton.Checked = True
             PackageLicenseExpression.Enabled = False
             LicenseFileNameTextBox.Enabled = True
+            LicenseBrowseButton.Enabled = True
             _licenseFileSelected = True
             _licenseExpressionSelected = False
+
+            'Just setting it to dirty will allow the user to not
+            PackageLicenseExpression.Text = ""
+            SetDirty(PackageLicenseExpression)
         End Sub
 
         Private Sub LicenseExpressionRadioButton_Selected(sender As Object, e As EventArgs) Handles LicenseExpressionRadioButton.CheckedChanged
@@ -359,18 +371,35 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         Private Sub PackageLicenseExpression_Changed(sender As Object, e As EventArgs) Handles PackageLicenseExpression.TextChanged
             If (_licenseExpressionSelected) Then
-                'LicenseFileNameTextBox.Text = ""
                 SetDirty(PackageLicenseExpression)
-                'SetDirty(LicenseFileNameTextBox)
+
+            ElseIf (PackageLicenseExpression.Text IsNot "" And Not PackageLicenseExpression.Enabled) Then
+                'The license expression is not selected, and the Text was changed to something while it was disabled
+                'This means it there was probably an Undo which populated the textbox with text, give it back control
+                SetLicenseExpressionRadioButton()
             End If
         End Sub
 
         Private Sub LicenseFileNameTextBox_Changed(sender As Object, e As EventArgs) Handles LicenseFileNameTextBox.TextChanged
             If (_licenseFileSelected) Then
-                'PackageLicenseExpression.Text = ""
-                'SetDirty(PackageLicenseExpression)
                 SetDirty(LicenseFileNameTextBox)
+            ElseIf (LicenseFileNameTextBox.Text IsNot "" And Not LicenseFileNameTextBox.Enabled) Then
+                'The license file is not selected, and the Text was changed to something while it was disabled
+                'This means it there was probably an Undo which populated the textbox with text, give it back control
+                SetLicenseExpressionRadioButton()
             End If
+        End Sub
+
+        'These GotFocus methods are for when the property page is first entered and neither have a value
+        'It would make sense to selected the corresponding radio button when the text box recieves focus
+        Private Sub PackageLicenseExpression_GotFocus(sender As Object, e As EventArgs) Handles PackageLicenseExpression.GotFocus
+            LicenseExpressionRadioButton.Checked = True
+            SetLicenseExpressionRadioButton()
+        End Sub
+
+        Private Sub LicenseFileNameTextBox_GotFocus(sender As Object, e As EventArgs) Handles LicenseFileNameTextBox.GotFocus
+            LicenseFileRadioButton.Checked = True
+            SetLicenseFileRadioButton()
         End Sub
 
         Private Sub LicenseBrowseButton_Click(sender As Object, e As EventArgs) Handles LicenseBrowseButton.Click
