@@ -62,46 +62,49 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.Product = New System.Windows.Forms.TextBox()
             Me.AssemblyFileVersionLabel = New System.Windows.Forms.Label()
             Me.LicenseLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-            Me.LicenseBrowseButton = New System.Windows.Forms.Button()
+            Me.ExpressionLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+            Me.PackageLicenseExpression = New System.Windows.Forms.TextBox()
+            Me.LicenseFileLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
             Me.LicenseFileNameTextBox = New System.Windows.Forms.TextBox()
+            Me.LicenseBrowseButton = New System.Windows.Forms.Button()
             Me.ExpressionLabel = New System.Windows.Forms.Label()
             Me.FileLabel = New System.Windows.Forms.Label()
             Me.OrLabel = New System.Windows.Forms.Label()
-            Me.PackageLicenseExpression = New System.Windows.Forms.TextBox()
             Me.TableLayoutPanel.SuspendLayout()
             Me.AssemblyVersionLayoutPanel.SuspendLayout()
             Me.FileVersionLayoutPanel.SuspendLayout()
-            Me.LicenseLayoutPanel.SuspendLayout()
+            Me.ExpressionLayoutPanel.SuspendLayout()
+            Me.LicenseFileLayoutPanel.SuspendLayout()
             Me.SuspendLayout()
             '
             'TableLayoutPanel
             '
             resources.ApplyResources(Me.TableLayoutPanel, "TableLayoutPanel")
-            Me.TableLayoutPanel.Controls.Add(Me.AssemblyVersionLabel, 0, 25)
+            Me.TableLayoutPanel.Controls.Add(Me.AssemblyVersionLabel, 0, 27)
             Me.TableLayoutPanel.Controls.Add(Me.CopyrightLabel, 0, 10)
             Me.TableLayoutPanel.Controls.Add(Me.Copyright, 1, 10)
             Me.TableLayoutPanel.Controls.Add(Me.DescriptionLabel, 0, 9)
             Me.TableLayoutPanel.Controls.Add(Me.Description, 1, 9)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageIconUrl, 1, 15)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageIconUrlLabel, 0, 15)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageProjectUrl, 1, 14)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageIconUrl, 1, 17)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageIconUrlLabel, 0, 17)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageProjectUrl, 1, 16)
             Me.TableLayoutPanel.Controls.Add(Me.PackageVersion, 1, 4)
             Me.TableLayoutPanel.Controls.Add(Me.PackageVersionLabel, 0, 4)
-            Me.TableLayoutPanel.Controls.Add(Me.RepositoryUrl, 1, 16)
-            Me.TableLayoutPanel.Controls.Add(Me.RepositoryType, 1, 17)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageTagsLabel, 0, 18)
-            Me.TableLayoutPanel.Controls.Add(Me.RepositoryUrlLabel, 0, 16)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageReleaseNotesLabel, 0, 19)
-            Me.TableLayoutPanel.Controls.Add(Me.RepositoryTypeLabel, 0, 17)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageTags, 1, 18)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageReleaseNotes, 1, 19)
-            Me.TableLayoutPanel.Controls.Add(Me.PackageProjectUrlLabel, 0, 14)
+            Me.TableLayoutPanel.Controls.Add(Me.RepositoryUrl, 1, 18)
+            Me.TableLayoutPanel.Controls.Add(Me.RepositoryType, 1, 19)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageTagsLabel, 0, 20)
+            Me.TableLayoutPanel.Controls.Add(Me.RepositoryUrlLabel, 0, 18)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageReleaseNotesLabel, 0, 21)
+            Me.TableLayoutPanel.Controls.Add(Me.RepositoryTypeLabel, 0, 19)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageTags, 1, 20)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageReleaseNotes, 1, 21)
+            Me.TableLayoutPanel.Controls.Add(Me.PackageProjectUrlLabel, 0, 16)
             Me.TableLayoutPanel.Controls.Add(Me.GeneratePackageOnBuild, 0, 0)
-            Me.TableLayoutPanel.Controls.Add(Me.NeutralLanguageLabel, 0, 24)
-            Me.TableLayoutPanel.Controls.Add(Me.AssemblyVersionLayoutPanel, 1, 25)
-            Me.TableLayoutPanel.Controls.Add(Me.FileVersionLayoutPanel, 1, 26)
+            Me.TableLayoutPanel.Controls.Add(Me.NeutralLanguageLabel, 0, 26)
+            Me.TableLayoutPanel.Controls.Add(Me.AssemblyVersionLayoutPanel, 1, 27)
+            Me.TableLayoutPanel.Controls.Add(Me.FileVersionLayoutPanel, 1, 28)
             Me.TableLayoutPanel.Controls.Add(Me.PackageLicenseLabel, 0, 13)
-            Me.TableLayoutPanel.Controls.Add(Me.NeutralLanguageComboBox, 1, 24)
+            Me.TableLayoutPanel.Controls.Add(Me.NeutralLanguageComboBox, 1, 26)
             Me.TableLayoutPanel.Controls.Add(Me.PackageRequireLicenseAcceptance, 0, 1)
             Me.TableLayoutPanel.Controls.Add(Me.PackageIdLabel, 0, 2)
             Me.TableLayoutPanel.Controls.Add(Me.PackageId, 1, 2)
@@ -111,8 +114,12 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TableLayoutPanel.Controls.Add(Me.ProductLabel, 0, 7)
             Me.TableLayoutPanel.Controls.Add(Me.AssemblyCompany, 1, 6)
             Me.TableLayoutPanel.Controls.Add(Me.Product, 1, 7)
-            Me.TableLayoutPanel.Controls.Add(Me.AssemblyFileVersionLabel, 0, 26)
+            Me.TableLayoutPanel.Controls.Add(Me.AssemblyFileVersionLabel, 0, 28)
             Me.TableLayoutPanel.Controls.Add(Me.LicenseLayoutPanel, 1, 13)
+            Me.TableLayoutPanel.Controls.Add(Me.ExpressionLayoutPanel, 1, 14)
+            Me.TableLayoutPanel.Controls.Add(Me.LicenseFileLayoutPanel, 1, 15)
+            Me.TableLayoutPanel.Controls.Add(Me.ExpressionLabel, 0, 14)
+            Me.TableLayoutPanel.Controls.Add(Me.FileLabel, 0, 15)
             Me.TableLayoutPanel.Name = "TableLayoutPanel"
             '
             'AssemblyVersionLabel
@@ -346,23 +353,36 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             'LicenseLayoutPanel
             '
             resources.ApplyResources(Me.LicenseLayoutPanel, "LicenseLayoutPanel")
-            Me.LicenseLayoutPanel.Controls.Add(Me.LicenseBrowseButton, 5, 0)
-            Me.LicenseLayoutPanel.Controls.Add(Me.LicenseFileNameTextBox, 4, 0)
-            Me.LicenseLayoutPanel.Controls.Add(Me.ExpressionLabel, 0, 0)
-            Me.LicenseLayoutPanel.Controls.Add(Me.FileLabel, 3, 0)
-            Me.LicenseLayoutPanel.Controls.Add(Me.OrLabel, 2, 0)
-            Me.LicenseLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 1, 0)
             Me.LicenseLayoutPanel.Name = "LicenseLayoutPanel"
             '
-            'LicenseBrowseButton
+            'ExpressionLayoutPanel
             '
-            resources.ApplyResources(Me.LicenseBrowseButton, "LicenseBrowseButton")
-            Me.LicenseBrowseButton.Name = "LicenseBrowseButton"
+            Me.ExpressionLayoutPanel.CausesValidation = False
+            resources.ApplyResources(Me.ExpressionLayoutPanel, "ExpressionLayoutPanel")
+            Me.ExpressionLayoutPanel.Controls.Add(Me.PackageLicenseExpression, 1, 0)
+            Me.ExpressionLayoutPanel.Name = "ExpressionLayoutPanel"
+            '
+            'PackageLicenseExpression
+            '
+            resources.ApplyResources(Me.PackageLicenseExpression, "PackageLicenseExpression")
+            Me.PackageLicenseExpression.Name = "PackageLicenseExpression"
+            '
+            'LicenseFileLayoutPanel
+            '
+            resources.ApplyResources(Me.LicenseFileLayoutPanel, "LicenseFileLayoutPanel")
+            Me.LicenseFileLayoutPanel.Controls.Add(Me.LicenseFileNameTextBox, 1, 0)
+            Me.LicenseFileLayoutPanel.Controls.Add(Me.LicenseBrowseButton, 2, 0)
+            Me.LicenseFileLayoutPanel.Name = "LicenseFileLayoutPanel"
             '
             'LicenseFileNameTextBox
             '
             resources.ApplyResources(Me.LicenseFileNameTextBox, "LicenseFileNameTextBox")
             Me.LicenseFileNameTextBox.Name = "LicenseFileNameTextBox"
+            '
+            'LicenseBrowseButton
+            '
+            resources.ApplyResources(Me.LicenseBrowseButton, "LicenseBrowseButton")
+            Me.LicenseBrowseButton.Name = "LicenseBrowseButton"
             '
             'ExpressionLabel
             '
@@ -379,11 +399,6 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             resources.ApplyResources(Me.OrLabel, "OrLabel")
             Me.OrLabel.Name = "OrLabel"
             '
-            'PackageLicenseExpression
-            '
-            resources.ApplyResources(Me.PackageLicenseExpression, "PackageLicenseExpression")
-            Me.PackageLicenseExpression.Name = "PackageLicenseExpression"
-            '
             'PackagePropPage
             '
             resources.ApplyResources(Me, "$this")
@@ -396,8 +411,10 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.AssemblyVersionLayoutPanel.PerformLayout()
             Me.FileVersionLayoutPanel.ResumeLayout(False)
             Me.FileVersionLayoutPanel.PerformLayout()
-            Me.LicenseLayoutPanel.ResumeLayout(False)
-            Me.LicenseLayoutPanel.PerformLayout()
+            Me.ExpressionLayoutPanel.ResumeLayout(False)
+            Me.ExpressionLayoutPanel.PerformLayout()
+            Me.LicenseFileLayoutPanel.ResumeLayout(False)
+            Me.LicenseFileLayoutPanel.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -450,6 +467,10 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents AssemblyFileVersionLabel As Windows.Forms.Label
 
         Friend WithEvents LicenseLayoutPanel As Windows.Forms.TableLayoutPanel
+        Friend WithEvents ExpressionLayoutPanel As Windows.Forms.TableLayoutPanel
+        Friend WithEvents LicenseFileLayoutPanel As Windows.Forms.TableLayoutPanel
+
+
         Friend WithEvents ExpressionLabel As Windows.Forms.Label
         Friend WithEvents PackageLicenseExpression As Windows.Forms.TextBox
         Friend WithEvents OrLabel As Windows.Forms.Label
