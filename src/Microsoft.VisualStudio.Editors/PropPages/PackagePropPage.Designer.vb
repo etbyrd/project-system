@@ -502,7 +502,6 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents FileLabel As Windows.Forms.Label
         Friend WithEvents LicenseFileNameTextBox As Windows.Forms.TextBox
         Friend WithEvents LicenseBrowseButton As System.Windows.Forms.Button
-
     End Class
 
 End Namespace

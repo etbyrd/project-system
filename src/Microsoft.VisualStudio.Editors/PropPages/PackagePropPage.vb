@@ -17,6 +17,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Private ReadOnly _assemblyVersionTextBoxes As TextBox()
         Private _licenseFileSelected As Boolean = False
         Private _licenseExpressionSelected As Boolean = False
+        Private _licenseUrlDetected As Boolean = False
+        Private _newLicensePropertyDetectedAtInit As Boolean = False
 
 
         'After 65535, the project system doesn't complain, and in theory any value is allowed as
@@ -116,12 +118,21 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Dim PackageLicenseFileSet = TryCast(TryGetNonCommonPropertyValue(GetPropertyDescriptor("PackageLicenseFile")), String)
             If (PackageLicenseFileSet IsNot Nothing And PackageLicenseFileSet IsNot "") Then
                 LicenseFileRadioButton.Checked = True
+                _newLicensePropertyDetectedAtInit = True
                 SetLicenseFileRadioButton()
             End If
             Dim PackageLicenseExpressionSet = TryCast(TryGetNonCommonPropertyValue(GetPropertyDescriptor("PackageLicenseExpression")), String)
             If (PackageLicenseExpressionSet IsNot Nothing And PackageLicenseExpressionSet IsNot "") Then
                 LicenseExpressionRadioButton.Checked = True
+                _newLicensePropertyDetectedAtInit = True
                 SetLicenseExpressionRadioButton()
+            End If
+            Dim PackageLicenseUrlSet = TryCast(TryGetNonCommonPropertyValue(GetPropertyDescriptor("PackageLicenseUrl")), String)
+            If (PackageLicenseUrlSet IsNot Nothing And PackageLicenseUrlSet IsNot "") Then
+                LicenseLineLabel.BackColor = Drawing.SystemColors.Control
+                LicenseLineLabel.Size = New Drawing.Size(LicenseLineLabel.Size.Width, 30)
+                LicenseLineLabel.Text = "PackageLicenseURL property was detected, but it has been depreciated. Please change to either an Expression or File."
+                _licenseUrlDetected = True
             End If
         End Sub
 
@@ -267,7 +278,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                     datalist.Add(data)
                     data = New PropertyControlData(106, "PackageLicenseExpression", PackageLicenseExpression, ControlDataFlags.UserHandledEvents, New Control() {PackageLicenseLabel})
                     datalist.Add(data)
-                    data = New PropertyControlData(107, "PackageLicenseFile", LicenseFileNameTextBox, ControlDataFlags.None, New Control() {PackageLicenseLabel})
+                    data = New PropertyControlData(107, "PackageLicenseFileLocation", LicenseFileNameTextBox, ControlDataFlags.None, New Control() {PackageLicenseLabel})
                     datalist.Add(data)
                     data = New PropertyControlData(108, "PackageProjectUrl", PackageProjectUrl, ControlDataFlags.None, New Control() {PackageProjectUrlLabel})
                     datalist.Add(data)
@@ -320,14 +331,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                                                         End Function)
         End Function
 
-        Private Shared Function GetRelativePath(fullPath As String, basePath As String) As String
-            Dim baseUri = New Uri(basePath)
-            Dim fullUri = New Uri(fullPath)
 
-            Dim relativeUri = baseUri.MakeRelativeUri(fullUri)
-
-            Return relativeUri.ToString().Replace("/", "\")
-        End Function
 
         Private Sub SetLicenseExpressionRadioButton()
             LicenseFileRadioButton.Checked = False
@@ -357,13 +361,32 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             SetDirty(PackageLicenseExpression)
         End Sub
 
+        Private Sub LicenseTypeFirstSelected()
+            If (_licenseUrlDetected) Then
+                'This is to handle when the property page has neither of the new properties AND it has the license URL selected
+                LicenseLineLabel.BackColor = Drawing.SystemColors.ControlDark
+                LicenseLineLabel.Size = New Drawing.Size(LicenseLineLabel.Size.Width, 1)
+                SetCommonPropertyValue(GetPropertyDescriptor("PackageLicenseUrl"), "")
+                'Shouldn't ever be hit again, but just in case
+                _licenseUrlDetected = False
+            End If
+        End Sub
+
         Private Sub LicenseExpressionRadioButton_Selected(sender As Object, e As EventArgs) Handles LicenseExpressionRadioButton.CheckedChanged
+            If (Not _newLicensePropertyDetectedAtInit) Then
+                LicenseTypeFirstSelected()
+                _newLicensePropertyDetectedAtInit = False
+            End If
             If (LicenseExpressionRadioButton.Checked) Then
                 SetLicenseExpressionRadioButton()
             End If
         End Sub
 
         Private Sub LicenseFileRadioButton_Selected(sender As Object, e As EventArgs) Handles LicenseFileRadioButton.CheckedChanged
+            If (Not _newLicensePropertyDetectedAtInit) Then
+                LicenseTypeFirstSelected()
+                _newLicensePropertyDetectedAtInit = False
+            End If
             If (LicenseFileRadioButton.Checked) Then
                 SetLicenseFileRadioButton()
             End If
@@ -375,7 +398,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
             ElseIf (PackageLicenseExpression.Text IsNot "" And Not PackageLicenseExpression.Enabled) Then
                 'The license expression is not selected, and the Text was changed to something while it was disabled
-                'This means it there was probably an Undo which populated the textbox with text, give it back control
+                'This means it there was probably an Undo which populated the textbox with text, so give it back control
                 SetLicenseExpressionRadioButton()
             End If
         End Sub
@@ -402,6 +425,15 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             SetLicenseFileRadioButton()
         End Sub
 
+        Private Shared Function GetRelativePath(fullPath As String, basePath As String) As String
+            Dim baseUri = New Uri(basePath)
+            Dim fullUri = New Uri(fullPath)
+
+            Dim relativeUri = baseUri.MakeRelativeUri(fullUri)
+
+            Return relativeUri.ToString().Replace("/", "\")
+        End Function
+
         Private Sub LicenseBrowseButton_Click(sender As Object, e As EventArgs) Handles LicenseBrowseButton.Click
             Dim sInitialDirectory = ""
             Dim sFileName = ""
@@ -421,14 +453,17 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                     Dim configuredProject As ProjectSystem.ConfiguredProject = AccessTheConfiguredProject(unconfiguredProject)
                     Dim projectSourceItemProvider = configuredProject.Services.ExportProvider.GetExportedValue(Of ProjectSystem.IProjectSourceItemProvider)()
                     Dim correctDirectory = Directory.GetParent(unconfiguredProject.FullPath).ToString
-                    Dim fileWriteLocation = correctDirectory + "\" + LicenseFileNameTextBox.Text
-                    Dim relativePath As String = GetRelativePath(Path.GetFullPath(sFileName), fileWriteLocation)
+                    'Dim fileWriteLocation = correctDirectory + "\" + 
+                    Dim fileWriteLocation = Path.GetFullPath(sFileName)
+                    Dim relativePath As String = GetRelativePath(Path.GetFullPath(sFileName), correctDirectory + "\")
                     LicenseFileNameTextBox.Text = Path.GetFullPath(sFileName)
                     SetDirty(LicenseFileNameTextBox, True)
                     LicenseFileNameTextBox.Text = relativePath
-                    ThreadHelper.JoinableTaskFactory.Run(Function()
-                                                             Return projectSourceItemProvider.AddAsync("None", relativePath, {(New KeyValuePair(Of String, String)("Pack", "True")), New KeyValuePair(Of String, String)("PackagePath", "")})
-                                                         End Function)
+                    SetCommonPropertyValue(GetPropertyDescriptor("PackageLicenseFile"), Path.GetFileName(sFileName))
+
+                    'ThreadHelper.JoinableTaskFactory.Run(Function()
+                    '                                         Return projectSourceItemProvider.AddAsync("None", relativePath, {(New KeyValuePair(Of String, String)("Pack", "True")), New KeyValuePair(Of String, String)("PackagePath", "")})
+                    '                                     End Function)
                     'No copy
                     'File.Copy(sFileName, fileWriteLocation)
                 End If
