@@ -242,6 +242,11 @@
         <target state="new">Package Tags</target>
         <note />
       </trans-unit>
+      <trans-unit id="LicenseLineLabel.Text">
+        <source>PackageLicenseURL property was detected, but it has been deprecated. Please change to either an Expression or File.</source>
+        <target state="new">PackageLicenseURL property was detected, but it has been deprecated. Please change to either an Expression or File.</target>
+        <note />
+      </trans-unit>
     </body>
   </file>
 </xliff>

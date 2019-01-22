@@ -20,7 +20,6 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Private _licenseUrlDetected As Boolean = False
         Private _newLicensePropertyDetectedAtInit As Boolean = False
 
-
         'After 65535, the project system doesn't complain, and in theory any value is allowed as
         '  the string version of this, but after this value the numeric version of the file version
         '  no longer matches the string version.
@@ -131,7 +130,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             If (PackageLicenseUrlSet IsNot Nothing And PackageLicenseUrlSet IsNot "") Then
                 LicenseLineLabel.BackColor = Drawing.SystemColors.Control
                 LicenseLineLabel.Size = New Drawing.Size(LicenseLineLabel.Size.Width, 30)
-                LicenseLineLabel.Text = "PackageLicenseURL property was detected, but it has been depreciated. Please change to either an Expression or File."
+                ''This will have the be some sort of localized string property 
+                ''LicenseLineLabel.Text = "PackageLicenseURL property was detected, but it has been deprecated. Please change to either an Expression or File."
                 _licenseUrlDetected = True
             End If
         End Sub
@@ -325,13 +325,11 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             SetComboBoxDropdownWidth(NeutralLanguageComboBox)
         End Sub
 
-        Public Function AccessTheConfiguredProject(unconfiguredProject As ProjectSystem.UnconfiguredProject) As ProjectSystem.ConfiguredProject
+        Private Shared Function AccessTheConfiguredProject(unconfiguredProject As ProjectSystem.UnconfiguredProject) As ProjectSystem.ConfiguredProject
             Return ThreadHelper.JoinableTaskFactory.Run(Function()
                                                             Return unconfiguredProject.GetSuggestedConfiguredProjectAsync
                                                         End Function)
         End Function
-
-
 
         Private Sub SetLicenseExpressionRadioButton()
             LicenseFileRadioButton.Checked = False
@@ -342,9 +340,16 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             _licenseFileSelected = False
             _licenseExpressionSelected = True
 
+            'If there is no text in it already, don't set it to dirty (to handle the beginning case where it is already empty, we don't want to add the property)
+            If Not LicenseFileNameTextBox.Text = "" Then
+                LicenseFileNameTextBox.Text = ""
+                SetDirty(LicenseFileNameTextBox)
+                SetCommonPropertyValue(GetPropertyDescriptor("PackageLicenseFile"), "")
+            End If
+
             'Set it to empty, but not dirty so that the property is not set yet
-            LicenseFileNameTextBox.Text = ""
-            SetDirty(LicenseFileNameTextBox)
+            'Should we set the other to dirty?
+            'SetDirty(LicenseFileNameTextBox)
         End Sub
 
         Private Sub SetLicenseFileRadioButton()
@@ -357,8 +362,11 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             _licenseExpressionSelected = False
 
             'Just setting it to dirty will allow the user to not
-            PackageLicenseExpression.Text = ""
-            SetDirty(PackageLicenseExpression)
+            If Not PackageLicenseExpression.Text = "" Then
+                PackageLicenseExpression.Text = ""
+                SetDirty(PackageLicenseExpression)
+            End If
+            'SetDirty(PackageLicenseExpression)
         End Sub
 
         Private Sub LicenseTypeFirstSelected()
@@ -394,6 +402,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         Private Sub PackageLicenseExpression_Changed(sender As Object, e As EventArgs) Handles PackageLicenseExpression.TextChanged
             If (_licenseExpressionSelected) Then
+                'I really don't want to have to call setDirty every single time, but this mathes the behavior of all other propreties
+                'The alternative would be to listen for lost focus and set dirty there, but that probably isn't a big deal
                 SetDirty(PackageLicenseExpression)
 
             ElseIf (PackageLicenseExpression.Text IsNot "" And Not PackageLicenseExpression.Enabled) Then
@@ -409,7 +419,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             ElseIf (LicenseFileNameTextBox.Text IsNot "" And Not LicenseFileNameTextBox.Enabled) Then
                 'The license file is not selected, and the Text was changed to something while it was disabled
                 'This means it there was probably an Undo which populated the textbox with text, give it back control
-                SetLicenseExpressionRadioButton()
+                SetLicenseFileRadioButton()
             End If
         End Sub
 
@@ -434,13 +444,15 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Return relativeUri.ToString().Replace("/", "\")
         End Function
 
+        'Private Sub PropertyChanged() Handles 
+
         Private Sub LicenseBrowseButton_Click(sender As Object, e As EventArgs) Handles LicenseBrowseButton.Click
             Dim sInitialDirectory = ""
             Dim sFileName = ""
 
             Dim fileNames As ArrayList = GetFilesViaBrowse(ServiceProvider, Handle, sInitialDirectory, My.Resources.Microsoft_VisualStudio_Editors_Designer.PPG_AddExistingFilesTitle,
                     CombineDialogFilters(
-                        CreateDialogFilter(My.Resources.Microsoft_VisualStudio_Editors_Designer.RSE_Filter_Text, "txt"),
+                        CreateDialogFilter(My.Resources.Microsoft_VisualStudio_Editors_Designer.RSE_Filter_Text, ".txt", ".md", "."),
                         GetAllFilesDialogFilter()
                         ),
                         0, False, sFileName)
