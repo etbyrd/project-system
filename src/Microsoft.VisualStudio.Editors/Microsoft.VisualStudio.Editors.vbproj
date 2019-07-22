@@ -62,9 +62,14 @@
       <LogicalName>Microsoft.VisualStudio.Editors.PropertyPages.AdvBuildSettingsPropPage.resources</LogicalName>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="PropPages\AdvCompilerSettingsPropPage.resx">
-      <DependentUpon>AdvCompilerSettingsPropPage.vb</DependentUpon>
-      <LogicalName>Microsoft.VisualStudio.Editors.PropertyPages.AdvCompilerSettingsPropPage.resources</LogicalName>
+    <EmbeddedResource Update="PropPages\AdvBuildSettingsPropPage.resx">
+      <DependentUpon>AdvBuildSettingsPropPage.vb</DependentUpon>
+      <LogicalName>Microsoft.VisualStudio.Editors.PropertyPages.AdvBuildSettingsPropPage.resources</LogicalName>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PropPages\MultiTargetingDialog.resx">
+      <DependentUpon>MultiTargetingDialog.vb</DependentUpon>
+      <LogicalName>Microsoft.VisualStudio.Editors.PropertyPages.MultiTargetingDialog.resources</LogicalName>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Update="PropPages\ApplicationPropPage.resx">
@@ -253,6 +258,10 @@
       <DependentUpon>AdvBuildSettingsPropPage.vb</DependentUpon>
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="PropPages\MultiTargetingDialog.Designer.vb">
+      <DependentUpon>MultiTargetingDialog.vb</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="PropPages\AdvCompilerSettingsPropPage.Designer.vb">
       <DependentUpon>AdvCompilerSettingsPropPage.vb</DependentUpon>
       <SubType>UserControl</SubType>
@@ -397,6 +406,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="proppages\AdvBuildSettingsPropPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="proppages\MultiTargetingDialog.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="proppages\AdvCompilerSettingsPropPage.vb">

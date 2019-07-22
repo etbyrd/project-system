@@ -135,7 +135,6 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                     Dim supportedFrameworks As IEnumerable(Of TargetFrameworkMoniker) = TargetFrameworkMoniker.GetSupportedTargetFrameworkMonikers(vsFrameworkMultiTargeting, DTEProject, supportedTargetFrameworksDescriptor)
 
                     For Each supportedFramework As TargetFrameworkMoniker In supportedFrameworks
-                        Dim tfmTest As String = TFMToProjectFileName(supportedFramework)
                         targetFrameworkComboBox.Items.Add(supportedFramework)
                     Next
 

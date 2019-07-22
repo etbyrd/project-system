@@ -85,6 +85,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             '
             resources.ApplyResources(Me.TitleLabel, "TitleLabel")
             Me.TitleLabel.Name = "TitleLabel"
+            Me.TitleLabel.Text = "Hello"
             '
             'TrademarkLabel
             '

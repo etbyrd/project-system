@@ -1,4 +1,4 @@
-' Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿' Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
 Imports System.Windows.Forms
 
@@ -118,7 +118,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         Private Function LaunchEventBuilder(Parent As BuildEventsPropPage, valueHelper As GetTokenValueFunc, WindowTitleText As String, ByRef CommandLine As String) As Boolean
 
-            Dim frm As New BuildEventCommandLineDialog
+            Dim frm As New MultiTargetingDialog
             Dim Values() As String = Nothing
 
             '// Initialize the title text
