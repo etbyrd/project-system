@@ -135,6 +135,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                     Dim supportedFrameworks As IEnumerable(Of TargetFrameworkMoniker) = TargetFrameworkMoniker.GetSupportedTargetFrameworkMonikers(vsFrameworkMultiTargeting, DTEProject, supportedTargetFrameworksDescriptor)
 
                     For Each supportedFramework As TargetFrameworkMoniker In supportedFrameworks
+                        Dim tfmTest As String = TFMToProjectFileName(supportedFramework)
                         targetFrameworkComboBox.Items.Add(supportedFramework)
                     Next
 
@@ -142,6 +143,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
                     ' Set the service provider to be used when choosing the 'Install other frameworks...' item
                     TargetFrameworkPropertyControlData.Site = siteServiceProvider
+
+
 
                     targetFrameworkSupported = True
                 End If
@@ -155,6 +158,25 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
                 targetFrameworkComboBox.Enabled = False
             End If
         End Sub
+
+        Private Function TFMToProjectFileName(moniker As TargetFrameworkMoniker) As String
+            Dim frameworkName As New FrameworkName(moniker.Moniker)
+
+            Dim isNetCoreApp = String.Compare(frameworkName.Identifier, ".NETCoreApp", StringComparison.Ordinal) = 0
+            Dim isNetStandard = String.Compare(frameworkName.Identifier, ".NETStandard", StringComparison.Ordinal) = 0
+            Dim isNetFramework = String.Compare(frameworkName.Identifier, ".NETFramework", StringComparison.Ordinal) = 0
+
+            If isNetCoreApp Then
+                Return "netcoreapp" + frameworkName.Version.ToString
+            ElseIf isNetStandard Then
+                Return "netstandard" + frameworkName.Version.ToString
+            ElseIf isNetFramework Then
+                Return "net" + frameworkName.Version.ToString.Replace(".", "")
+            End If
+
+            'Some weird TFM
+            Return Nothing
+        End Function
 
         Private Function TargetFrameworksDefined() As Boolean
             Dim obj As Object

@@ -1,4 +1,4 @@
-' Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿' Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
 Imports System.ComponentModel
 Imports System.Runtime.Versioning
@@ -107,10 +107,19 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             For Each moniker As String In supportedFrameworksArray
                 If hashSupportedTargetFrameworkMonikers.Add(moniker) Then
 
+                    Dim DisplayName2 As String = Nothing
+                    Dim InstallableFramework As String = Nothing
+                    vsFrameworkMultiTargeting.GetDisplayNameForTargetFx(moniker, DisplayName2)
+                    vsFrameworkMultiTargeting.GetInstallableFrameworkForTargetFx(moniker, InstallableFramework)
+
                     Dim frameworkName As New FrameworkName(moniker)
 
-                    ' Filter out frameworks with a different identifier since they are not applicable to the current project type
-                    If String.Compare(frameworkName.Identifier, currentFrameworkName.Identifier, StringComparison.OrdinalIgnoreCase) = 0 Then
+                    Dim isNetCoreApp = String.Compare(frameworkName.Identifier, ".NETCoreApp", StringComparison.Ordinal) = 0
+                    Dim isNetStandard = String.Compare(frameworkName.Identifier, ".NETStandard", StringComparison.Ordinal) = 0
+                    Dim isNetFramework = String.Compare(frameworkName.Identifier, ".NETFramework", StringComparison.Ordinal) = 0
+
+                    ' Show all NETCore, NETStandard and NETFramework TFM's
+                    If isNetCoreApp OrElse isNetStandard OrElse isNetFramework Then
 
                         If isWebProject Then
 
