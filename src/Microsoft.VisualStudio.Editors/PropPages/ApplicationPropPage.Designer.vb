@@ -33,6 +33,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents overarchingLayoutPanel As System.Windows.Forms.TableLayoutPanel
         Friend WithEvents ManifestExplanationLabel As System.Windows.Forms.TextBox
         Friend WithEvents iconTableLayoutPanel As System.Windows.Forms.TableLayoutPanel
+        Friend WithEvents MultipleTFMButton As System.Windows.Forms.Button
 
         <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ApplicationPropPage))
@@ -49,6 +50,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TargetFrameworkLabel = New System.Windows.Forms.Label()
             Me.TargetFramework = New System.Windows.Forms.ComboBox()
             Me.AutoGenerateBindingRedirects = New System.Windows.Forms.CheckBox()
+            Me.MultipleTFMButton = New System.Windows.Forms.Button()
             Me.ResourcesGroupBox = New System.Windows.Forms.GroupBox()
             Me.iconTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
             Me.ResourcesLabel = New System.Windows.Forms.Label()
@@ -85,7 +87,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TopHalfLayoutPanel.Controls.Add(Me.AssemblyInfoButton, 1, 7)
             Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFrameworkLabel, 0, 2)
             Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFramework, 0, 3)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.AutoGenerateBindingRedirects, 0, 4)
+            Me.TopHalfLayoutPanel.Controls.Add(Me.AutoGenerateBindingRedirects, 0, 5)
+            Me.TopHalfLayoutPanel.Controls.Add(Me.MultipleTFMButton, 0, 4)
             Me.TopHalfLayoutPanel.Name = "TopHalfLayoutPanel"
             '
             'AssemblyNameLabel
@@ -103,10 +106,10 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             resources.ApplyResources(Me.RootNamespaceLabel, "RootNamespaceLabel")
             Me.RootNamespaceLabel.Name = "RootNamespaceLabel"
             '
-            'RootNameSpace
+            'RootNamespaceTextBox
             '
-            resources.ApplyResources(Me.RootNamespaceTextBox, "RootNameSpace")
-            Me.RootNamespaceTextBox.Name = "RootNameSpace"
+            resources.ApplyResources(Me.RootNamespaceTextBox, "RootNamespaceTextBox")
+            Me.RootNamespaceTextBox.Name = "RootNamespaceTextBox"
             '
             'OutputTypeLabel
             '
@@ -152,9 +155,14 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TargetFramework.Sorted = True
             '
             'AutoGenerateBindingRedirects
+            '
             resources.ApplyResources(Me.AutoGenerateBindingRedirects, "AutoGenerateBindingRedirects")
             Me.AutoGenerateBindingRedirects.Name = "AutoGenerateBindingRedirects"
             '
+            'MultipleTFMButton
+            '
+            resources.ApplyResources(Me.MultipleTFMButton, "MultipleTFMButton")
+            Me.MultipleTFMButton.Name = "MultipleTFMButton"
             '
             'ResourcesGroupBox
             '

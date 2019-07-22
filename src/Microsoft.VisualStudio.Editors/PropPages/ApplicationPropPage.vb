@@ -1,10 +1,10 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
 Imports System.Windows.Forms
-
+Imports System.Windows.Forms.Design
 Imports Microsoft.VisualStudio.Editors.Common
 Imports Microsoft.VisualStudio.Shell
-
+Imports Microsoft.VisualStudio.Utilities
 Imports VSLangProj110
 
 Imports VSLangProj158
@@ -66,6 +66,12 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Private Sub AssemblyInfoButton_Click(sender As Object, e As EventArgs) Handles AssemblyInfoButton.Click
             ShowChildPage(My.Resources.Microsoft_VisualStudio_Editors_Designer.PPG_AssemblyInfo_Title, GetType(AssemblyInfoPropPage), HelpKeywords.VBProjPropAssemblyInfo)
         End Sub
+
+        Private Sub MultipleTFMButton_Click(sender As Object, e As EventArgs) Handles MultipleTFMButton.Click
+            ShowChildPage("Multi Framework Drifting!", GetType(MultiTargetingDialog))
+        End Sub
+
+
 
         ''' <summary>
         ''' 

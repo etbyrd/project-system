@@ -87,6 +87,11 @@
         <target state="translated">&amp;Generar redirecciones de enlace automáticamente</target>
         <note />
       </trans-unit>
+      <trans-unit id="MultipleTFMButton.Text">
+        <source>Multiple TFM</source>
+        <target state="new">Multiple TFM</target>
+        <note />
+      </trans-unit>
     </body>
   </file>
 </xliff>

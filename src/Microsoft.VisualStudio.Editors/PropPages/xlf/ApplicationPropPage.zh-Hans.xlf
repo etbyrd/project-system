@@ -87,6 +87,11 @@
         <target state="translated">自动生成绑定重定向(&amp;A)</target>
         <note />
       </trans-unit>
+      <trans-unit id="MultipleTFMButton.Text">
+        <source>Multiple TFM</source>
+        <target state="new">Multiple TFM</target>
+        <note />
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -26,6 +26,9 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         Protected TargetFrameworkPropertyControlData As TargetFrameworkPropertyControlData
 
+        Friend Shared SupportedFrameworks As IEnumerable(Of TargetFrameworkMoniker)
+        Protected SiteServiceProvider As OLE.Interop.IServiceProvider = Nothing
+        Protected VSFrameworkMultiTargeting As IVsFrameworkMultiTargeting
         Protected Overrides Sub CleanupCOMReferences()
             MyBase.CleanupCOMReferences()
 
@@ -114,6 +117,14 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
 #Region "Target Framework"
 
+        Protected Sub GetSupportedTargetFrameworks()
+            VSErrorHandler.ThrowOnFailure(ProjectHierarchy.GetSite(SiteServiceProvider))
+            Dim sp As New Shell.ServiceProvider(SiteServiceProvider)
+            Dim VSFrameworkMultiTargeting As IVsFrameworkMultiTargeting = TryCast(sp.GetService(GetType(SVsFrameworkMultiTargeting).GUID), IVsFrameworkMultiTargeting)
+            Dim supportedTargetFrameworksDescriptor = GetPropertyDescriptor("SupportedTargetFrameworks")
+            SupportedFrameworks = TargetFrameworkMoniker.GetSupportedTargetFrameworkMonikers(VSFrameworkMultiTargeting, DTEProject, supportedTargetFrameworksDescriptor)
+        End Sub
+
         ''' <summary>
         ''' Fill up the allowed values in the target framework combo box
         ''' </summary>
@@ -123,25 +134,21 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             targetFrameworkComboBox.Items.Clear()
             targetFrameworkComboBox.SelectedIndex = -1
 
+            GetSupportedTargetFrameworks()
             Try
-                Dim siteServiceProvider As OLE.Interop.IServiceProvider = Nothing
-                VSErrorHandler.ThrowOnFailure(ProjectHierarchy.GetSite(siteServiceProvider))
-                Dim sp As New Shell.ServiceProvider(siteServiceProvider)
-                Dim vsFrameworkMultiTargeting As IVsFrameworkMultiTargeting = TryCast(sp.GetService(GetType(SVsFrameworkMultiTargeting).GUID), IVsFrameworkMultiTargeting)
                 ' TODO: Remove IsTargetFrameworksDefined check after issue #800 is resolved.
-                If (TargetFrameworksDefined() = False And vsFrameworkMultiTargeting IsNot Nothing) Then
+                If (TargetFrameworksDefined() = False And VSFrameworkMultiTargeting IsNot Nothing) Then
 
-                    Dim supportedTargetFrameworksDescriptor = GetPropertyDescriptor("SupportedTargetFrameworks")
-                    Dim supportedFrameworks As IEnumerable(Of TargetFrameworkMoniker) = TargetFrameworkMoniker.GetSupportedTargetFrameworkMonikers(vsFrameworkMultiTargeting, DTEProject, supportedTargetFrameworksDescriptor)
 
-                    For Each supportedFramework As TargetFrameworkMoniker In supportedFrameworks
+
+                    For Each supportedFramework As TargetFrameworkMoniker In SupportedFrameworks
                         targetFrameworkComboBox.Items.Add(supportedFramework)
                     Next
 
                     targetFrameworkComboBox.Items.Add(New InstallOtherFrameworksComboBoxValue())
 
                     ' Set the service provider to be used when choosing the 'Install other frameworks...' item
-                    TargetFrameworkPropertyControlData.Site = siteServiceProvider
+                    TargetFrameworkPropertyControlData.Site = SiteServiceProvider
 
 
 
@@ -158,24 +165,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             End If
         End Sub
 
-        Private Function TFMToProjectFileName(moniker As TargetFrameworkMoniker) As String
-            Dim frameworkName As New FrameworkName(moniker.Moniker)
 
-            Dim isNetCoreApp = String.Compare(frameworkName.Identifier, ".NETCoreApp", StringComparison.Ordinal) = 0
-            Dim isNetStandard = String.Compare(frameworkName.Identifier, ".NETStandard", StringComparison.Ordinal) = 0
-            Dim isNetFramework = String.Compare(frameworkName.Identifier, ".NETFramework", StringComparison.Ordinal) = 0
-
-            If isNetCoreApp Then
-                Return "netcoreapp" + frameworkName.Version.ToString
-            ElseIf isNetStandard Then
-                Return "netstandard" + frameworkName.Version.ToString
-            ElseIf isNetFramework Then
-                Return "net" + frameworkName.Version.ToString.Replace(".", "")
-            End If
-
-            'Some weird TFM
-            Return Nothing
-        End Function
 
         Private Function TargetFrameworksDefined() As Boolean
             Dim obj As Object

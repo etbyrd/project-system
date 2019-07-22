@@ -4,7 +4,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
     Partial Class MultiTargetingDialog
         Friend WithEvents CommandLinePanel As System.Windows.Forms.Panel
-        Friend WithEvents TitleLabel As System.Windows.Forms.Label
+        Friend WithEvents TFMSelector As System.Windows.Forms.CheckedListBox
         Private components As System.ComponentModel.IContainer
 
 
@@ -19,30 +19,26 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         <System.Diagnostics.DebuggerNonUserCode()> Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MultiTargetingDialog))
-            Me.TitleLabel = New System.Windows.Forms.Label()
+            Me.TFMSelector = New System.Windows.Forms.CheckedListBox()
             Me.CommandLinePanel = New System.Windows.Forms.Panel()
             Me.SuspendLayout()
+            '
+            'TFMSelector
+            '
+            resources.ApplyResources(Me.TFMSelector, "TFMSelector")
+            Me.TFMSelector.Name = "TFMSelector"
             '
             'CommandLinePanel
             '
             resources.ApplyResources(Me.CommandLinePanel, "CommandLinePanel")
             Me.CommandLinePanel.Name = "CommandLinePanel"
             '
-            'TitleLabel
-            '
-            resources.ApplyResources(Me.TitleLabel, "TitleLabel")
-            Me.TitleLabel.Name = "TitleLabel"
-            '
             'MultiTargetingDialog
             '
             resources.ApplyResources(Me, "$this")
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.HelpButton = True
-            Me.MaximizeBox = False
-            Me.MinimizeBox = False
+            Me.Controls.Add(Me.TFMSelector)
             Me.Name = "MultiTargetingDialog"
-            Me.ShowIcon = False
-            Me.ShowInTaskbar = False
             Me.ResumeLayout(False)
 
         End Sub

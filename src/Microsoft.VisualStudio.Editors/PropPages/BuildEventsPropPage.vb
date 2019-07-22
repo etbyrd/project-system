@@ -118,7 +118,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         Private Function LaunchEventBuilder(Parent As BuildEventsPropPage, valueHelper As GetTokenValueFunc, WindowTitleText As String, ByRef CommandLine As String) As Boolean
 
-            Dim frm As New MultiTargetingDialog
+            Dim frm As New BuildEventCommandLineDialog
             Dim Values() As String = Nothing
 
             '// Initialize the title text

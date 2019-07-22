@@ -1,19 +1,9 @@
-﻿
+﻿Imports System.Runtime.Versioning
 Imports System.Windows.Forms
-Imports System.Windows.Forms.Design
-Imports Microsoft.VisualStudio.Utilities
 
 Namespace Microsoft.VisualStudio.Editors.PropertyPages
     Friend NotInheritable Class MultiTargetingDialog
-        Inherits Form
-
-        Private _eventCommandLine As String
-        Private _tokens() As String
-        Private _values() As String
-        Private _dte As EnvDTE.DTE
-        Private _serviceProvider As IServiceProvider
-        Private _page As PropPageUserControlBase
-        Private _helpTopic As String
+        Inherits PropPageUserControlBase
 
         Public Sub New()
             MyBase.New()
@@ -22,177 +12,67 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             InitializeComponent()
 
             'Add any initialization after the InitializeComponent() call
-
-            'When we load the macros panel is hidden so don't show the Insert button
-            SetInsertButtonState(False)
-
+            AddChecks()
         End Sub
 
-        Public Function SetFormTitleText(titleText As String) As Boolean
-            Text = titleText
-            Return True
-        End Function
+        Private Sub AddChecks()
 
-        Public Function SetTokensAndValues(tokens() As String, values() As String) As Boolean
-            _tokens = tokens
-            _values = values
-
-            Return ParseAndPopulateTokens()
-        End Function
-
-        Public WriteOnly Property DTE() As EnvDTE.DTE
-            Set(value As EnvDTE.DTE)
-                _dte = value
-            End Set
-        End Property
-
-        Public WriteOnly Property Page() As PropPageUserControlBase
-            Set(value As PropPageUserControlBase)
-                _page = value
-            End Set
-        End Property
-
-        Public Property EventCommandLine() As String
-            Get
-                Return _eventCommandLine
-            End Get
-            Set(value As String)
-                _eventCommandLine = value
-            End Set
-        End Property
-
-        Public Property HelpTopic() As String
-            Get
-                If _helpTopic Is Nothing Then
-                    If _page IsNot Nothing AndAlso _page.IsVBProject() Then
-                        _helpTopic = HelpKeywords.VBProjPropBuildEventsBuilder
-                    Else
-                        _helpTopic = HelpKeywords.CSProjPropBuildEventsBuilder
-                    End If
-                End If
-
-                Return _helpTopic
-            End Get
-            Set(value As String)
-                _helpTopic = value
-            End Set
-        End Property
-
-        Private Property ServiceProvider() As IServiceProvider
-            Get
-                If _serviceProvider Is Nothing AndAlso _dte IsNot Nothing Then
-                    Dim isp As OLE.Interop.IServiceProvider = CType(_dte, OLE.Interop.IServiceProvider)
-                    If isp IsNot Nothing Then
-                        _serviceProvider = New Shell.ServiceProvider(isp)
-                    End If
-                End If
-                Return _serviceProvider
-            End Get
-            Set(value As IServiceProvider)
-                _serviceProvider = value
-            End Set
-        End Property
-
-        Private Sub UpdateDialog_HelpButtonClicked(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.HelpButtonClicked
-            InvokeHelp()
-            e.Cancel = True
-        End Sub
-
-        Private Function ParseAndPopulateTokens() As Boolean
-            '// Walk through the array and add each row to the listview
-            Dim i As Integer
-            Dim NameItem As ListViewItem
-
-            For i = 0 To _tokens.Length - 1
-                NameItem = New ListViewItem(_tokens(i))
-
-                NameItem.SubItems.Add(_values(i))
+            For Each supportedFramework As TargetFrameworkMoniker In ApplicationPropPageInternalBase.SupportedFrameworks
+                TFMSelector.Items.Add(supportedFramework)
             Next
 
-            Return True
-        End Function
-
-
-        Private Sub BuildEventCommandLineDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            InitializeControlLocations()
-
-            '// Never let them resize to something smaller than the default form size
-            MinimumSize = Size
         End Sub
 
-        Private Function InitializeControlLocations() As Boolean
-            ShowCollapsedForm()
-        End Function
+        Private Delegate Sub ProcessItemCheck(ByRef listBoxObject As CheckedListBox)
 
-        Private Shared Function ShowCollapsedForm() As Boolean
+        Private Sub ProcessItemCheckSub(ByRef listBoxObject As CheckedListBox)
+            'SetTargetFrameworks()
+            Me.IsDirty = True
+        End Sub
 
+        Private Sub CheckedListBox1_ItemCheck(ByVal sender As Object, ByVal e As ItemCheckEventArgs) Handles TFMSelector.ItemCheck
+            Dim Objects As Object() = {TFMSelector}
+            BeginInvoke(New ProcessItemCheck(AddressOf ProcessItemCheckSub), Objects)
+        End Sub
 
-            '// Disable and hide the Insert button
-            SetInsertButtonState(False)
+        Protected Overrides Sub OnApplyComplete(applySuccessful As Boolean)
+            MyBase.OnApplyComplete(applySuccessful)
+            SetTargetFrameworks()
+        End Sub
 
-            Return True
-        End Function
+        Private Sub SetTargetFrameworks()
+            Dim TargetFrameworksString As String = ""
 
-        Private Function ShowExpandedForm() As Boolean
-
-
-            '// Show the Insert button
-            SetInsertButtonState(True)
-            Return True
-        End Function
-
-
-        Private Sub InvokeHelp()
-            If Not IsNothing(_page) Then
-                _page.Help(HelpTopic)
+            If TFMSelector.CheckedItems.Count = 1 Then
+                TargetFrameworksString = TFMToProjectFileName(CType(TFMSelector.CheckedItems.Item(0), TargetFrameworkMoniker))
             Else
-                ' NOTE: the m_Page is nothing for deploy project, we need keep those code ...
-                Try
-                    Dim sp As IServiceProvider = ServiceProvider
-                    If sp IsNot Nothing Then
-                        Dim vshelp As VSHelp.Help = CType(sp.GetService(GetType(VSHelp.Help)), VSHelp.Help)
-                        vshelp.DisplayTopicFromF1Keyword(HelpTopic)
-                    Else
-                        Debug.Fail("Can not find ServiceProvider")
-                    End If
+                For Each selectedFramework As TargetFrameworkMoniker In TFMSelector.CheckedItems
+                    TargetFrameworksString += TFMToProjectFileName(selectedFramework) + ";"
+                Next
 
-                Catch ex As Exception When Common.ReportWithoutCrash(ex, NameOf(InvokeHelp), NameOf(BuildEventCommandLineDialog))
-                End Try
+                TargetFrameworksString = TargetFrameworksString.TrimEnd(CChar(";"))
+
             End If
+
+            SetCommonPropertyValue(GetPropertyDescriptor("TargetFrameworks"), TargetFrameworksString)
         End Sub
+        Private Shared Function TFMToProjectFileName(moniker As TargetFrameworkMoniker) As String
+            Dim frameworkName As New FrameworkName(moniker.Moniker)
 
-        Private Sub BuildEventCommandLineDialog_HelpRequested(sender As Object, hlpevent As HelpEventArgs) Handles MyBase.HelpRequested
-            InvokeHelp()
-        End Sub
+            Dim isNetCoreApp = String.Compare(frameworkName.Identifier, ".NETCoreApp", StringComparison.Ordinal) = 0
+            Dim isNetStandard = String.Compare(frameworkName.Identifier, ".NETStandard", StringComparison.Ordinal) = 0
+            Dim isNetFramework = String.Compare(frameworkName.Identifier, ".NETFramework", StringComparison.Ordinal) = 0
 
-        Private Shared Function SetInsertButtonEnableState() As Boolean
-            Return True
-        End Function
-
-        Private Shared Function SetInsertButtonState(bEnable As Boolean) As Boolean
-            'Me.InsertButton.Enabled = bEnable
-            SetInsertButtonEnableState()
-
-            Return True
-        End Function
-
-        ''' <summary>
-        ''' We shadow the original ShowDialog, because the right way to show dialog in VS is to use the IUIService. So the font/size will be set correctly.
-        ''' The caller should pass a valid serviceProvider here. The dialog also hold it to invoke the help system
-        ''' </summary>
-        Public Shadows Function ShowDialog(sp As IServiceProvider) As DialogResult
-            If sp IsNot Nothing Then
-                ServiceProvider = sp
+            If isNetCoreApp Then
+                Return "netcoreapp" + frameworkName.Version.ToString
+            ElseIf isNetStandard Then
+                Return "netstandard" + frameworkName.Version.ToString
+            ElseIf isNetFramework Then
+                Return "net" + frameworkName.Version.ToString.Replace(".", "")
             End If
-            Using (DpiAwareness.EnterDpiScope(DpiAwarenessContext.SystemAware))
-                If ServiceProvider IsNot Nothing Then
-                    Dim uiService As IUIService = CType(ServiceProvider.GetService(GetType(IUIService)), IUIService)
-                    If uiService IsNot Nothing Then
-                        Return uiService.ShowDialog(Me)
-                    End If
-                End If
-                Return MyBase.ShowDialog()
-            End Using
+
+            'Some weird TFM
+            Return Nothing
         End Function
 
     End Class

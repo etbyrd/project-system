@@ -87,6 +87,11 @@
         <target state="translated">&amp;Gerar redirecionamentos de associação automaticamente</target>
         <note />
       </trans-unit>
+      <trans-unit id="MultipleTFMButton.Text">
+        <source>Multiple TFM</source>
+        <target state="new">Multiple TFM</target>
+        <note />
+      </trans-unit>
     </body>
   </file>
 </xliff>

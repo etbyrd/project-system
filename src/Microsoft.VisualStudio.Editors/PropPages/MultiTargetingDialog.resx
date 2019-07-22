@@ -118,13 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TFMSelector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="TFMSelector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>998, 464</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TFMSelector.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TFMSelector.Name" xml:space="preserve">
+    <value>TFMSelector</value>
+  </data>
+  <data name="&gt;&gt;TFMSelector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TFMSelector.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TFMSelector.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="CommandLinePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="CommandLinePanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 100</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CommandLinePanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -134,43 +155,19 @@
   <data name="&gt;&gt;CommandLinePanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="SplitButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 174</value>
-  </data>
-  <data name="SplitButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 91</value>
-  </data>
-  <data name="SplitButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="SplitButton1.Text" xml:space="preserve">
-    <value>SplitButton1</value>
-  </data>
-  <data name="&gt;&gt;SplitButton1.Name" xml:space="preserve">
-    <value>SplitButton1</value>
-  </data>
-  <data name="&gt;&gt;SplitButton1.Type" xml:space="preserve">
-    <value>Microsoft.VisualStudio.Editors.Common.SplitButton, Microsoft.VisualStudio.Editors, Version=42.42.42.42, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;SplitButton1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SplitButton1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>9, 20</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>999, 489</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MultiTargetingDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Microsoft.VisualStudio.Editors.PropertyPages.PropPageUserControlBase, Microsoft.VisualStudio.AppDesigner, Version=42.42.42.42, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
