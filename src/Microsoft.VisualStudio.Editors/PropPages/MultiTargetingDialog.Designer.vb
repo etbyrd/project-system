@@ -4,7 +4,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
     Partial Class MultiTargetingDialog
         Friend WithEvents CommandLinePanel As System.Windows.Forms.Panel
-        Friend WithEvents TFMSelector As System.Windows.Forms.CheckedListBox
+        Friend WithEvents TFMSelector As System.Windows.Forms.ListView
         Private components As System.ComponentModel.IContainer
 
 
@@ -19,14 +19,16 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
         <System.Diagnostics.DebuggerNonUserCode()> Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MultiTargetingDialog))
-            Me.TFMSelector = New System.Windows.Forms.CheckedListBox()
+            Me.TFMSelector = New System.Windows.Forms.ListView()
             Me.CommandLinePanel = New System.Windows.Forms.Panel()
             Me.SuspendLayout()
             '
             'TFMSelector
             '
+            Me.TFMSelector.HideSelection = False
             resources.ApplyResources(Me.TFMSelector, "TFMSelector")
             Me.TFMSelector.Name = "TFMSelector"
+            Me.TFMSelector.UseCompatibleStateImageBehavior = False
             '
             'CommandLinePanel
             '
