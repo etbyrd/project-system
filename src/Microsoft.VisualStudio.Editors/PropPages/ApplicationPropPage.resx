@@ -319,7 +319,7 @@
     <value>NoControl</value>
   </data>
   <data name="StartupObjectLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 205</value>
+    <value>0, 65</value>
   </data>
   <data name="StartupObjectLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 9, 4, 0</value>
@@ -352,7 +352,7 @@
     <value>20</value>
   </data>
   <data name="StartupObject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 230</value>
+    <value>0, 90</value>
   </data>
   <data name="StartupObject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 4, 0</value>
@@ -382,7 +382,7 @@
     <value>True</value>
   </data>
   <data name="AssemblyInfoButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>549, 230</value>
+    <value>549, 228</value>
   </data>
   <data name="AssemblyInfoButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>160, 5, 0, 5</value>
@@ -418,7 +418,7 @@
     <value>NoControl</value>
   </data>
   <data name="TargetFrameworkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 65</value>
+    <value>0, 165</value>
   </data>
   <data name="TargetFrameworkLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 9, 4, 0</value>
@@ -451,13 +451,13 @@
     <value>20</value>
   </data>
   <data name="TargetFramework.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 90</value>
+    <value>403, 190</value>
   </data>
   <data name="TargetFramework.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 5, 4, 0</value>
+    <value>14, 5, 0, 5</value>
   </data>
   <data name="TargetFramework.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 28</value>
+    <value>455, 28</value>
   </data>
   <data name="TargetFramework.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -474,6 +474,33 @@
   <data name="&gt;&gt;TargetFramework.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="TargetFrameworksTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="TargetFrameworksTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 190</value>
+  </data>
+  <data name="TargetFrameworksTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 5, 4, 0</value>
+  </data>
+  <data name="TargetFrameworksTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 26</value>
+  </data>
+  <data name="TargetFrameworksTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;TargetFrameworksTextBox.Name" xml:space="preserve">
+    <value>TargetFrameworksTextBox</value>
+  </data>
+  <data name="&gt;&gt;TargetFrameworksTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TargetFrameworksTextBox.Parent" xml:space="preserve">
+    <value>TopHalfLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;TargetFrameworksTextBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="AutoGenerateBindingRedirects.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -481,7 +508,7 @@
     <value>True</value>
   </data>
   <data name="AutoGenerateBindingRedirects.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 172</value>
+    <value>0, 132</value>
   </data>
   <data name="AutoGenerateBindingRedirects.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 9, 4, 0</value>
@@ -505,13 +532,13 @@
     <value>TopHalfLayoutPanel</value>
   </data>
   <data name="&gt;&gt;AutoGenerateBindingRedirects.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="MultipleTFMButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="MultipleTFMButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 128</value>
+    <value>0, 228</value>
   </data>
   <data name="MultipleTFMButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 4, 0</value>
@@ -535,7 +562,7 @@
     <value>TopHalfLayoutPanel</value>
   </data>
   <data name="&gt;&gt;MultipleTFMButton.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="TopHalfLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -547,7 +574,7 @@
     <value>11</value>
   </data>
   <data name="TopHalfLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>858, 281</value>
+    <value>858, 279</value>
   </data>
   <data name="TopHalfLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -565,7 +592,7 @@
     <value>1</value>
   </data>
   <data name="TopHalfLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AssemblyNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyName" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RootNamespaceLabel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="RootNamespaceTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="OutputTypeLabel" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="OutputType" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="StartupObjectLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="StartupObject" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyInfoButton" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="TargetFrameworkLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="TargetFramework" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AutoGenerateBindingRedirects" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="MultipleTFMButton" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,20,AutoSize,20,AutoSize,20,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,20,AutoSize,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AssemblyNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyName" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RootNamespaceLabel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="RootNamespaceTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="OutputTypeLabel" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="OutputType" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="StartupObjectLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="StartupObject" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AssemblyInfoButton" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="TargetFrameworkLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="TargetFramework" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="TargetFrameworksTextBox" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="AutoGenerateBindingRedirects" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="MultipleTFMButton" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,20,AutoSize,20,AutoSize,20,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,20,AutoSize,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="ResourcesGroupBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -952,7 +979,7 @@
     <value>NoControl</value>
   </data>
   <data name="Win32ResourceFileBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>731, 272</value>
+    <value>731, 270</value>
   </data>
   <data name="Win32ResourceFileBrowse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 4, 0</value>
@@ -991,7 +1018,7 @@
     <value>9</value>
   </data>
   <data name="iconTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 307</value>
+    <value>859, 302</value>
   </data>
   <data name="iconTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1015,7 +1042,7 @@
     <value>Fill</value>
   </data>
   <data name="ResourcesGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 299</value>
+    <value>0, 297</value>
   </data>
   <data name="ResourcesGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 18, 0, 0</value>
@@ -1024,7 +1051,7 @@
     <value>12, 12, 12, 12</value>
   </data>
   <data name="ResourcesGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 350</value>
+    <value>883, 345</value>
   </data>
   <data name="ResourcesGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1060,7 +1087,7 @@
     <value>2</value>
   </data>
   <data name="overarchingLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 649</value>
+    <value>883, 642</value>
   </data>
   <data name="overarchingLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1102,7 +1129,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 649</value>
+    <value>883, 642</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ApplicationPropPage</value>

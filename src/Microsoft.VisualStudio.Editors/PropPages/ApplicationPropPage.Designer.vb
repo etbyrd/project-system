@@ -34,6 +34,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Friend WithEvents ManifestExplanationLabel As System.Windows.Forms.TextBox
         Friend WithEvents iconTableLayoutPanel As System.Windows.Forms.TableLayoutPanel
         Friend WithEvents MultipleTFMButton As System.Windows.Forms.Button
+        Friend WithEvents TargetFrameworksTextBox As System.Windows.Forms.TextBox
 
         <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ApplicationPropPage))
@@ -49,6 +50,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.AssemblyInfoButton = New System.Windows.Forms.Button()
             Me.TargetFrameworkLabel = New System.Windows.Forms.Label()
             Me.TargetFramework = New System.Windows.Forms.ComboBox()
+            Me.TargetFrameworksTextBox = New System.Windows.Forms.TextBox()
             Me.AutoGenerateBindingRedirects = New System.Windows.Forms.CheckBox()
             Me.MultipleTFMButton = New System.Windows.Forms.Button()
             Me.ResourcesGroupBox = New System.Windows.Forms.GroupBox()
@@ -82,15 +84,12 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TopHalfLayoutPanel.Controls.Add(Me.RootNamespaceTextBox, 1, 1)
             Me.TopHalfLayoutPanel.Controls.Add(Me.OutputTypeLabel, 1, 2)
             Me.TopHalfLayoutPanel.Controls.Add(Me.OutputType, 1, 3)
-
             Me.TopHalfLayoutPanel.Controls.Add(Me.StartupObjectLabel, 0, 2)
             Me.TopHalfLayoutPanel.Controls.Add(Me.StartupObject, 0, 3)
-
             Me.TopHalfLayoutPanel.Controls.Add(Me.AssemblyInfoButton, 1, 7)
-
             Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFrameworkLabel, 0, 5)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFramework, 0, 6)
-
+            Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFramework, 1, 6)
+            Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFrameworksTextBox, 0, 6)
             Me.TopHalfLayoutPanel.Controls.Add(Me.AutoGenerateBindingRedirects, 0, 4)
             Me.TopHalfLayoutPanel.Controls.Add(Me.MultipleTFMButton, 0, 7)
             Me.TopHalfLayoutPanel.Name = "TopHalfLayoutPanel"
@@ -157,6 +156,11 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TargetFramework.FormattingEnabled = True
             Me.TargetFramework.Name = "TargetFramework"
             Me.TargetFramework.Sorted = True
+            '
+            'TargetFrameworksTextBox
+            '
+            resources.ApplyResources(Me.TargetFrameworksTextBox, "TargetFrameworksTextBox")
+            Me.TargetFrameworksTextBox.Name = "TargetFrameworksTextBox"
             '
             'AutoGenerateBindingRedirects
             '

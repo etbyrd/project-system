@@ -91,7 +91,13 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
 
                     'StartupObject must be kept at the end of the list because it depends on the initialization of "OutputType" values
                     Dim datalist As List(Of PropertyControlData) = New List(Of PropertyControlData)
-                    Dim data As PropertyControlData = New PropertyControlData(VsProjPropId.VBPROJPROPID_AssemblyName, "AssemblyName", AssemblyName, New Control() {AssemblyNameLabel}) With {
+                    'There is no VBPROJPROPID_TargetFrameworks, so not sure what to do about the id, did a random one just in case
+                    'No associated controls, and there is no property for the display name yet
+                    Dim data As PropertyControlData = New PropertyControlData(9595, "TargetFrameworks", TargetFrameworksTextBox) With {
+                        .DisplayPropertyName = "TargetFrameworksBox"
+                    }
+                    datalist.Add(data)
+                    data = New PropertyControlData(VsProjPropId.VBPROJPROPID_AssemblyName, "AssemblyName", AssemblyName, New Control() {AssemblyNameLabel}) With {
                         .DisplayPropertyName = My.Resources.Microsoft_VisualStudio_Editors_Designer.PPG_Property_AssemblyName
                     }
                     datalist.Add(data)
