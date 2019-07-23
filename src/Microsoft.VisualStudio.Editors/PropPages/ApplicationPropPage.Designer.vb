@@ -82,13 +82,17 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Me.TopHalfLayoutPanel.Controls.Add(Me.RootNamespaceTextBox, 1, 1)
             Me.TopHalfLayoutPanel.Controls.Add(Me.OutputTypeLabel, 1, 2)
             Me.TopHalfLayoutPanel.Controls.Add(Me.OutputType, 1, 3)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.StartupObjectLabel, 0, 6)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.StartupObject, 0, 7)
+
+            Me.TopHalfLayoutPanel.Controls.Add(Me.StartupObjectLabel, 0, 2)
+            Me.TopHalfLayoutPanel.Controls.Add(Me.StartupObject, 0, 3)
+
             Me.TopHalfLayoutPanel.Controls.Add(Me.AssemblyInfoButton, 1, 7)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFrameworkLabel, 0, 2)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFramework, 0, 3)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.AutoGenerateBindingRedirects, 0, 5)
-            Me.TopHalfLayoutPanel.Controls.Add(Me.MultipleTFMButton, 0, 4)
+
+            Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFrameworkLabel, 0, 5)
+            Me.TopHalfLayoutPanel.Controls.Add(Me.TargetFramework, 0, 6)
+
+            Me.TopHalfLayoutPanel.Controls.Add(Me.AutoGenerateBindingRedirects, 0, 4)
+            Me.TopHalfLayoutPanel.Controls.Add(Me.MultipleTFMButton, 0, 7)
             Me.TopHalfLayoutPanel.Name = "TopHalfLayoutPanel"
             '
             'AssemblyNameLabel

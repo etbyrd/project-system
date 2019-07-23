@@ -120,7 +120,7 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
         Protected Sub GetSupportedTargetFrameworks()
             VSErrorHandler.ThrowOnFailure(ProjectHierarchy.GetSite(SiteServiceProvider))
             Dim sp As New Shell.ServiceProvider(SiteServiceProvider)
-            Dim VSFrameworkMultiTargeting As IVsFrameworkMultiTargeting = TryCast(sp.GetService(GetType(SVsFrameworkMultiTargeting).GUID), IVsFrameworkMultiTargeting)
+            VSFrameworkMultiTargeting = TryCast(sp.GetService(GetType(SVsFrameworkMultiTargeting).GUID), IVsFrameworkMultiTargeting)
             Dim supportedTargetFrameworksDescriptor = GetPropertyDescriptor("SupportedTargetFrameworks")
             SupportedFrameworks = TargetFrameworkMoniker.GetSupportedTargetFrameworkMonikers(VSFrameworkMultiTargeting, DTEProject, supportedTargetFrameworksDescriptor)
         End Sub
@@ -138,8 +138,6 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Try
                 ' TODO: Remove IsTargetFrameworksDefined check after issue #800 is resolved.
                 If (TargetFrameworksDefined() = False And VSFrameworkMultiTargeting IsNot Nothing) Then
-
-
 
                     For Each supportedFramework As TargetFrameworkMoniker In SupportedFrameworks
                         targetFrameworkComboBox.Items.Add(supportedFramework)

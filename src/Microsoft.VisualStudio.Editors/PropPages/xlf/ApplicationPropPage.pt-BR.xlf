@@ -28,8 +28,8 @@
         <note />
       </trans-unit>
       <trans-unit id="TargetFrameworkLabel.Text">
-        <source>Tar&amp;get framework:</source>
-        <target state="translated">Estrutura de &amp;Destino:</target>
+        <source>Tar&amp;get frameworks:</source>
+        <target state="needs-review-translation">Estrutura de &amp;Destino:</target>
         <note />
       </trans-unit>
       <trans-unit id="ResourcesLabel.Text">
@@ -88,8 +88,8 @@
         <note />
       </trans-unit>
       <trans-unit id="MultipleTFMButton.Text">
-        <source>Multiple TFM</source>
-        <target state="new">Multiple TFM</target>
+        <source>Select Target Frameworks</source>
+        <target state="new">Select Target Frameworks</target>
         <note />
       </trans-unit>
     </body>

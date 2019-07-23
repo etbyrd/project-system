@@ -319,7 +319,7 @@
     <value>NoControl</value>
   </data>
   <data name="StartupObjectLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 210</value>
+    <value>0, 205</value>
   </data>
   <data name="StartupObjectLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 9, 4, 0</value>
@@ -352,7 +352,7 @@
     <value>20</value>
   </data>
   <data name="StartupObject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 235</value>
+    <value>0, 230</value>
   </data>
   <data name="StartupObject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 5, 4, 0</value>
@@ -382,7 +382,7 @@
     <value>True</value>
   </data>
   <data name="AssemblyInfoButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>549, 235</value>
+    <value>549, 230</value>
   </data>
   <data name="AssemblyInfoButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>160, 5, 0, 5</value>
@@ -424,13 +424,13 @@
     <value>0, 9, 4, 0</value>
   </data>
   <data name="TargetFrameworkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 20</value>
+    <value>145, 20</value>
   </data>
   <data name="TargetFrameworkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="TargetFrameworkLabel.Text" xml:space="preserve">
-    <value>Tar&amp;get framework:</value>
+    <value>Tar&amp;get frameworks:</value>
   </data>
   <data name="&gt;&gt;TargetFrameworkLabel.Name" xml:space="preserve">
     <value>TargetFrameworkLabel</value>
@@ -481,7 +481,7 @@
     <value>True</value>
   </data>
   <data name="AutoGenerateBindingRedirects.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 177</value>
+    <value>0, 172</value>
   </data>
   <data name="AutoGenerateBindingRedirects.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 9, 4, 0</value>
@@ -507,20 +507,23 @@
   <data name="&gt;&gt;AutoGenerateBindingRedirects.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="MultipleTFMButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="MultipleTFMButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 128</value>
+    <value>0, 128</value>
   </data>
   <data name="MultipleTFMButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>0, 5, 4, 0</value>
   </data>
   <data name="MultipleTFMButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 35</value>
+    <value>205, 35</value>
   </data>
   <data name="MultipleTFMButton.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="MultipleTFMButton.Text" xml:space="preserve">
-    <value>Multiple TFM</value>
+    <value>Select Target Frameworks</value>
   </data>
   <data name="&gt;&gt;MultipleTFMButton.Name" xml:space="preserve">
     <value>MultipleTFMButton</value>
@@ -544,7 +547,7 @@
     <value>11</value>
   </data>
   <data name="TopHalfLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>858, 286</value>
+    <value>858, 281</value>
   </data>
   <data name="TopHalfLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -949,7 +952,7 @@
     <value>NoControl</value>
   </data>
   <data name="Win32ResourceFileBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>731, 270</value>
+    <value>731, 272</value>
   </data>
   <data name="Win32ResourceFileBrowse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 4, 0</value>
@@ -988,7 +991,7 @@
     <value>9</value>
   </data>
   <data name="iconTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 302</value>
+    <value>859, 307</value>
   </data>
   <data name="iconTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1012,7 +1015,7 @@
     <value>Fill</value>
   </data>
   <data name="ResourcesGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 304</value>
+    <value>0, 299</value>
   </data>
   <data name="ResourcesGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 18, 0, 0</value>
@@ -1021,7 +1024,7 @@
     <value>12, 12, 12, 12</value>
   </data>
   <data name="ResourcesGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 345</value>
+    <value>883, 350</value>
   </data>
   <data name="ResourcesGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

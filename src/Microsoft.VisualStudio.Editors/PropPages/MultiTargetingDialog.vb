@@ -90,8 +90,8 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             Dim TargetFrameworksString As String = ""
 
             If TFMSelector.CheckedItems.Count = 1 Then
-                'TargetFrameworksString = TFMToProjectFileName(CType(TFMSelector.CheckedItems.Item(0), TargetFrameworkMoniker))
-                TargetFrameworksString = TFMSelector.CheckedItems.Item(0).ToString
+                TargetFrameworksString = TFMToProjectFileName(CType(TFMSelector.CheckedItems.Item(0).Tag, TargetFrameworkMoniker))
+                'TargetFrameworksString = TFMSelector.CheckedItems.Item(0).ToString
             Else
                 For Each selectedFrameworkItem As ListViewItem In TFMSelector.CheckedItems
                     Dim selectedFrameworkMoniker As TargetFrameworkMoniker = CType(selectedFrameworkItem.Tag, TargetFrameworkMoniker)
