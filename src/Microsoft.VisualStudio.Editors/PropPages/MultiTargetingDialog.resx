@@ -117,14 +117,214 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TFMSelector.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAA1SZWNlbnRseSBVc2VkBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdu
+        bWVudAEAAAAHdmFsdWVfXwAIAgAAAAAAAAAKBgUAAAATUmVjZW50bHkgVXNlZCBHcm91cAs=
+</value>
+  </data>
+  <data name="TFMSelector.Groups1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAA4uTkVUIEZyYW1ld29yawX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGln
+        bm1lbnQBAAAAB3ZhbHVlX18ACAIAAAAAAAAACgYFAAAADkZyYW1ld29ya0dyb3VwCw==
+</value>
+  </data>
+  <data name="TFMSelector.Groups2" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAkuTkVUIENvcmUF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAxORVRDb3JlR3JvdXAL
+</value>
+  </data>
+  <data name="TFMSelector.Groups3" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAA0uTkVUIFN0YW5kYXJkBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdu
+        bWVudAEAAAAHdmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAQTkVUU3RhbmRhcmRHcm91cAs=
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="TFMSelector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>3, 3</value>
   </data>
-  <data name="TFMSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>999, 486</value>
+  <data name="CurrentTFMs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 3</value>
+  </data>
+  <data name="CurrentTFMs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 558</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CurrentTFMs.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CurrentTFMs.Name" xml:space="preserve">
+    <value>CurrentTFMs</value>
+  </data>
+  <data name="&gt;&gt;CurrentTFMs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CurrentTFMs.Parent" xml:space="preserve">
+    <value>overarchingLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;CurrentTFMs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="moveUpButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="moveUpButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 172</value>
+  </data>
+  <data name="moveUpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 50</value>
+  </data>
+  <data name="moveUpButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="moveUpButton.Text" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="&gt;&gt;moveUpButton.Name" xml:space="preserve">
+    <value>moveUpButton</value>
+  </data>
+  <data name="&gt;&gt;moveUpButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveUpButton.Parent" xml:space="preserve">
+    <value>overarchingLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;moveUpButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="moveDownButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 228</value>
+  </data>
+  <data name="moveDownButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 50</value>
+  </data>
+  <data name="moveDownButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="moveDownButton.Text" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="&gt;&gt;moveDownButton.Name" xml:space="preserve">
+    <value>moveDownButton</value>
+  </data>
+  <data name="&gt;&gt;moveDownButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveDownButton.Parent" xml:space="preserve">
+    <value>overarchingLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;moveDownButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="moveRightButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="moveRightButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="moveRightButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 284</value>
+  </data>
+  <data name="moveRightButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 50</value>
+  </data>
+  <data name="moveRightButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="moveRightButton.Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;moveRightButton.Name" xml:space="preserve">
+    <value>moveRightButton</value>
+  </data>
+  <data name="&gt;&gt;moveRightButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveRightButton.Parent" xml:space="preserve">
+    <value>overarchingLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;moveRightButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="moveLeftButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="moveLeftButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="moveLeftButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 340</value>
+  </data>
+  <data name="moveLeftButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 50</value>
+  </data>
+  <data name="moveLeftButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="moveLeftButton.Text" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;moveLeftButton.Name" xml:space="preserve">
+    <value>moveLeftButton</value>
+  </data>
+  <data name="&gt;&gt;moveLeftButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveLeftButton.Parent" xml:space="preserve">
+    <value>overarchingLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;moveLeftButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="overarchingLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="overarchingLayoutPanel.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="overarchingLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1086, 564</value>
+  </data>
+  <data name="overarchingLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;overarchingLayoutPanel.Name" xml:space="preserve">
+    <value>overarchingLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;overarchingLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;overarchingLayoutPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;overarchingLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="overarchingLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TFMSelector" Row="0" RowSpan="4" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CurrentTFMs" Row="0" RowSpan="4" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="moveUpButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveDownButton" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveRightButton" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveLeftButton" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,45,Percent,10,Percent,45" /&gt;&lt;Rows Styles="Percent,40,Percent,10,Percent,10,Percent,40,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="TFMSelector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 558</value>
+  </data>
   <data name="TFMSelector.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -135,25 +335,10 @@
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TFMSelector.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>overarchingLayoutPanel</value>
   </data>
   <data name="&gt;&gt;TFMSelector.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="CommandLinePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="CommandLinePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
-  </data>
-  <data name="CommandLinePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CommandLinePanel.Name" xml:space="preserve">
-    <value>CommandLinePanel</value>
-  </data>
-  <data name="&gt;&gt;CommandLinePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -162,7 +347,7 @@
     <value>9, 20</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>999, 489</value>
+    <value>1089, 564</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MultiTargetingDialog</value>
