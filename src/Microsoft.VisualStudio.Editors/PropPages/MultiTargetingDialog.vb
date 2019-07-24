@@ -1,5 +1,8 @@
-﻿Imports System.Runtime.Versioning
+﻿Imports System.Drawing
+Imports System.Runtime.Versioning
 Imports System.Windows.Forms
+Imports Microsoft.VisualStudio.Imaging
+Imports Microsoft.VisualStudio.Editors.Common
 
 Namespace Microsoft.VisualStudio.Editors.PropertyPages
     Friend NotInheritable Class MultiTargetingDialog
@@ -33,6 +36,20 @@ Namespace Microsoft.VisualStudio.Editors.PropertyPages
             CurrentTFMs.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
             CurrentTFMs.CheckBoxes = False
             CurrentTFMs.HeaderStyle = ColumnHeaderStyle.None
+
+            'MoveUp.Size = DpiAwareness.LogicalToDeviceSize(Handle, MoveUp.Size)
+            'MoveDown.Size = DpiAwareness.LogicalToDeviceSize(Handle, MoveDown.Size)
+            'RemoveFolder.Size = DpiAwareness.LogicalToDeviceSize(Handle, RemoveFolder.Size)
+
+            'Add any initialization after the InitializeComponent() call
+            MinimumSize = Size
+
+            ' Recalculate all images for the button from the default image we put in the resource file
+            moveUpButton.Image = MapBitmapColor(GetImageFromImageService(KnownMonikers.MoveUp, moveUpButton.Size.Height, moveUpButton.Size.Height, Color.Transparent), Color.Black, SystemColors.ControlText)
+            moveDownButton.Image = MapBitmapColor(GetImageFromImageService(KnownMonikers.MoveDown, moveDownButton.Size.Height, moveDownButton.Size.Height, Color.Transparent), Color.Black, SystemColors.ControlText)
+            moveRightButton.Image = MapBitmapColor(GetImageFromImageService(KnownMonikers.ExpandRightGroup, moveRightButton.Size.Height, moveRightButton.Size.Height, Color.Transparent), Color.Black, SystemColors.ControlText)
+            moveLeftButton.Image = MapBitmapColor(GetImageFromImageService(KnownMonikers.ColapseLeftGroup, moveLeftButton.Size.Height, moveLeftButton.Size.Height, Color.Transparent), Color.Black, SystemColors.ControlText)
+
         End Sub
 
         Protected Overrides Sub PostInitPage()

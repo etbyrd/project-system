@@ -1,27 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en" target-language="cs" original="../MultiTargetingDialog.resx">
-    <body>
-      <trans-unit id="moveUpButton.Text">
-        <source>Up</source>
-        <target state="new">Up</target>
-        <note />
-      </trans-unit>
-      <trans-unit id="moveDownButton.Text">
-        <source>Down</source>
-        <target state="new">Down</target>
-        <note />
-      </trans-unit>
-      <trans-unit id="moveRightButton.Text">
-        <source>Right</source>
-        <target state="new">Right</target>
-        <note />
-      </trans-unit>
-      <trans-unit id="moveLeftButton.Text">
-        <source>Left</source>
-        <target state="new">Left</target>
-        <note />
-      </trans-unit>
-    </body>
+    <body />
   </file>
 </xliff>

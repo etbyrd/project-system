@@ -162,10 +162,10 @@
     <value>3, 3</value>
   </data>
   <data name="CurrentTFMs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 3</value>
+    <value>502, 3</value>
   </data>
   <data name="CurrentTFMs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 558</value>
+    <value>448, 494</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CurrentTFMs.TabIndex" type="System.Int32, mscorlib">
@@ -188,16 +188,13 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="moveUpButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 172</value>
+    <value>455, 156</value>
   </data>
   <data name="moveUpButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 50</value>
+    <value>41, 41</value>
   </data>
   <data name="moveUpButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="moveUpButton.Text" xml:space="preserve">
-    <value>Up</value>
   </data>
   <data name="&gt;&gt;moveUpButton.Name" xml:space="preserve">
     <value>moveUpButton</value>
@@ -212,16 +209,13 @@
     <value>2</value>
   </data>
   <data name="moveDownButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 228</value>
+    <value>455, 203</value>
   </data>
   <data name="moveDownButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 50</value>
+    <value>41, 41</value>
   </data>
   <data name="moveDownButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="moveDownButton.Text" xml:space="preserve">
-    <value>Down</value>
   </data>
   <data name="&gt;&gt;moveDownButton.Name" xml:space="preserve">
     <value>moveDownButton</value>
@@ -242,16 +236,13 @@
     <value>NoControl</value>
   </data>
   <data name="moveRightButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 284</value>
+    <value>455, 256</value>
   </data>
   <data name="moveRightButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 50</value>
+    <value>41, 41</value>
   </data>
   <data name="moveRightButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="moveRightButton.Text" xml:space="preserve">
-    <value>Right</value>
   </data>
   <data name="&gt;&gt;moveRightButton.Name" xml:space="preserve">
     <value>moveRightButton</value>
@@ -272,16 +263,13 @@
     <value>NoControl</value>
   </data>
   <data name="moveLeftButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 340</value>
+    <value>455, 303</value>
   </data>
   <data name="moveLeftButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 50</value>
+    <value>41, 41</value>
   </data>
   <data name="moveLeftButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="moveLeftButton.Text" xml:space="preserve">
-    <value>Left</value>
   </data>
   <data name="&gt;&gt;moveLeftButton.Name" xml:space="preserve">
     <value>moveLeftButton</value>
@@ -302,7 +290,7 @@
     <value>4</value>
   </data>
   <data name="overarchingLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1086, 564</value>
+    <value>953, 500</value>
   </data>
   <data name="overarchingLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -320,10 +308,10 @@
     <value>0</value>
   </data>
   <data name="overarchingLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TFMSelector" Row="0" RowSpan="4" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CurrentTFMs" Row="0" RowSpan="4" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="moveUpButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveDownButton" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveRightButton" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveLeftButton" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,45,Percent,10,Percent,45" /&gt;&lt;Rows Styles="Percent,40,Percent,10,Percent,10,Percent,40,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TFMSelector" Row="0" RowSpan="4" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CurrentTFMs" Row="0" RowSpan="4" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="moveUpButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveDownButton" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveRightButton" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="moveLeftButton" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,47.5,Percent,5,Percent,47.5" /&gt;&lt;Rows Styles="Percent,40,Percent,10,Percent,10,Percent,40" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="TFMSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>482, 558</value>
+    <value>446, 494</value>
   </data>
   <data name="TFMSelector.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -346,8 +334,11 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>9, 20</value>
   </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1089, 564</value>
+    <value>956, 503</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MultiTargetingDialog</value>
